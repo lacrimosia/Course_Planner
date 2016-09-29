@@ -12,4 +12,8 @@ export class TitleComponent implements OnInit {
   ngOnInit() {
   }
 
+  reload(){
+  	location.reload();
+  }
+
 }

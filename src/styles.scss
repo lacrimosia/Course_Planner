@@ -52,12 +52,12 @@ body{
 
 // large main titles
 h1{
-	@include titles(Headings, 2em, $blue, 2px);
+	@include titles(Headings, 1.7em, $blue, 2px);
 }
 
 // large main titles
 h3{
-	@include titles(subHeadings, 1.5em, $subHeading, 0px);
+	@include titles(subHeadings, 1.4em, $subHeading, 0px);
 }
 
 // copy text
