@@ -1,6 +1,49 @@
 {
 	"course_title": "ENV 498 Capstone",
 	"instructions": "",
+	"start": {
+			"type": "instructions",
+			"title": "Instructions",
+			"symbol": "S",
+			"sub_title": "Interactive Activity Planner",
+			"instructions": "The interactive will show information on each assignment due to for this course. Please click each button to view the current assignments and information about them."
+		},
 	"assignments": [
+		{
+			"type": "assignments",
+			"title": "Comprehensive review of coursework assignment",
+			"symbol": "1",
+			"sub_title": "Assignment Information",
+			"due_date": "image.jpg",
+			"percentage": "percent.jpg",
+			"tasks": [
+				{
+					"name": "Task A",
+					"information": "This is the information about Task A from 1"
+				},
+				{
+					"name": "Task B",
+					"information": "This is the information about Task B from 1"
+				}
+			]
+		},
+		{
+			"type": "assignments",
+			"title": "Sustainability assignment",
+			"symbol": "2",
+			"sub_title": "Assignment Information",
+			"due_date": "image.jpg",
+			"percentage": "percent.jpg",
+			"tasks": [
+				{
+					"name": "Task A",
+					"information": "This is the information about Task A from 2"
+				},
+				{
+					"name": "Task B",
+					"information": "This is the information about Task B from 2"
+				}
+			]
+		}
 	]
 }
