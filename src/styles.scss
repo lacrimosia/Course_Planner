@@ -52,12 +52,12 @@ body{
 
 // large main titles
 h1{
-	@include titles(Headings, 1.7em, $blue, 2px);
+	@include titles(Headings, 1.5em, $blue, 2px);
 }
 
 // large main titles
 h3{
-	@include titles(subHeadings, 1.4em, $subHeading, 0px);
+	@include titles(subHeadings, 1.2em, $subHeading, 0px);
 }
 
 // copy text
@@ -67,8 +67,9 @@ p{
 
 // circle navigation buttons
 .circle{
-	@include buttonStyles(60px, 60px, $green, 100px, $green, subHeadings);
+	@include buttonStyles(50px, 50px, $green, 100px, $green, subHeadings);
 	cursor: pointer;
+	text-align: center;
 }
 
 .circle:hover{
@@ -76,11 +77,20 @@ p{
 	border: 1px solid $red;
 }
 
+// circle symbol
+.symbol{
+	@include buttonStyles(45px, 45px, $red, 100px, $red, subHeadings);
+	padding: 15px;
+	font-size: 3.3em;
+	text-align: center;
+}
+
 // regular sized buttons
 .normal{
 	@include buttonStyles(10%, 55%, $darkBlue, 10px, $darkBlue, subHeadings);
 	padding: 15px;
 	cursor: pointer;
+	text-align: center;
 }
 
 .normal:hover{
@@ -104,4 +114,14 @@ p{
 // clear both
 .clear{
 	clear: both;
+}
+
+// title Area from nav component
+#titleArea{
+	background: $white;
+}
+
+// title of assignment
+.sub{
+	font-size: 2.2;
 }

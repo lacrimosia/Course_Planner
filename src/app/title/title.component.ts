@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService} from '../data.service';
 import { Observable } from 'rxjs/Rx';
-import {KeysPipe} from '../keys.pipe';
 
 @Component({
   selector: 'app-title',
@@ -10,19 +9,18 @@ import {KeysPipe} from '../keys.pipe';
   providers: [DataService]
 })
 export class TitleComponent implements OnInit {
-	public data;
-	public dataInfo;
+	public titleData;
 
   constructor(private dataService: DataService) {
-  	this.data = dataService; 
+  	this.dataService = dataService; 
   }
 
   ngOnInit() {
 
-  	this.dataInfo = this.dataService.getData()
+  	this.titleData = this.dataService.getData()
     .subscribe(
        data => {
-        this.dataInfo = data;
+        this.titleData = data;
        },
        err => console.error(err),
        () => console.log('tile and information loaded')

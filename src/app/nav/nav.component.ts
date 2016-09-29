@@ -11,11 +11,10 @@ import {KeysPipe} from '../keys.pipe';
 })
 export class NavComponent implements OnInit {
 
-	public data;
 	public dataInfo;
 
   constructor(private dataService: DataService) {
-  	this.data = dataService; 
+  	this.dataService = dataService; 
   }
 
   ngOnInit() {
@@ -23,10 +22,10 @@ export class NavComponent implements OnInit {
   	this.dataInfo = this.dataService.getData()
     .subscribe(
        data => {
-        this.dataInfo = data;
+        this.dataInfo = data.start;
        },
        err => console.error(err),
-       () => console.log('dataList loaded')
+       () => console.log('nav data loaded')
     );
   }
 
