@@ -5,11 +5,15 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { TitleComponent } from './title/title.component';
+import { NavComponent } from './nav/nav.component';
+import { KeysPipe } from './keys.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TitleComponent
+    TitleComponent,
+    NavComponent,
+    KeysPipe
   ],
   imports: [
     BrowserModule,

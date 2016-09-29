@@ -4,12 +4,13 @@ import { Observable } from 'rxjs/Rx';
 import {KeysPipe} from '../keys.pipe';
 
 @Component({
-  selector: 'app-title',
-  templateUrl: './title.component.html',
-  styleUrls: ['./title.component.scss'],
+  selector: 'app-nav',
+  templateUrl: './nav.component.html',
+  styleUrls: ['./nav.component.scss'],
   providers: [DataService]
 })
-export class TitleComponent implements OnInit {
+export class NavComponent implements OnInit {
+
 	public data;
 	public dataInfo;
 
@@ -25,13 +26,8 @@ export class TitleComponent implements OnInit {
         this.dataInfo = data;
        },
        err => console.error(err),
-       () => console.log('tile and information loaded')
+       () => console.log('dataList loaded')
     );
-
-  }
-
-  reload(){
-  	location.reload();
   }
 
 }
