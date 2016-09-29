@@ -67,7 +67,7 @@ p{
 
 // circle navigation buttons
 .circle{
-	@include buttonStyles(50px, 50px, $green, 100px, $green, subHeadings);
+	@include buttonStyles(60px, 60px, $green, 100px, $green, subHeadings);
 	cursor: pointer;
 }
 
