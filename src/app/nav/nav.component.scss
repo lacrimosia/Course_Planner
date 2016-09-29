@@ -1,8 +1,9 @@
 #titleArea{
 	width: 100%;
 	min-height: 50px;
-	padding: 15px 15px 0px 15px;
+	padding: 15px 20px 5px 20px;
 	height: 85px;
+	position: relative;
 }
 
 .symbol, hl{
@@ -14,4 +15,20 @@
 .sub{
 	font-size: 2.2em;
 	margin-top: 12px;
+}
+
+.workArea{
+	width: 100%;
+	padding: 5px 20px 5px 20px;
+	background: url(../assets/images/background.jpg) no-repeat center center;
+	background-size: cover;
+	// min-heigth: 200px;
+	min-height: 600px;
+	height: auto;
+	position: relative;
+}
+
+h3{
+	color: #fff;
+	font-size: 3em;
 }
