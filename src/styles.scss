@@ -1,6 +1,89 @@
 /* You can add global styles to this file, and also import other style files */
-$red: pink;
+/* styles that affect global*/
+
+/* Global color styles*/
+$background: #F2F2F2; // background gray
+// Colors for app
+$red: #F04C4B; // mostly for buttons
+$blue: #607D8B; // mostly for divs
+$green: #9FBA91; // mostly for navigation and text
+$darkBlue: #4A626B; // mostly if blue is already used
+$text: #4D4D4D; // used for copy text
+$subHeading: #595959; // used for subheadings
+$white: #ffffff; //white
+$black: #000000; //black
 
 body{
+	background: $background;
+	padding: 0;
+	margin: 0;
+}
+
+//fonts defaults
+@font-face{
+	src: url(./assets/fonts/AlfaSlabOne-Regular.ttf);
+	font-family: Headings;
+}
+
+@font-face{
+	src: url(./assets/fonts/JosefinSlab-Regular.ttf);
+	font-family: subHeadings;
+}
+
+// get the titles specs (font name, size, font color, letter spacing)
+@mixin titles($font, $size, $color, $letterSpacing){
+	font-family: $font;
+	font-size: $size;
+	color: $color;
+	letter-spacing: $letterSpacing;
+}
+
+// buttons styles
+@mixin buttonStyles($w, $h, $color, $radius, $border, $font){
+	width: $w;
+	height: $h;
+	background: $color;
+	border-radius: $radius;
+	border: 1px solid $border;
+	font-family: $font;
+	font-size: 1.7em;
+	color: $white;
+}
+
+// large main titles
+h1{
+	@include titles(Headings, 2em, $blue, 2px);
+}
+
+// large main titles
+h3{
+	@include titles(subHeadings, 1.5em, $subHeading, 0px);
+}
+
+// copy text
+p{
+	@include titles(sans-serif, 1em, $text, 0px);
+}
+
+// circle navigation buttons
+.circle{
+	@include buttonStyles(50px, 50px, $green, 100px, $green, subHeadings);
+	cursor: pointer;
+}
+
+.circle:hover{
 	background: $red;
+	border: 1px solid $red;
+}
+
+// regular sized buttons
+.normal{
+	@include buttonStyles(10%, 55%, $darkBlue, 10px, $darkBlue, subHeadings);
+	padding: 15px;
+	cursor: pointer;
+}
+
+.normal:hover{
+	background: $blue;
+	border: 1px solid $blue;
 }
