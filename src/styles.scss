@@ -87,3 +87,21 @@ p{
 	background: $blue;
 	border: 1px solid $blue;
 }
+
+// our main wrapper
+#container{
+	width: 1024px;
+	min-height: 100px;
+	height: auto;
+	margin: 0 auto;
+	position: relative;
+}
+
+.heading{
+	background: $blue;
+}
+
+// clear both
+.clear{
+	clear: both;
+}
