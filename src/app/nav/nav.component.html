@@ -12,10 +12,14 @@
     </div>
 </div>
 <div class="navArea">
-    <div class="tooltip" *ngFor="let d of data | keys; let i = index">
-        Assignment: {{ i + 1}}
+    <div class="template" *ngFor="let d of data.assignments | keys; let i = index">
+
+        <div class="tooltip" *ngIf="d.value.show==true">
+            Assignment: {{ d.value.symbol}}
+        </div>
+        <button class="numButtons circle" on-mouseover="d.value.show = !d.value.show;" on-mouseleave="d.value.show = !d.value.show;">
+            {{ d.value.symbol }}
+        </button>
+        
     </div>
-    <button *ngFor="let d of data | keys; let i = index" class="numButtons circle" on-mouseover="d.show = !d.show;" on-mouseleave="d.show = !d.show;">
-        {{ i + 1 }}
-    </button>
 </div>

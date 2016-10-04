@@ -32,7 +32,7 @@ export class NavComponent implements OnInit {
     this.data = this.dataService.getData()
     .subscribe(
        data => {
-        this.data = data.assignments;
+        this.data = data;
        },
        err => console.error(err),
        () => console.log('nav data loaded')
