@@ -1,26 +1,24 @@
-<div class="template" >
+<div class="template">
     <div class="wrappers" *ngFor="let d of data.assignments | keys; let i = index">
-        <div id="titleArea" *ngIf="i==0">
+        <div id="titleArea" *ngIf="i==value">
             <div class="symbol"> {{ d.value.symbol }} </div>
             <h1 class="sub">{{ d.value.title }}</h1>
             <div class="clear"></div>
             <!--clear floats-->
         </div>
-        <div class="workArea" *ngIf="i==0">
+        <div class="workArea" *ngIf="i==value">
             <h3> {{ d.value.sub_title }}</h3>
             <div class="box">
                 <b>Instructions:</b>
                 <p>{{ d.value.instructions }}</p>
             </div>
         </div>
-        <div class="tooltip" *ngIf="d.value.show==true;">
+        <div class="tooltip" *ngIf="d.value.show==true;" [ngStyle]="{'left': d.value.tooltip.left+'px'}">
             Assignment: {{ d.value.symbol}}
         </div>
-        <button class="numButtons circle" on-mouseover="d.value.show = !d.value.show;" on-mouseleave="d.value.show = !d.value.show;">
+        <button class="numButtons circle" id={{i}} on-mouseover="d.value.show = !d.value.show;" on-mouseleave="d.value.show = !d.value.show;" (click)="goTo(i)">
             {{ d.value.symbol }}
         </button>
     </div>
     <div class="navArea">
-</div>
-</div>
-
+    </div>

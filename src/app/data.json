@@ -1,64 +1,60 @@
 {
-	"course_title": "ENV 498 Capstone",
-	"instructions": "",
-	"assignments": [
-		{
-			"type": "instructions",
-			"title": "Instructions",
-			"symbol": "S",
-			"show": false,
-			"sub_title": "Interactive Activity Planner",
-			"due_date": "image.jpg",
-			"percentage": "percent.jpg",
-			"instructions": "The interactive will show information on each assignment due to for this course. Please click each button to view the current assignments and information about them.",
-			"tasks": [
-				{
-					"name": "Task A",
-					"information": "This is the information about Task A from 1"
-				},
-				{
-					"name": "Task B",
-					"information": "This is the information about Task B from 1"
-				}
-			]
-		},
-		{
-			"type": "assignments",
-			"title": "Comprehensive review of coursework assignment",
-			"symbol": 1,
-			"show": false,
-			"sub_title": "Assignment Information",
-			"due_date": "image.jpg",
-			"percentage": "percent.jpg",
-			"tasks": [
-				{
-					"name": "Task A",
-					"information": "This is the information about Task A from 1"
-				},
-				{
-					"name": "Task B",
-					"information": "This is the information about Task B from 1"
-				}
-			]
-		},
-		{
-			"type": "assignments",
-			"title": "Sustainability assignment",
-			"symbol": 2,
-			"show": false,
-			"sub_title": "Assignment Information",
-			"due_date": "image.jpg",
-			"percentage": "percent.jpg",
-			"tasks": [
-				{
-					"name": "Task A",
-					"information": "This is the information about Task A from 2"
-				},
-				{
-					"name": "Task B",
-					"information": "This is the information about Task B from 2"
-				}
-			]
-		}
-	]
+    "course_title": "ENV 498 Capstone",
+    "instructions": "",
+    "assignments": [{
+        "type": "instructions",
+        "title": "Instructions",
+        "symbol": "S",
+        "show": false,
+        "sub_title": "Interactive Activity Planner",
+        "tooltip": {
+            "left": -25
+        },
+        "due_date": "image.jpg",
+        "percentage": "percent.jpg",
+        "instructions": "The interactive will show information on each assignment due to for this course. Please click each button to view the current assignments and information about them.",
+        "tasks": [{
+            "name": "Task A",
+            "information": "This is the information about Task A from 1"
+        }, {
+            "name": "Task B",
+            "information": "This is the information about Task B from 1"
+        }]
+    }, {
+        "type": "assignments",
+        "title": "Comprehensive review of coursework assignment",
+        "symbol": 1,
+        "show": false,
+        "sub_title": "Assignment Information",
+        "tooltip": {
+            "left": 70
+        },
+        "due_date": "image.jpg",
+        "percentage": "percent.jpg",
+        "tasks": [{
+            "name": "Task A",
+            "information": "This is the information about Task A from 1"
+        }, {
+            "name": "Task B",
+            "information": "This is the information about Task B from 1"
+        }]
+    }, {
+        "type": "assignments",
+        "title": "Sustainability assignment",
+        "symbol": 2,
+        "show": false,
+        "sub_title": "Assignment Information",
+        "tooltip": {
+            "left": 170
+        },
+        "due_date": "image.jpg",
+        "percentage": "percent.jpg",
+        "tasks": [{
+            "name": "Task A",
+            "information": "This is the information about Task A from 2"
+        }, {
+            "name": "Task B",
+            "information": "This is the information about Task B from 2"
+        }]
+    }]
 }

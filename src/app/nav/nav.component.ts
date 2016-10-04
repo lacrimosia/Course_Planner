@@ -13,9 +13,11 @@ export class NavComponent implements OnInit {
 
 	public dataInfo;
 	public data;
+	public value;
 
   constructor(private dataService: DataService) {
   	this.dataService = dataService; 
+  	this.value = 0;
   }
 
   ngOnInit() {
@@ -27,6 +29,11 @@ export class NavComponent implements OnInit {
        err => console.error(err),
        () => console.log('nav data loaded')
     );
+  }
+
+  goTo(value){
+  	this.value = value;
+  	return this.value;
   }
 
 }
