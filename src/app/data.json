@@ -12,7 +12,8 @@
 		{
 			"type": "assignments",
 			"title": "Comprehensive review of coursework assignment",
-			"symbol": "1",
+			"symbol": 1,
+			"show": false,
 			"sub_title": "Assignment Information",
 			"due_date": "image.jpg",
 			"percentage": "percent.jpg",
@@ -30,7 +31,8 @@
 		{
 			"type": "assignments",
 			"title": "Sustainability assignment",
-			"symbol": "2",
+			"symbol": 2,
+			"show": false,
 			"sub_title": "Assignment Information",
 			"due_date": "image.jpg",
 			"percentage": "percent.jpg",

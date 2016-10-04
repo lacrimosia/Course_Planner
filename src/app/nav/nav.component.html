@@ -1,17 +1,21 @@
 <div id="titleArea">
-	<div class="symbol"> {{ dataInfo.symbol }} </div> <h1 class="sub">{{ dataInfo.title }}</h1>
-	<div class="clear"></div> <!--clear floats-->
+    <div class="symbol"> {{ dataInfo.symbol }} </div>
+    <h1 class="sub">{{ dataInfo.title }}</h1>
+    <div class="clear"></div>
+    <!--clear floats-->
 </div>
-
 <div class="workArea">
-	<h3> {{ dataInfo.sub_title }}</h3>
-   <div class="box">
-   	<b>Instructions:</b><p>{{ dataInfo.instructions }}</p>
-   </div>
+    <h3> {{ dataInfo.sub_title }}</h3>
+    <div class="box">
+        <b>Instructions:</b>
+        <p>{{ dataInfo.instructions }}</p>
+    </div>
 </div>
-
 <div class="navArea">
-		<button class="numButtons circle" *ngFor="let d of data | keys; let i = index">
-   			{{ i }}
-   		</button>
+    <div class="tooltip" *ngFor="let d of data | keys; let i = index">
+        Assignment: {{ i + 1}}
+    </div>
+    <button *ngFor="let d of data | keys; let i = index" class="numButtons circle" on-mouseover="d.show = !d.show;" on-mouseleave="d.show = !d.show;">
+        {{ i + 1 }}
+    </button>
 </div>

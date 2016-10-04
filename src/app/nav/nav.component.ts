@@ -26,7 +26,7 @@ export class NavComponent implements OnInit {
         this.dataInfo = data.start;
        },
        err => console.error(err),
-       () => console.log('nav data loaded')
+       () => console.log('nav start loaded')
     );
 
     this.data = this.dataService.getData()

@@ -142,3 +142,27 @@ p{
 	width: 1024px;
 }
 
+.tooltip{
+	width: 10%;
+	height: 25px;
+	position: absolute;
+	top: -40px;
+	background: $white;
+	padding: 5px;
+	font-family: sans-serif;
+
+}
+
+.tooltip:after {
+	content: '';
+	display: block;  
+	position: absolute;
+	left: 43%;
+	top: 100%;
+	width: 0;
+	height: 0;
+	border-top: 15px solid $white;
+	border-right: 10px solid transparent;
+	border-bottom: 0 solid transparent;
+	border-left: 10px solid transparent;
+}

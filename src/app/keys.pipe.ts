@@ -8,7 +8,7 @@ export class KeysPipe implements PipeTransform {
     let keys = [];
     for (let key in value) {
       keys.push({key: key, value: value[key]});
-    //  console.log('keys', keys);
+   //  console.log('keys', keys);
     }
     return keys;
   }
