@@ -10,6 +10,9 @@
         "tooltip": {
             "left": -25
         },
+        "buttonPos":{
+        	"left": 20
+        },
         "due_date": "image.jpg",
         "percentage": "percent.jpg",
         "instructions": "The interactive will show information on each assignment due to for this course. Please click each button to view the current assignments and information about them.",
@@ -27,7 +30,10 @@
         "show": false,
         "sub_title": "Assignment Information",
         "tooltip": {
-            "left": 70
+            "left": 60
+        },
+        "buttonPos":{
+        	"left": 150
         },
         "due_date": "image.jpg",
         "percentage": "percent.jpg",
@@ -45,7 +51,10 @@
         "show": false,
         "sub_title": "Assignment Information",
         "tooltip": {
-            "left": 170
+            "left": 100
+        },
+        "buttonPos":{
+        	"left": 300
         },
         "due_date": "image.jpg",
         "percentage": "percent.jpg",
