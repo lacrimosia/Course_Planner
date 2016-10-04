@@ -41,11 +41,15 @@ p, b{
 
 .navArea{
 	position: relative;
-	height: 45px;
+	height: 40px;
 	padding: 20px;
 }
 
 .numButtons{
 	float: left;
 	margin-right: 5%;
+	z-index: 1000;
+	position: relative;
+	top: 15px;
+	left: 20px;
 }

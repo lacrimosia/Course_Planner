@@ -143,13 +143,16 @@ p{
 }
 
 .tooltip{
-	width: 10%;
+	width: 13%;
 	height: 25px;
 	position: absolute;
-	top: -40px;
+	top: 750px;
 	background: $white;
 	padding: 5px;
 	font-family: sans-serif;
+	text-align: center;
+	box-shadow: 3px 3px 4px #333333;
+	z-index: 4000;
 
 }
 

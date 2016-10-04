@@ -1,25 +1,26 @@
-<div id="titleArea">
-    <div class="symbol"> {{ dataInfo.symbol }} </div>
-    <h1 class="sub">{{ dataInfo.title }}</h1>
-    <div class="clear"></div>
-    <!--clear floats-->
-</div>
-<div class="workArea">
-    <h3> {{ dataInfo.sub_title }}</h3>
-    <div class="box">
-        <b>Instructions:</b>
-        <p>{{ dataInfo.instructions }}</p>
-    </div>
-</div>
-<div class="navArea">
-    <div class="template" *ngFor="let d of data.assignments | keys; let i = index">
-
-        <div class="tooltip" *ngIf="d.value.show==true">
+<div class="template" >
+    <div class="wrappers" *ngFor="let d of data.assignments | keys; let i = index">
+        <div id="titleArea" *ngIf="i==0">
+            <div class="symbol"> {{ d.value.symbol }} </div>
+            <h1 class="sub">{{ d.value.title }}</h1>
+            <div class="clear"></div>
+            <!--clear floats-->
+        </div>
+        <div class="workArea" *ngIf="i==0">
+            <h3> {{ d.value.sub_title }}</h3>
+            <div class="box">
+                <b>Instructions:</b>
+                <p>{{ d.value.instructions }}</p>
+            </div>
+        </div>
+        <div class="tooltip" *ngIf="d.value.show==true;">
             Assignment: {{ d.value.symbol}}
         </div>
         <button class="numButtons circle" on-mouseover="d.value.show = !d.value.show;" on-mouseleave="d.value.show = !d.value.show;">
             {{ d.value.symbol }}
         </button>
-        
     </div>
+    <div class="navArea">
 </div>
+</div>
+
