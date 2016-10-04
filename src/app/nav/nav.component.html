@@ -4,7 +4,14 @@
 </div>
 
 <div class="workArea">
+	<h3> {{ dataInfo.sub_title }}</h3>
    <div class="box">
-   		<h3> {{ dataInfo.sub_title }}</h3>
+   	<b>Instructions:</b><p>{{ dataInfo.instructions }}</p>
    </div>
+</div>
+
+<div class="navArea">
+		<button class="numButtons circle" *ngFor="let d of data | keys; let i = index">
+   			{{ i }}
+   		</button>
 </div>

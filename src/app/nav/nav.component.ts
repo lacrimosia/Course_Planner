@@ -12,6 +12,7 @@ import {KeysPipe} from '../keys.pipe';
 export class NavComponent implements OnInit {
 
 	public dataInfo;
+	public data;
 
   constructor(private dataService: DataService) {
   	this.dataService = dataService; 
@@ -23,6 +24,15 @@ export class NavComponent implements OnInit {
     .subscribe(
        data => {
         this.dataInfo = data.start;
+       },
+       err => console.error(err),
+       () => console.log('nav data loaded')
+    );
+
+    this.data = this.dataService.getData()
+    .subscribe(
+       data => {
+        this.data = data.assignments;
        },
        err => console.error(err),
        () => console.log('nav data loaded')

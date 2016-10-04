@@ -129,9 +129,16 @@ p{
 // info box
 .box{
 	background: $white;
-	width: 60%;
+	width: 80%;
 	min-height: 100px;
 	height: auto;
-	margin: 150 auto;
+	margin: 0px auto;
 	position: relative;
+	padding: 10px;
 }
+
+.navArea{
+	background: $blue;
+	width: 1024px;
+}
+
