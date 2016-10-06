@@ -21,11 +21,12 @@
         "show": false,
         "sub_title": "Assignment Information",
         "tooltip": {
-            "left": 60
+            "left": 82
         },
         "buttonPos":{
-        	"left": 108
+        	"left": 130
         },
+        "instructions": "",
         "due_date": "sept-15.png",
         "percentage": "10.png",
         "tasks": [{
@@ -39,10 +40,10 @@
         "show": false,
         "sub_title": "Assignment Information",
         "tooltip": {
-            "left": 100
+            "left": 200
         },
         "buttonPos":{
-        	"left": 216
+        	"left": 250
         },
         "due_date": "29.png",
         "percentage": "10.png",
@@ -61,10 +62,10 @@
         "show": false,
         "sub_title": "Assignment Information",
         "tooltip": {
-            "left": 140
+            "left": 325
         },
         "buttonPos":{
-        	"left": 324
+        	"left": 370
         },
         "due_date": "29.png",
         "percentage": "10.png",
@@ -83,10 +84,10 @@
         "show": false,
         "sub_title": "Assignment Information",
         "tooltip": {
-            "left": 180
+            "left": 450
         },
         "buttonPos":{
-        	"left": 432
+        	"left": 495
         },
         "due_date": "29.png",
         "percentage": "10.png",
