@@ -45,7 +45,7 @@
         <div class="tooltip" *ngIf="d.value.show==true && i==0;" [ngStyle]="{'left': d.value.tooltip.left+'px'}">
             Instructions
         </div>
-        <button class="numButtons circle" id={{i}} on-mouseover="d.value.show = !d.value.show;" on-mouseleave="d.value.show = !d.value.show;" (click)="goTo(i)" [ngStyle]="{'position': 'absolute', 'top': '795px', 'left': d.value.buttonPos.left+'px'}">
+        <button class="numButtons circle" id={{i}} on-mouseover="d.value.show = !d.value.show;" on-mouseleave="d.value.show = !d.value.show;" (click)="goTo(i)" [ngStyle]="{'position': 'absolute', 'top': '795px', 'left': d.value.buttonPos.left+'px'}" [ngClass]="{'highlight': i==value}">
             {{ d.value.symbol }}
         </button>
     </div>

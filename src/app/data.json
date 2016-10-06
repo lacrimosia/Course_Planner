@@ -24,7 +24,7 @@
             "left": 60
         },
         "buttonPos":{
-        	"left": 150
+        	"left": 108
         },
         "due_date": "sept-15.png",
         "percentage": "10.png",
@@ -42,7 +42,138 @@
             "left": 100
         },
         "buttonPos":{
-        	"left": 300
+        	"left": 216
+        },
+        "due_date": "29.png",
+        "percentage": "10.png",
+        "tasks": [{
+            "name": "Task A",
+            "information": "This is the information about Task A from Sustainability"
+        }, {
+            "name": "Task B",
+            "information": "This is the information about Task B from 2"
+        }]
+    },
+{
+        "type": "two",
+        "title": "Environmental Policy Assignment",
+        "symbol": 3,
+        "show": false,
+        "sub_title": "Assignment Information",
+        "tooltip": {
+            "left": 140
+        },
+        "buttonPos":{
+        	"left": 324
+        },
+        "due_date": "29.png",
+        "percentage": "10.png",
+        "tasks": [{
+            "name": "Task A",
+            "information": "This is the information about Task A from Sustainability"
+        }, {
+            "name": "Task B",
+            "information": "This is the information about Task B from 2"
+        }]
+    },
+    {
+        "type": "two",
+        "title": "Collaboration assignment",
+        "symbol": 4,
+        "show": false,
+        "sub_title": "Assignment Information",
+        "tooltip": {
+            "left": 180
+        },
+        "buttonPos":{
+        	"left": 432
+        },
+        "due_date": "29.png",
+        "percentage": "10.png",
+        "tasks": [{
+            "name": "Task A",
+            "information": "This is the information about Task A from Sustainability"
+        }, {
+            "name": "Task B",
+            "information": "This is the information about Task B from 2"
+        }]
+    },
+{
+        "type": "two",
+        "title": "Data Analysis assignment",
+        "symbol": 5,
+        "show": false,
+        "sub_title": "Assignment Information",
+        "tooltip": {
+            "left": 635
+        },
+        "buttonPos":{
+        	"left": 680
+        },
+        "due_date": "29.png",
+        "percentage": "10.png",
+        "tasks": [{
+            "name": "Task A",
+            "information": "This is the information about Task A from Sustainability"
+        }, {
+            "name": "Task B",
+            "information": "This is the information about Task B from 2"
+        }]
+    },
+    {
+        "type": "two",
+        "title": "Communication assignment",
+        "symbol": 6,
+        "show": false,
+        "sub_title": "Assignment Information",
+        "tooltip": {
+            "left": 755
+        },
+        "buttonPos":{
+        	"left": 800
+        },
+        "due_date": "29.png",
+        "percentage": "10.png",
+        "tasks": [{
+            "name": "Task A",
+            "information": "This is the information about Task A from Sustainability"
+        }, {
+            "name": "Task B",
+            "information": "This is the information about Task B from 2"
+        }]
+    },
+{
+        "type": "two",
+        "title": "Electronic Portfolio assignment",
+        "symbol": 7,
+        "show": false,
+        "sub_title": "Assignment Information",
+        "tooltip": {
+            "left": 855
+        },
+        "buttonPos":{
+        	"left": 900
+        },
+        "due_date": "29.png",
+        "percentage": "10.png",
+        "tasks": [{
+            "name": "Task A",
+            "information": "This is the information about Task A from Sustainability"
+        }, {
+            "name": "Task B",
+            "information": "This is the information about Task B from 2"
+        }]
+    },{
+        "type": "two",
+        "title": "Presentation of Portfolio",
+        "symbol": 8,
+        "show": false,
+        "sub_title": "Assignment Information",
+        "tooltip": {
+            "left": 950
+        },
+        "buttonPos":{
+        	"left": 995
         },
         "due_date": "29.png",
         "percentage": "10.png",
