@@ -10,7 +10,7 @@ public show;
   }
 
   getData() {
-  	 return this.http.get('./app/data.json')
+  	 return this.http.get('assets/data.json')
   	       .map((res:Response) => res.json());
   }
 
