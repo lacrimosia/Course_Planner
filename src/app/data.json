@@ -24,7 +24,7 @@
             "information": "This is the information about Task B from 1"
         }]
     }, {
-        "type": "assignments",
+        "type": "one",
         "title": "Comprehensive review of coursework assignment",
         "symbol": 1,
         "show": false,
@@ -45,7 +45,7 @@
             "information": "This is the information about Task B from 1"
         }]
     }, {
-        "type": "assignments",
+        "type": "two",
         "title": "Sustainability assignment",
         "symbol": 2,
         "show": false,

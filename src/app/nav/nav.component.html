@@ -1,16 +1,34 @@
 <div class="template">
     <div class="wrappers" *ngFor="let d of data.assignments | keys; let i = index">
+        <!-- title and subtitle with symbol -->
         <div id="titleArea" *ngIf="i==value">
             <div class="symbol"> {{ d.value.symbol }} </div>
-            <h1 class="sub">{{ d.value.title }}</h1>
+            <h1 class="sub" *ngIf="i!=1">{{ d.value.title }}</h1>
+            <!--show if short text -->
+            <h1 class="subForLarge" *ngIf="i==1">{{ d.value.title }}</h1>
+            <!--show if long text -->
             <div class="clear"></div>
             <!--clear floats-->
         </div>
         <div class="workArea" *ngIf="i==value">
             <h3> {{ d.value.sub_title }}</h3>
             <div class="box">
-                <b>Instructions:</b>
-                <p>{{ d.value.instructions }}</p>
+                <!-- only shown in the intstructions page -->
+                <div class="intro" *ngIf="i==0">
+                    <b>Instructions:</b>
+                    <p>{{ d.value.instructions }}</p>
+                </div>
+                <!-- show this only when clicking assignments one -->
+                <div class="oneTasks" *ngIf="d.value.type=='one'">
+                    <b>One Task</b>
+                    <p>One tasks here</p>
+                </div>
+
+                <!-- show this only when clicking assignments two -->
+                <div class="twoTasks" *ngIf="d.value.type=='two'">
+                    <b>Two Task</b>
+                    <p>Two assignments here</p>
+                </div>
             </div>
         </div>
         <div class="tooltip" *ngIf="d.value.show==true;" [ngStyle]="{'left': d.value.tooltip.left+'px'}">

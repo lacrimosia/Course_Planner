@@ -10,8 +10,6 @@ import {KeysPipe} from '../keys.pipe';
   providers: [DataService]
 })
 export class NavComponent implements OnInit {
-
-	public dataInfo;
 	public data;
 	public value;
 
