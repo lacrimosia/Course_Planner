@@ -29,13 +29,15 @@ export class NavComponent implements OnInit {
     );
   }
 
+  // go to link onclick
   goTo(value){
   	this.value = value;
   	return this.value;
   }
 
-  imageSrc(value){
-  	return "../../assets/images/" + value;
+  // show the correct picture
+  imageSrc(picture){
+  	return "../../assets/images/" + picture;
   }
 
 }

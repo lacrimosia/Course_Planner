@@ -53,8 +53,8 @@
         "buttonPos":{
         	"left": 300
         },
-        "due_date": "image.jpg",
-        "percentage": "percent.jpg",
+        "due_date": "29.png",
+        "percentage": "10.png",
         "tasks": [{
             "name": "Task A",
             "information": "This is the information about Task A from Sustainability"

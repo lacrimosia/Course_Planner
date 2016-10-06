@@ -21,7 +21,7 @@
                 <!-- show this only when clicking assignments one -->
                 <div class="oneTasks" *ngIf="d.value.type=='one'">
                     <h2 class="titles">Task</h2>
-                 <!-- <img [src]="./app/assets/images/+d.value.due_date"/> -->
+                 <img [src]="imageSrc(d.value.due_date)" class="resize"/>
                   <img [src]="imageSrc(d.value.percentage)" class="resize"/>
                     <!-- show all the tasks in a list -->
                     <p *ngFor="let t of d.value.tasks | keys; let x = index">
@@ -32,6 +32,8 @@
                 <!-- show this only when clicking assignments two -->
                 <div class="twoTasks" *ngIf="d.value.type=='two'">
                 <h2 class="titles">Tasks</h2>
+                <img [src]="imageSrc(d.value.due_date)" class="resize"/>
+                  <img [src]="imageSrc(d.value.percentage)" class="resize"/>
                     <p *ngFor="let t of d.value.tasks | keys; let x = index">
                         {{ t.value.information }}
                     </p>
