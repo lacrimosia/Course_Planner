@@ -109,10 +109,10 @@
         "show": false,
         "sub_title": "Assignment Information",
         "tooltip": {
-            "left": 635
+            "left": 570
         },
         "buttonPos":{
-        	"left": 680
+        	"left": 620
         },
         "instructions": "The purpose of this assignment is to present an example of work that demonstrates numeracy. This assignment relates to being able to use knowledge and skills related to analyzing data.",
         "due_date": "29.png",
@@ -132,10 +132,10 @@
         "show": false,
         "sub_title": "Assignment Information",
         "tooltip": {
-            "left": 755
+            "left": 700
         },
         "buttonPos":{
-        	"left": 800
+        	"left": 745
         },
         "instructions": "The purpose of this assignment is to present an example of work that demonstrates awareness of multiple audiences. This assignment relates to being able to communicate typically complex information about an environmental issue to multiple audiences. It is based upon learning outcomes for the major and course.",
         "due_date": "29.png",
@@ -155,10 +155,10 @@
         "show": false,
         "sub_title": "Assignment Information",
         "tooltip": {
-            "left": 855
+            "left": 820
         },
         "buttonPos":{
-        	"left": 900
+        	"left": 870
         },
         "instructions": "The purpose of this assignment is to create an electronic portfolio of your work in college that exemplifies each learning outcome in your degree.",
         "due_date": "29.png",
@@ -174,10 +174,10 @@
         "show": false,
         "sub_title": "Assignment Information",
         "tooltip": {
-            "left": 950
+            "left": 948
         },
         "buttonPos":{
-        	"left": 995
+        	"left": 993
         },
         "instructions": "The purpose of this assignment is to present your portfolio created in this course to your classmates and guests.",
         "due_date": "29.png",
