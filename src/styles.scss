@@ -62,7 +62,7 @@ h3{
 
 // copy text
 p{
-	@include titles(sans-serif, 1em, $text, 0px);
+	@include titles(sans-serif, 0.9em, $text, 0px);
 }
 
 // circle navigation buttons
@@ -132,10 +132,10 @@ p{
 	width: 80%;
 	min-height: 100px;
 	height: auto;
-	margin: 25px auto;
+	margin: 15px auto;
 	position: relative;
-	padding: 10px;
-	box-shadow: 3px 3px 5px #333333;
+	padding: 15px;
+	// box-shadow: 3px 3px 5px #333333;
 }
 
 .navArea{
@@ -173,6 +173,8 @@ p{
 
 .titles{
 	font-family: subHeadings;
+	font-weight: bold;
+	color: $darkBlue;
 }
 
 .highlight{
@@ -182,4 +184,26 @@ p{
 
 #line{
 	border-bottom: 1px solid $white;
+}
+
+.select{
+	background: $darkBlue;
+	color: $white;
+	font-family: subHeadings;
+	font-size: 1.5em;
+	width: 45%;
+	height: 20%;
+	text-align: center;
+	border: none;
+	padding: 15px;
+	cursor: pointer;
+}
+
+.select:hover{
+	background: $blue;
+}
+
+hr{
+	color: $blue;
+	opacity: 0.4;
 }
