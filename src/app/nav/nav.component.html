@@ -44,7 +44,7 @@
                     <div *ngFor="let t of d.value.tasks | keys; let x = index" class="options">
                         <h2 class="titles">{{ t.value.name }}</h2>
                         <p>{{ t.value.information }}</p>
-                        <button class="select"><i class="fa fa-times"></i> Select</button>
+                        <button class="select" (click)="select=!select" [ngClass]="{'yes': !select, 'no': select}"><i class="fa fa-times"></i> Select</button>
                     </div>
                     <div class="clear"></div>
                     <!-- clear floats -->

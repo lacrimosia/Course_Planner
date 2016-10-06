@@ -200,7 +200,7 @@ p{
 }
 
 .select:hover{
-	background: $blue;
+//	background: $blue;
 }
 
 hr{
@@ -232,4 +232,12 @@ hr{
 	border-right: 60px solid transparent;
 	border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
+}
+
+.yes{
+	background: $green;
+}
+
+.no{
+	background: $red;
 }
