@@ -1,5 +1,10 @@
 <div class="template">
     <div class="wrappers" *ngFor="let d of data.assignments | keys; let i = index">
+
+    <!-- previous and next buttons -->
+        <button id="next" (click)="next(value)" *ngIf="value<=i">Next</button>
+        <button id="prev" (click)="prev(value)" *ngIf="value>i">Prev</button>
+
         <!-- title and subtitle with symbol -->
         <div id="titleArea" *ngIf="i==value">
             <div class="symbol"> {{ d.value.symbol }} </div>

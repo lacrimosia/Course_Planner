@@ -40,4 +40,16 @@ export class NavComponent implements OnInit {
   	return "../../assets/images/" + picture;
   }
 
+  // next button
+  next(value){
+  	this.value = value;
+  	this.value++;
+  }
+
+  // Prev button
+  prev(value){
+  	this.value = value;
+  	this.value--;
+  }
+
 }
