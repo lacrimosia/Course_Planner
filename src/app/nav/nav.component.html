@@ -52,7 +52,7 @@
                 </div>
             </div>
         </div>
-        <div class="tooltip" *ngIf="d.value.show==true;" [ngStyle]="{'left': d.value.tooltip.left+'px'}">
+        <div class="tooltip" *ngIf="i==value" [ngStyle]="{'left': d.value.tooltip.left+'px'}">
             Assignment: {{ d.value.symbol}}
         </div>
         <div class="tooltip" *ngIf="d.value.show==true && i==0;" [ngStyle]="{'left': d.value.tooltip.left+'px'}">
