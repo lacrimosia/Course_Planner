@@ -11,7 +11,7 @@ import {KeysPipe} from '../keys.pipe';
 })
 export class NavComponent implements OnInit {
 	public data;
-	public value;
+	public value:number;
 
   constructor(private dataService: DataService) {
   	this.dataService = dataService; 
@@ -32,6 +32,10 @@ export class NavComponent implements OnInit {
   goTo(value){
   	this.value = value;
   	return this.value;
+  }
+
+  imageSrc(value){
+  	return "../../assets/images/" + value;
   }
 
 }

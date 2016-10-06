@@ -35,14 +35,11 @@
         "buttonPos":{
         	"left": 150
         },
-        "due_date": "image.jpg",
-        "percentage": "percent.jpg",
+        "due_date": "sept-15.png",
+        "percentage": "10.png",
         "tasks": [{
             "name": "Task A",
-            "information": "This is the information about Task A from 1"
-        }, {
-            "name": "Task B",
-            "information": "This is the information about Task B from 1"
+            "information": "This is the information about Task A from Comprehensive"
         }]
     }, {
         "type": "two",
@@ -60,7 +57,7 @@
         "percentage": "percent.jpg",
         "tasks": [{
             "name": "Task A",
-            "information": "This is the information about Task A from 2"
+            "information": "This is the information about Task A from Sustainability"
         }, {
             "name": "Task B",
             "information": "This is the information about Task B from 2"
