@@ -207,3 +207,29 @@ hr{
 	color: $blue;
 	opacity: 0.4;
 }
+
+#prev{
+	border-right: 60px solid $red;
+	border-left: 60px solid transparent;
+	cursor: pointer;
+}
+
+#next{
+	border-left: 60px solid $red;
+	border-right: 60px solid transparent;
+	cursor: pointer;
+}
+
+#prev:hover{
+	border-right: 60px solid $blue;
+	border-left: 60px solid transparent;
+	border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+}
+
+#next:hover{
+	border-left: 60px solid $blue;
+	border-right: 60px solid transparent;
+	border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+}

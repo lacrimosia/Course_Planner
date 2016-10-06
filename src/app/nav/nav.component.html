@@ -2,8 +2,8 @@
     <div class="wrappers" *ngFor="let d of data.assignments | keys; let i = index">
 
     <!-- previous and next buttons -->
-        <button id="next" (click)="next(value)" *ngIf="value<=i">Next</button>
-        <button id="prev" (click)="prev(value)" *ngIf="value>i">Prev</button>
+        <button id="next" (click)="next(value)" *ngIf="value<i"></button>
+        <button id="prev" (click)="prev(value)" *ngIf="value>i"></button>
 
         <!-- title and subtitle with symbol -->
         <div id="titleArea" *ngIf="i==value">

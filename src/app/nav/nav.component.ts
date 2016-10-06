@@ -12,10 +12,12 @@ import {KeysPipe} from '../keys.pipe';
 export class NavComponent implements OnInit {
 	public data;
 	public value:number;
+	public selected:boolean;
 
   constructor(private dataService: DataService) {
   	this.dataService = dataService; 
   	this.value = 0;
+  	this.selected = false;
   }
 
   ngOnInit() {
