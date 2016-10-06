@@ -1,10 +1,8 @@
 <div class="template">
     <div class="wrappers" *ngFor="let d of data.assignments | keys; let i = index">
-
-    <!-- previous and next buttons -->
+        <!-- previous and next buttons -->
         <button id="next" (click)="next(value)" *ngIf="value<i"></button>
         <button id="prev" (click)="prev(value)" *ngIf="value>i"></button>
-
         <!-- title and subtitle with symbol -->
         <div id="titleArea" *ngIf="i==value">
             <div class="symbol"> {{ d.value.symbol }} </div>
@@ -28,7 +26,7 @@
                     <h2 class="titles">Assignment Information</h2>
                     <p> {{ d.value.instructions }} </p>
                     <hr />
-                   <!-- <img [src]="imageSrc(d.value.due_date)" class="resize" />
+                    <!-- <img [src]="imageSrc(d.value.due_date)" class="resize" />
                     <img [src]="imageSrc(d.value.percentage)" class="resize" /> -->
                     <!-- show all the tasks in a list -->
                     <div *ngFor="let t of d.value.tasks | keys; let x = index">
@@ -41,22 +39,23 @@
                     <h2 class="titles">Assignment Information</h2>
                     <p> {{ d.value.instructions }} </p>
                     <hr />
-                   <!-- <img [src]="imageSrc(d.value.due_date)" class="resize" />
+                    <!-- <img [src]="imageSrc(d.value.due_date)" class="resize" />
                     <img [src]="imageSrc(d.value.percentage)" class="resize" /> -->
                     <div *ngFor="let t of d.value.tasks | keys; let x = index" class="options">
                         <h2 class="titles">{{ t.value.name }}</h2>
                         <p>{{ t.value.information }}</p>
                         <button class="select"><i class="fa fa-times"></i> Select</button>
                     </div>
-                    <div class="clear"></div><!-- clear floats -->
+                    <div class="clear"></div>
+                    <!-- clear floats -->
                 </div>
             </div>
         </div>
         <div class="tooltip" *ngIf="i==value" [ngStyle]="{'left': d.value.tooltip.left+'px'}">
-            Assignment: {{ d.value.symbol}}
+            <i class="fa fa-book"></i> Assignment: {{ d.value.symbol}}
         </div>
-        <div class="tooltip" *ngIf="d.value.show==true && i==0;" [ngStyle]="{'left': d.value.tooltip.left+'px'}">
-            Instructions
+        <div class="tooltip" *ngIf="i==0 && value==0" [ngStyle]="{'left': d.value.tooltip.left+'px'}">
+          <i class="fa fa-book"></i>  Instructions
         </div>
         <button class="numButtons circle" id={{i}} on-mouseover="d.value.show = !d.value.show;" on-mouseleave="d.value.show = !d.value.show;" (click)="goTo(i)" [ngStyle]="{'position': 'absolute', 'top': '795px', 'left': d.value.buttonPos.left+'px'}" [ngClass]="{'highlight': i==value}">
             {{ d.value.symbol }}
