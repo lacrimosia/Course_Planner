@@ -13,16 +13,7 @@
         "buttonPos":{
         	"left": 20
         },
-        "due_date": "image.jpg",
-        "percentage": "percent.jpg",
-        "instructions": "The interactive will show information on each assignment due to for this course. Please click each button to view the current assignments and information about them.",
-        "tasks": [{
-            "name": "Task A",
-            "information": "This is the information about Task A from 1"
-        }, {
-            "name": "Task B",
-            "information": "This is the information about Task B from 1"
-        }]
+        "instructions": "The interactive will show information on each assignment due to for this course. Please click each button to view the current assignments and information about them."
     }, {
         "type": "one",
         "title": "Comprehensive review of coursework assignment",

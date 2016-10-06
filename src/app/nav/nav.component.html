@@ -21,19 +21,18 @@
                 <!-- show this only when clicking assignments one -->
                 <div class="oneTasks" *ngIf="d.value.type=='one'">
                     <h2 class="titles">Task</h2>
-                 <img [src]="imageSrc(d.value.due_date)" class="resize"/>
-                  <img [src]="imageSrc(d.value.percentage)" class="resize"/>
+                    <img [src]="imageSrc(d.value.due_date)" class="resize" />
+                    <img [src]="imageSrc(d.value.percentage)" class="resize" />
                     <!-- show all the tasks in a list -->
                     <p *ngFor="let t of d.value.tasks | keys; let x = index">
                         {{ t.value.information }}
                     </p>
                 </div>
-
                 <!-- show this only when clicking assignments two -->
                 <div class="twoTasks" *ngIf="d.value.type=='two'">
-                <h2 class="titles">Tasks</h2>
-                <img [src]="imageSrc(d.value.due_date)" class="resize"/>
-                  <img [src]="imageSrc(d.value.percentage)" class="resize"/>
+                    <h2 class="titles">Tasks</h2>
+                    <img [src]="imageSrc(d.value.due_date)" class="resize" />
+                    <img [src]="imageSrc(d.value.percentage)" class="resize" />
                     <p *ngFor="let t of d.value.tasks | keys; let x = index">
                         {{ t.value.information }}
                     </p>
@@ -43,9 +42,13 @@
         <div class="tooltip" *ngIf="d.value.show==true;" [ngStyle]="{'left': d.value.tooltip.left+'px'}">
             Assignment: {{ d.value.symbol}}
         </div>
+        <div class="tooltip" *ngIf="d.value.show==true && i==0;" [ngStyle]="{'left': d.value.tooltip.left+'px'}">
+            Instructions
+        </div>
         <button class="numButtons circle" id={{i}} on-mouseover="d.value.show = !d.value.show;" on-mouseleave="d.value.show = !d.value.show;" (click)="goTo(i)" [ngStyle]="{'position': 'absolute', 'top': '795px', 'left': d.value.buttonPos.left+'px'}">
             {{ d.value.symbol }}
         </button>
     </div>
     <div class="navArea">
+        <div id="line"></div>
     </div>
