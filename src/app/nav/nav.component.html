@@ -61,10 +61,10 @@
                 </div>
             </div>
         </div>
-        <div class="tooltip" *ngIf="i==value" [ngStyle]="{'left': d.value.tooltip.left+'px'}">
+        <div class="tooltip" *ngIf="d.value.show==true" [ngStyle]="{'left': d.value.tooltip.left+'px'}">
             <i class="fa fa-book"></i> Assignment: {{ d.value.symbol}}
         </div>
-        <div class="tooltip" *ngIf="i==0 && value==0" [ngStyle]="{'left': d.value.tooltip.left+'px'}">
+        <div class="tooltip" *ngIf="d.value.show==true && i==0;" [ngStyle]="{'left': d.value.tooltip.left+'px'}">
           <i class="fa fa-book"></i>  Instructions
         </div>
         <button class="numButtons circle" id={{i}} on-mouseover="d.value.show = !d.value.show;" on-mouseleave="d.value.show = !d.value.show;" (click)="goTo(i)" [ngStyle]="{'position': 'absolute', 'top': '787px', 'left': d.value.buttonPos.left+'px'}" [ngClass]="{'highlight': i==value}">
