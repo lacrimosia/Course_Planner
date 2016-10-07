@@ -1,5 +1,15 @@
 <div class="template">
     <div class="wrappers" *ngFor="let d of data.assignments | keys; let i = index">
+
+      <div class="heading" *ngIf="i==value">
+      <!--	<h1>{{ d.value.course_title }}</h1> -->
+      	<button class="circle">P</button>
+      	<button class="circle">R</button>
+      	<button class="circle">H</button>
+      	<div class="clear"></div> <!--clear floats-->
+      </div>
+
+
         <!-- previous and next buttons -->
         <button id="next" (click)="next(value)" *ngIf="value<i"></button>
         <button id="prev" (click)="prev(value)" *ngIf="value>i"></button>

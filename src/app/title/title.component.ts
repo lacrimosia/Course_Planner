@@ -12,9 +12,11 @@ import {Hotkey} from 'angular2-hotkeys';
 })
 export class TitleComponent implements OnInit {
 	public titleData;
+  public value: number;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) {
   	this.dataService = dataService;
+    this.value = this.dataService.value;
   }
 
   ngOnInit() {
@@ -30,7 +32,13 @@ export class TitleComponent implements OnInit {
 
     // refresh the app
     this._hotkeysService.add(new Hotkey('r', (event: KeyboardEvent): boolean => {
-        location.reload();
+        this.reload();
+        return false; // Prevent bubbling
+    }));
+
+    // go back to screen one for help without refresh
+    this._hotkeysService.add(new Hotkey('h', (event: KeyboardEvent): boolean => {
+        this.help();
         return false; // Prevent bubbling
     }));
 
@@ -38,6 +46,11 @@ export class TitleComponent implements OnInit {
 
   reload(){
   	location.reload();
+  }
+
+  help(){
+    this.value = 0;
+    return this.value;
   }
 
 }

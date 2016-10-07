@@ -108,7 +108,7 @@ p{
 }
 
 .heading{
-	background: $blue;
+	background: $blue !important;
 }
 
 // clear both
@@ -159,7 +159,7 @@ p{
 
 .tooltip:after {
 	content: '';
-	display: block;  
+	display: block;
 	position: absolute;
 	left: 43%;
 	top: 100%;

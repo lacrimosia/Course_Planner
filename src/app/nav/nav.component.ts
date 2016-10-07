@@ -19,10 +19,8 @@ export class NavComponent implements OnInit {
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) {
   	// this.dataService = dataService;
-  	this.value = 0;
+  	this.value = this.dataService.value;
   	this.selected = false;
-
-
   }
 
   ngOnInit() {
