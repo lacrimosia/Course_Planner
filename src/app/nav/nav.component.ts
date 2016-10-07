@@ -100,7 +100,7 @@ export class NavComponent implements OnInit {
   }
 
 // add selections to printing array
-addSelections(selected, title, option, description){
+addSelections(selected, title, option, description, index){
   if(selected==true){
     this.content = {
       Title: title,
@@ -108,9 +108,9 @@ addSelections(selected, title, option, description){
       Description: description
     };
     this.contentList.push(this.content);
-    console.log("data for content", this.contentList.length);
+    console.log("button selected", selected);
   }else{
-    console.log("Nothing added");
+    this.contentList.pop();
   }
 }
 

@@ -30,7 +30,7 @@
         "due_date": "sept-15.png",
         "percentage": "10.png",
         "tasks": [{
-            "name": "Task A",
+            "name": "Option A",
             "information": "To complete this assignment you will write an essay about what you have learned in college and how this prepares you for life after college as an environmentalist. See course assignment posted online for details."
         }]
     }, {
@@ -52,12 +52,12 @@
           "title": "Sustainability assignment",
             "name": "Option A",
             "information": "Select an example of previous coursework that illustrates the learning outcome. Prepare the example to be attached and uploaded as part of the essay. Write a reflection essay that makes the case why it illustrates the learning outcome. Your essay will contain an introductory paragraph with a thesis statement. It will have approximately three paragraphs with information that backs up thesis. Finally, it will have a conclusion that completes the argument begun in the introduction as well as provides the reader a final broad statement that can persuade your audience you know how to apply the concept of sustainability to a community.",
-            "selectA": false
+            "select": false
         }, {
           "title": "Sustainability assignment",
             "name": "Option B",
             "information": "Write an essay about the Las Vegas area and sustainability. Your essay will need to contain an introductory paragraph with a thesis statement, at least five interior paragraphs of information backing up thesis statement and ends with a paragraph that wraps up the argument.",
-            "selectB": false
+            "select": false
         }]
     },
 {
@@ -79,12 +79,12 @@
           "title": "Environmental Policy Assignment",
             "name": "Option A",
             "information": "Select an example of previous coursework that illustrates the learning outcome on environmental policy and write a reflection essay.",
-            "selectA": false
+            "select": false
         }, {
           "title": "Environmental Policy Assignment",
             "name": "Option B",
             "information": "Write an essay about Las Vegas area and water.",
-            "selectB": false
+            "select": false
         }]
     },
     {
@@ -106,12 +106,12 @@
           "title": "Collaboration assignment",
             "name": "Option A",
             "information": "Select an example of previous coursework that illustrates the learning outcome on collaboration and write a reflection essay.",
-            "selectA": false
+            "select": false
         }, {
           "title": "Collaboration assignment",
             "name": "Option B",
             "information": "Write an essay about successful collaboration and environmental problem solving.",
-            "selectB": false
+            "select": false
         }]
     },
 {
@@ -133,12 +133,12 @@
           "title": "Data Analysis assignment",
             "name": "Option A",
             "information": "Select an example of previous coursework that illustrates the learning outcome on numeracy and write a reflection essay.",
-            "selectA": false
+            "select": false
         }, {
           "title": "Data Analysis assignment",
             "name": "Option B",
             "information": "Complete assignment relating to an analysis of Las Vegas metropolitan area using a data set provided. Present work in essay format.",
-            "selectB": false
+            "select": false
         }]
     },
     {
@@ -160,12 +160,12 @@
           "title": "Communication assignment",
             "name": "Option A",
             "information": "Select an example of previous coursework that illustrates learning outcomes related to communication and sharing findings with others. Prepare a presentation and give it to the class.",
-            "selectA": false
+            "select": false
         }, {
           "title": "Communication assignment",
             "name": "Option B",
             "information": "Identify a complex environmental issue and prepare two five-minute presentations for two different groups. Prepare each presentation and give both presentations to the class.",
-            "selectB": false
+            "select": false
         }]
     },
 {
