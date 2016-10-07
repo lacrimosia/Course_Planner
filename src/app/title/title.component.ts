@@ -1,18 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService} from '../data.service';
 import { Observable } from 'rxjs/Rx';
+import {HotkeysService} from 'angular2-hotkeys';
+import {Hotkey} from 'angular2-hotkeys';
 
 @Component({
   selector: 'app-title',
   templateUrl: './title.component.html',
   styleUrls: ['./title.component.scss'],
-  providers: [DataService]
+  providers: [DataService, HotkeysService]
 })
 export class TitleComponent implements OnInit {
 	public titleData;
 
-  constructor(private dataService: DataService) {
-  	this.dataService = dataService; 
+  constructor(private dataService: DataService, private _hotkeysService: HotkeysService) {
+  	this.dataService = dataService;
   }
 
   ngOnInit() {
@@ -25,6 +27,12 @@ export class TitleComponent implements OnInit {
        err => console.error(err),
        () => console.log('tile and information loaded')
     );
+
+    // refresh the app
+    this._hotkeysService.add(new Hotkey('r', (event: KeyboardEvent): boolean => {
+        location.reload();
+        return false; // Prevent bubbling
+    }));
 
   }
 
