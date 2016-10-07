@@ -1,20 +1,31 @@
 <div class="template">
     <div class="wrappers" *ngFor="let d of data.assignments | keys; let i = index">
 
+      <div class="print" *ngIf="print==true && i==value">
+        <h1>Assignment's Path</h1>
+        <button id="hidePrint" (click)="hidePrintContent()">Hide Print</button>
+        <div class="contentAreaPrint" *ngFor="let p of contentList | keys; let x = index">
+          <h1> {{ p.value.Title }} </h1>
+          <h2> {{ p.value.Option }} </h2>
+          <p> {{ p.value.Description }} </p>
+        </div>
+      </div>
+
       <div class="heading" *ngIf="i==value">
       <!--	<h1>{{ d.value.course_title }}</h1> -->
-      	<button class="circle">P</button>
-      	<button class="circle">R</button>
-      	<button class="circle" (click)="help()">H</button>
-      	<div class="clear"></div> <!--clear floats-->
+      	    <button class="circle" (click)="printContent()">P</button>
+      	    <button class="circle">R</button>
+      	    <button class="circle" (click)="help()">H</button>
+      	    <div class="clear"></div> <!--clear floats-->
       </div>
 
 
+
         <!-- previous and next buttons -->
-        <button id="next" (click)="next(value)" *ngIf="value<i"></button>
-        <button id="prev" (click)="prev(value)" *ngIf="value>i"></button>
+        <button id="next" (click)="next(value)" *ngIf="value<i && print==false"></button>
+        <button id="prev" (click)="prev(value)" *ngIf="value>i && print==false"></button>
         <!-- title and subtitle with symbol -->
-        <div id="titleArea" *ngIf="i==value">
+        <div id="titleArea" *ngIf="i==value && print==false">
             <div class="symbol"> {{ d.value.symbol }} </div>
             <h1 class="sub" *ngIf="i!=1">{{ d.value.title }}</h1>
             <!--show if short text -->
@@ -23,7 +34,7 @@
             <div class="clear"></div>
             <!--clear floats-->
         </div>
-        <div class="workArea" *ngIf="i==value">
+        <div class="workArea" *ngIf="i==value && print==false">
             <h3 *ngIf="i==0"> {{ d.value.sub_title }}</h3>
             <div class="box">
                 <!-- only shown in the intstructions page -->
@@ -54,7 +65,7 @@
                     <div *ngFor="let t of d.value.tasks | keys; let x = index" class="options">
                         <h2 class="titles">{{ t.value.name }}</h2>
                         <p>{{ t.value.information }}</p>
-                        <button class="select" (click)="select=!select" [ngClass]="{'yes': !select, 'no': select}"><i class="fa fa-times"></i> Select</button>
+                        <button class="select" (click)="t.value.select = !t.value.select; addSelections(t.value.select, t.value.title, t.value.name, t.value.information);" [ngClass]="{'yes': t.value.select, 'no': !t.value.select}"><i class="fa fa-times"></i> Select</button>
                     </div>
                     <div class="clear"></div>
                     <!-- clear floats -->
@@ -67,10 +78,12 @@
         <div class="tooltip" *ngIf="d.value.show==true && i==0;" [ngStyle]="{'left': d.value.tooltip.left+'px'}">
           <i class="fa fa-book"></i>  Instructions
         </div>
-        <button class="numButtons circle" id={{i}} on-mouseover="d.value.show = !d.value.show;" on-mouseleave="d.value.show = !d.value.show;" (click)="goTo(i)" [ngStyle]="{'position': 'absolute', 'top': '787px', 'left': d.value.buttonPos.left+'px'}" [ngClass]="{'highlight': i==value}">
+        <button class="numButtons circle" id={{i}} *ngIf="print==false" on-mouseover="d.value.show = !d.value.show;" on-mouseleave="d.value.show = !d.value.show;" (click)="goTo(i)" [ngStyle]="{'position': 'absolute', 'top': '787px', 'left': d.value.buttonPos.left+'px'}" [ngClass]="{'highlight': i==value}">
             {{ d.value.symbol }}
         </button>
+
+
     </div>
-    <div class="navArea">
+    <div class="navArea" *ngIf="print==false">
         <div id="line"></div>
     </div>

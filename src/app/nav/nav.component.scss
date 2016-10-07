@@ -116,3 +116,16 @@ button{
 	padding: 0px 20px 0px 20px;
 	position: relative;
 }
+
+.print{
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  top: 100px;
+}
+
+.contentAreaPrint{
+  width: 100%;
+  height: auto;
+  position: relative;
+}

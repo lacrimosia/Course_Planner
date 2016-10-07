@@ -16,11 +16,16 @@ export class NavComponent implements OnInit {
 	public value:number;
 	public selected:boolean;
   public amount: number;
+  public content;
+  public contentList;
+  public print;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) {
   	// this.dataService = dataService;
   	this.value = this.dataService.value;
   	this.selected = false;
+    this.contentList = [];
+    this.print = false;
   }
 
   ngOnInit() {
@@ -35,6 +40,7 @@ export class NavComponent implements OnInit {
        () => console.log('nav data loaded')
 
     );
+
 
 
     // left keyboard shortcut
@@ -88,10 +94,32 @@ export class NavComponent implements OnInit {
   	this.value--;
   }
 
+// help button
   help(){
     this.value = 0;
   }
 
+// add selections to printing array
+addSelections(selected, title, option, description){
+  if(selected==true){
+    this.content = {
+      Title: title,
+      Option: option,
+      Description: description
+    };
+    this.contentList.push(this.content);
+    console.log("data for content", this.contentList.length);
+  }else{
+    console.log("Nothing added");
+  }
+}
 
+printContent(){
+  this.print = true;
+}
+
+hidePrintContent(){
+  this.print = false;
+}
 
 }
