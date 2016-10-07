@@ -57,6 +57,12 @@ export class NavComponent implements OnInit {
         return false; // Prevent bubbling
     }));
 
+    // help keyboard shortcut
+        this._hotkeysService.add(new Hotkey('h', (event: KeyboardEvent): boolean => {
+          this.help();
+            return false; // Prevent bubbling
+        }));
+
   }
 
   // go to link onclick
