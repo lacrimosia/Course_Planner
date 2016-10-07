@@ -8,6 +8,8 @@ import { TitleComponent } from './title/title.component';
 import { NavComponent } from './nav/nav.component';
 import { KeysPipe } from './keys.pipe';
 
+import {HotkeyModule} from 'angular2-hotkeys';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,8 @@ import { KeysPipe } from './keys.pipe';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    HotkeyModule
   ],
   providers: [],
   bootstrap: [AppComponent]
