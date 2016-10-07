@@ -19,6 +19,7 @@ export class NavComponent implements OnInit {
   public content;
   public contentList;
   public print;
+  public assignments;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) {
   	// this.dataService = dataService;
@@ -34,14 +35,13 @@ export class NavComponent implements OnInit {
        data => {
         this.data = data;
         this.amount = this.data.assignments.length;
+        this.assignments = this.data.assignments;
       //  console.log("the data list", this.amount);
        },
        err => console.error(err),
        () => console.log('nav data loaded')
 
     );
-
-
 
     // left keyboard shortcut
     this._hotkeysService.add(new Hotkey('right', (event: KeyboardEvent): boolean => {
