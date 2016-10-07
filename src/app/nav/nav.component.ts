@@ -82,6 +82,10 @@ export class NavComponent implements OnInit {
   	this.value--;
   }
 
+  help(){
+    this.value = 0;
+  }
+
 
 
 }
