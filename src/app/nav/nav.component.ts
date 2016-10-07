@@ -82,6 +82,11 @@ export class NavComponent implements OnInit {
   	return "../../assets/images/" + picture;
   }
 
+// reload function
+reload(){
+  location.reload();
+}
+
   // next button
   next(value){
   	this.value = value;
