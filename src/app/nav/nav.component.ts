@@ -105,22 +105,28 @@ reload(){
   }
 
 // add selections to printing array
-addSelections(selected, title, option, description, index){
+addSelections(selected, title, option, description, pick){
   if(selected==true){
-    this.content = {
+  //  this.content = ;
+    this.contentList.push({
       Title: title,
       Option: option,
-      Description: description
-    };
-    this.contentList.push(this.content);
-    console.log("button selected", selected);
+      Description: description,
+      Index: pick
+    });
+      //console.log("index selected", this.contentList[0].Title);
   }else{
-    this.contentList.pop();
+
   }
+
 }
 
 printContent(){
-  this.print = true;
+  if(this.contentList.length > 0){
+    this.print = true;
+  }else{
+    this.print = false;
+  }
 }
 
 hidePrintContent(){
