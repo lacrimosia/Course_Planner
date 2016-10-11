@@ -116,7 +116,7 @@ addSelections(selected, title, option, description, pick){
     });
       //console.log("index selected", this.contentList[0].Title);
   }else{
-
+    console.log("the pick", this.contentList.Index);
   }
 
 }
