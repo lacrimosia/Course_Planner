@@ -106,6 +106,7 @@ reload(){
 
 // add selections to printing array
 addSelections(actual, selected, title, option, description, pick, index){
+  console.log("index selected", this.contentList);
   if(actual == 0){
   //  this.content = ;
   if(selected==true){
@@ -117,9 +118,19 @@ addSelections(actual, selected, title, option, description, pick, index){
         due: this.data.assignments[index].due_date,
         percent: this.data.assignments[index].percentage
       });
+  }else{
+    for(let x=0; x<this.contentList.length; x++){
+      if(this.contentList[x].index === pick){
+        this.contentList.splice(pick, 1);
+        console.log("Is this working?", this.contentList[x].index === pick);
+        console.log("content List", this.contentList);
+      }
+    }
   }
-      console.log("index selected", this.contentList);
-  }else if(actual == 1){
+
+  }
+
+  if(actual == 1){
     if(selected==true){
       this.contentList.push({
           Title: title,
@@ -129,12 +140,13 @@ addSelections(actual, selected, title, option, description, pick, index){
           due: this.data.assignments[index].due_date,
           percent: this.data.assignments[index].percentage
         });
-    }
-  }else{
-    for(let x=0; x<this.contentList.length; x++){
-      if(this.contentList[x].index === pick){
-        this.contentList.splice(x, 1);
-        console.log("content List", this.contentList);
+    }else{
+      for(let x=0; x<this.contentList.length; x++){
+        if(this.contentList[x].index === pick){
+          this.contentList.splice(pick, 1);
+          console.log("Is this working 2?", this.contentList[x].index === pick);
+          console.log("content List", this.contentList);
+        }
       }
     }
   }
