@@ -6,8 +6,8 @@
         <button id="hidePrint" class="select" (click)="hidePrintContent()">Hide Print</button>
         <div class="contentAreaPrint" *ngFor="let p of contentList | keys; let x = index">
           <h1> {{ p.value.Title }} </h1>
-          <img [src]="imageSrc(d.value.due_date)" class="resize" />
-          <img [src]="imageSrc(d.value.percentage)" class="resize" />
+          <img [src]="imageSrc(p.value.due)" class="resize"/>
+          <img [src]="imageSrc(p.value.percent)" class="resize"/>
           <h2> {{ p.value.Option }} </h2>
           <p> {{ p.value.Description }} </p>
         </div>
@@ -57,7 +57,7 @@
                       <img [src]="imageSrc(d.value.due_date)" class="taskImage1" />
                       <img [src]="imageSrc(d.value.percentage)" class="taskImage2" />
                         <p>{{ t.value.information }}</p>
-                      <button class="select" (click)="t.value.select = !t.value.select; addSelections(x, t.value.select, t.value.title, t.value.name, t.value.information, (t.value.symbol-1))" [ngClass]="{'yes': t.value.select, 'no': !t.value.select}"><i class="fa fa-times"></i> Select</button>
+                      <button class="select" (click)="t.value.select = !t.value.select; addSelections(x, t.value.select, t.value.title, t.value.name, t.value.information, (t.value.symbol-1), i)" [ngClass]="{'yes': t.value.select, 'no': !t.value.select}"><i class="fa fa-times"></i> Select</button>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -73,7 +73,7 @@
                     <div *ngFor="let t of d.value.tasks | keys; let x = index" class="options">
                         <h2 class="titles">{{ t.value.name }}</h2>
                         <p>{{ t.value.information }}</p>
-                      <button class="select" (click)="t.value.select = !t.value.select; addSelections(x, t.value.select, t.value.title, t.value.name, t.value.information, (t.value.symbol-1))"  [ngClass]="{'yes': t.value.select, 'no': !t.value.select}"><i class="fa fa-times"></i> Select</button>
+                      <button class="select" (click)="t.value.select = !t.value.select; addSelections(x, t.value.select, t.value.title, t.value.name, t.value.information, (t.value.symbol-1), i)"  [ngClass]="{'yes': t.value.select, 'no': !t.value.select}"><i class="fa fa-times"></i> Select</button>
                     </div>
                     <div class="clear"></div>
                     <!-- clear floats -->

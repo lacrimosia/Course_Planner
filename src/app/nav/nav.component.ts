@@ -105,7 +105,7 @@ reload(){
   }
 
 // add selections to printing array
-addSelections(actual, selected, title, option, description, pick){
+addSelections(actual, selected, title, option, description, pick, index){
   if(actual == 0){
   //  this.content = ;
   if(selected==true){
@@ -113,17 +113,21 @@ addSelections(actual, selected, title, option, description, pick){
         Title: title,
         Option: option,
         Description: description,
-        index: pick
+        index: pick,
+        due: this.data.assignments[index].due_date,
+        percent: this.data.assignments[index].percentage
       });
   }
-      //console.log("index selected", this.contentList[0].Title);
+      console.log("index selected", this.contentList);
   }else if(actual == 1){
     if(selected==true){
       this.contentList.push({
           Title: title,
           Option: option,
           Description: description,
-          index: pick
+          index: pick,
+          due: this.data.assignments[index].due_date,
+          percent: this.data.assignments[index].percentage
         });
     }
   }else{
