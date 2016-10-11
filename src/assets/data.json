@@ -33,7 +33,8 @@
             "name": "Option A",
             "title": "Comprehensive review of coursework assignment",
             "information": "To complete this assignment you will write an essay about what you have learned in college and how this prepares you for life after college as an environmentalist. See course assignment posted online for details.",
-            "select": false
+            "select": false,
+            "symbol": 1
         }]
     }, {
         "type": "two",
@@ -54,12 +55,14 @@
           "title": "Sustainability assignment",
             "name": "Option A",
             "information": "Select an example of previous coursework that illustrates the learning outcome. Prepare the example to be attached and uploaded as part of the essay. Write a reflection essay that makes the case why it illustrates the learning outcome. Your essay will contain an introductory paragraph with a thesis statement. It will have approximately three paragraphs with information that backs up thesis. Finally, it will have a conclusion that completes the argument begun in the introduction as well as provides the reader a final broad statement that can persuade your audience you know how to apply the concept of sustainability to a community.",
-            "select": false
+            "select": false,
+            "symbol": 2
         }, {
           "title": "Sustainability assignment",
             "name": "Option B",
             "information": "Write an essay about the Las Vegas area and sustainability. Your essay will need to contain an introductory paragraph with a thesis statement, at least five interior paragraphs of information backing up thesis statement and ends with a paragraph that wraps up the argument.",
-            "select": false
+            "select": false,
+            "symbol": 2
         }]
     },
 {

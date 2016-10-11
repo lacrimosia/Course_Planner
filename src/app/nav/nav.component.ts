@@ -105,18 +105,34 @@ reload(){
   }
 
 // add selections to printing array
-addSelections(selected, title, option, description, pick){
-  if(selected==true){
+addSelections(actual, selected, title, option, description, pick){
+  if(actual == 0){
   //  this.content = ;
+  if(selected==true){
     this.contentList.push({
-      Title: title,
-      Option: option,
-      Description: description,
-      Index: pick
-    });
+        Title: title,
+        Option: option,
+        Description: description,
+        index: pick
+      });
+  }
       //console.log("index selected", this.contentList[0].Title);
+  }else if(actual == 1){
+    if(selected==true){
+      this.contentList.push({
+          Title: title,
+          Option: option,
+          Description: description,
+          index: pick
+        });
+    }
   }else{
-    console.log("the pick", this.contentList.Index);
+    for(let x=0; x<this.contentList.length; x++){
+      if(this.contentList[x].index === pick){
+        this.contentList.splice(x, 1);
+        console.log("content List", this.contentList);
+      }
+    }
   }
 
 }
