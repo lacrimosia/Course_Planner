@@ -269,6 +269,17 @@ hr{
 	background: $white;
 }
 
+.aside{
+  background: $green;
+	color: $white;
+	padding: 6px;
+	float: right;
+	margin-left: 5px;
+	border-radius: 5px;
+	font-family: subHeadings;
+	letter-spacing: 3px;
+}
+
 .h{
   font-family: subHeadings;
 }

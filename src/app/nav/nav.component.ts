@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { DataService} from '../data.service';
 import { Observable } from 'rxjs/Rx';
 import {KeysPipe} from '../keys.pipe';
-import {HotkeysService} from 'angular2-hotkeys';
-import {Hotkey} from 'angular2-hotkeys';
+import {HotkeysService, Hotkey} from 'angular2-hotkeys';
+
 
 @Component({
   selector: 'app-nav',
