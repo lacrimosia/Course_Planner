@@ -34,7 +34,7 @@
             "name": "Option A",
             "title": "Comprehensive review of coursework assignment",
             "information": "To complete this assignment you will write an essay about what you have learned in college and how this prepares you for life after college as an environmentalist. See course assignment posted online for details.",
-            "selectA": false,
+            "selectA": true,
             "symbol": 1
         }
     }, {
@@ -204,7 +204,7 @@
             "name": "Option A",
             "title": "Electronic Portfolio assignment",
             "information": "Prepare an overview that enables reviewers examining your work to understand how your work meets or exceeds each learning outcome required for the degree.",
-            "selectA": false
+            "selectA": true
         }
     },{
         "type": "one",
@@ -226,7 +226,7 @@
             "name": "Option A",
             "title": "Presentation of Portfolio",
             "information": "To complete this assignment you will: Synthesize elements into a coherent 15-minute presentation. Provide an introduction to your portfolio. Describe how you approached each element. Summarize what you learned and identify what you plan to do next. Be prepared to answer questions.",
-            "selectA": false
+            "selectA": true
         }
     }]
 }

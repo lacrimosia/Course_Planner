@@ -71,7 +71,6 @@
                         <img [src]="imageSrc(d.value.due_date)" class="taskImage1" />
                         <img [src]="imageSrc(d.value.percentage)" class="taskImage2" />
                           <p>{{ d.value.taskA.information }}</p>
-                        <button class="select" (click)="d.value.taskA.selectA = !d.value.taskA.selectA;" [ngClass]="{'yes': d.value.taskA.selectA, 'no': !d.value.taskA.selectA}"><i class="fa fa-times" *ngIf="!d.value.taskA.selectA"></i> <i class="fa fa-check" *ngIf="d.value.taskA.selectA"></i> Select Task</button>
                       </div>
                     </div>
 
@@ -92,14 +91,14 @@
                         <img [src]="imageSrc(d.value.due_date)" class="taskImage1" />
                         <img [src]="imageSrc(d.value.percentage)" class="taskImage2" />
                           <p>{{ d.value.taskA.information }}</p>
-                        <button class="select" (click)="d.value.taskA.selectA = !d.value.taskA.selectA;" [ngClass]="{'yes': d.value.taskA.selectA, 'no': !d.value.taskA.selectA}"><i class="fa fa-times" *ngIf="!d.value.taskA.selectA"></i> <i class="fa fa-check" *ngIf="d.value.taskA.selectA"></i> Select Task</button>
+                        <button class="select" (click)="d.value.taskA.selectA = !d.value.taskA.selectA; d.value.taskB.selectB=false;" [ngClass]="{'yes': d.value.taskA.selectA, 'no': !d.value.taskA.selectA}"><i class="fa fa-times" *ngIf="!d.value.taskA.selectA"></i> <i class="fa fa-check" *ngIf="d.value.taskA.selectA"></i> Select Task</button>
                       </div>
                       <div class="taskB">
                           <h2 class="titles">{{ d.value.taskB.name }}</h2>
                         <img [src]="imageSrc(d.value.due_date)" class="taskImage1" />
                         <img [src]="imageSrc(d.value.percentage)" class="taskImage2" />
                           <p>{{ d.value.taskB.information }}</p>
-                        <button class="select" (click)="d.value.taskB.selectB = !d.value.taskB.selectB;" [ngClass]="{'yes': d.value.taskB.selectB, 'no': !d.value.taskB.selectB}"><i class="fa fa-times" *ngIf="!d.value.taskB.selectB"></i> <i class="fa fa-check" *ngIf="d.value.taskB.selectB"></i> Select Task</button>
+                        <button class="select" (click)="d.value.taskB.selectB = !d.value.taskB.selectB; d.value.taskA.selectA=false;" [ngClass]="{'yes': d.value.taskB.selectB, 'no': !d.value.taskB.selectB}"><i class="fa fa-times" *ngIf="!d.value.taskB.selectB"></i> <i class="fa fa-check" *ngIf="d.value.taskB.selectB"></i> Select Task</button>
                       </div>
                     </div>
                     <div class="clear"></div>
