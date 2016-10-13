@@ -104,40 +104,9 @@ reload(){
     this.value = 0;
   }
 
-// add selections to printing array
-/*addSelections(actual, selectedA, selectedB, title, option, description, pick, index){
-  console.log("index selected", this.contentList);
-
-  //  this.content = ;
-  if(selectedA==true){
-    this.contentList.push({
-        Title: title,
-        Option: option,
-        Description: description,
-        index: pick,
-        due: this.data.assignments[index].due_date,
-        percent: this.data.assignments[index].percentage
-      });
-    console.log("Selection A");
-  }else{
-    for(let x=0; x<this.contentList.length; x++){
-      if(this.contentList[x].index === pick){
-        this.contentList.splice(pick, 1);
-      //  console.log("Is this working?", this.contentList[x].index === pick);
-       // console.log("content List", this.contentList);
-      }
-    }
-
-  }
-
-}*/
 
 printContent(){
-  if(this.contentList.length > 0){
-    this.print = true;
-  }else{
-    this.print = false;
-  }
+  this.print = true;
 }
 
 hidePrintContent(){
