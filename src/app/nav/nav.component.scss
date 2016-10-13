@@ -70,6 +70,14 @@ b {
     height: 1px;
 }
 
+.lines{
+  height: 100%;
+  width: 1px;
+  position: absolute;
+  margin: 20px 0px 0px 25px;
+  z-index: 1000;
+}
+
 .twoTasks {
     width: 100%;
 }
