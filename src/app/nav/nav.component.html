@@ -52,13 +52,16 @@
                     <!-- <img [src]="imageSrc(d.value.due_date)" class="resize" />
                     <img [src]="imageSrc(d.value.percentage)" class="resize" /> -->
                     <!-- show all the tasks in a list -->
-                    <div *ngFor="let t of d.value.tasks | keys; let x = index">
-                        <h2 class="titles">{{ t.value.name }}</h2>
-                      <img [src]="imageSrc(d.value.due_date)" class="taskImage1" />
-                      <img [src]="imageSrc(d.value.percentage)" class="taskImage2" />
-                        <p>{{ t.value.information }}</p>
-                      <button class="select" (click)="t.value.selectA = !t.value.selectA; t.value.selectB = !t.value.selectB; addSelections(x, t.value.selectA, t.value.selectB, t.value.title, t.value.name, t.value.information, (t.value.symbol), i)" [ngClass]="{'yes': t.value.select, 'no': !t.value.select}"><i class="fa fa-times"></i> Select</button>
+                    <div class="tasks">
+                      <div class="taskA">
+                          <h2 class="titles">{{ d.value.taskA.name }}</h2>
+                        <img [src]="imageSrc(d.value.due_date)" class="taskImage1" />
+                        <img [src]="imageSrc(d.value.percentage)" class="taskImage2" />
+                          <p>{{ d.value.taskA.information }}</p>
+                        <button class="select" (click)="d.value.taskA.selectA = !d.value.taskA.selectA;" [ngClass]="{'yes': d.value.taskA.selectA, 'no': !d.value.taskA.selectA}"><i class="fa fa-times"></i> Select</button>
+                      </div>
                     </div>
+
                     <div class="clear"></div>
                 </div>
                 <!-- show this only when clicking assignments two -->
@@ -70,10 +73,21 @@
                     <hr />
                     <!-- <img [src]="imageSrc(d.value.due_date)" class="resize" />
                     <img [src]="imageSrc(d.value.percentage)" class="resize" /> -->
-                    <div *ngFor="let t of d.value.tasks | keys; let x = index" class="options">
-                        <h2 class="titles">{{ t.value.name }}</h2>
-                        <p>{{ t.value.information }}</p>
-                      <button class="select" (click)="t.value.selectA = !t.value.selectA; t.value.selectB = !t.value.selectB; addSelections(x, t.value.selectA, t.value.selectB, t.value.title, t.value.name, t.value.information, (t.value.symbol), i)"  [ngClass]="{'yes': t.value.select, 'no': !t.value.select}"><i class="fa fa-times"></i> Select</button>
+                    <div class="tasks floatingTasks">
+                      <div class="taskA">
+                          <h2 class="titles">{{ d.value.taskA.name }}</h2>
+                        <img [src]="imageSrc(d.value.due_date)" class="taskImage1" />
+                        <img [src]="imageSrc(d.value.percentage)" class="taskImage2" />
+                          <p>{{ d.value.taskA.information }}</p>
+                        <button class="select" (click)="d.value.taskA.selectA = !d.value.taskA.selectA;" [ngClass]="{'yes': d.value.taskA.selectA, 'no': !d.value.taskA.selectA}"><i class="fa fa-times"></i> Select</button>
+                      </div>
+                      <div class="taskB">
+                          <h2 class="titles">{{ d.value.taskB.name }}</h2>
+                        <img [src]="imageSrc(d.value.due_date)" class="taskImage1" />
+                        <img [src]="imageSrc(d.value.percentage)" class="taskImage2" />
+                          <p>{{ d.value.taskB.information }}</p>
+                        <button class="select" (click)="d.value.taskB.selectB = !d.value.taskB.selectB;" [ngClass]="{'yes': d.value.taskB.selectB, 'no': !d.value.taskB.selectB}"><i class="fa fa-times"></i> Select</button>
+                      </div>
                     </div>
                     <div class="clear"></div>
                     <!-- clear floats -->
