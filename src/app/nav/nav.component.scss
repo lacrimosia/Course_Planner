@@ -60,7 +60,7 @@ b {
 }
 
 .resize {
-    width: 15%;
+    width: 8%;
 }
 
 #line {
@@ -129,7 +129,8 @@ button{
 .contentAreaPrint{
   width: 100%;
   height: auto;
-  position: relative;
+  position: absolute;
+  z-index: 4000;
 }
 
 #hidePrint{

@@ -1,16 +1,24 @@
 <div class="template">
     <div class="wrappers" *ngFor="let d of data.assignments | keys; let i = index">
 
-      <div class="print" *ngIf="print==true && i==value">
+      <div class="print" *ngIf="print==true">
         <h1>Assignment's Path</h1>
         <button id="hidePrint" class="select" (click)="hidePrintContent()">Hide Print</button>
-        <div class="contentAreaPrint" *ngFor="let p of contentList | keys; let x = index">
-          <h1> {{ p.value.Title }} </h1>
-          <img [src]="imageSrc(p.value.due)" class="resize"/>
-          <img [src]="imageSrc(p.value.percent)" class="resize"/>
-          <h2> {{ p.value.Option }} </h2>
-          <p> {{ p.value.Description }} </p>
+        <div class="contentAreaPrint" [ngStyle]="{'position': 'absolute', 'top': d.value.printTop+'px'}" *ngIf="i>0">
+          <h1> {{ d.value.title }} </h1>
+
+          <div class="taskAselected" *ngIf="d.value.taskA">
+        <!--    <img [src]="imageSrc(d.value.due_date)" class="resize"/>
+            <img [src]="imageSrc(d.value.percentage)" class="resize"/>-->
+            <h2> {{ d.value.taskA.name }} </h2>
+            <p> {{ d.value.taskA.information }} </p>
+          </div>
+          <div class="taskBselected" *ngIf="d.value.taskB">
+            <h2> {{ d.value.taskB.name }} </h2>
+            <p> {{ d.value.taskB.information }} </p>
+          </div>
         </div>
+        <div class="clear"></div>
       </div>
 
       <div class="heading" *ngIf="i==value">

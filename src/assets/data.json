@@ -26,6 +26,7 @@
         "buttonPos":{
         	"left": 130
         },
+        "printTop": 0,
         "instructions": "The purpose of this assignment is to examine personal development as an environmental studies major. This assignment relates to being able to communicate information to multiple audiences as well as demonstrate information literacy, two learning outcomes associated with your degree. It also can be linked with the first learning outcome of this course, being able to describe how coursework from different disciplines provides new perspectives on environmental issues.",
         "due_date": "sept-15.png",
         "percentage": "10.png",
@@ -48,6 +49,7 @@
         "buttonPos":{
         	"left": 250
         },
+        "printTop": 165,
         "instructions": "The purpose of this assignment is to present an example of work on sustainability. This assignment relates to being able to examine whether a community meets multiple conditions of sustainability, a learning outcome associated with your degree. It also relates to the second learning outcome of this course, being able to reflect and improve upon work.",
         "due_date": "29.png",
         "percentage": "10.png",
@@ -78,6 +80,7 @@
         "buttonPos":{
         	"left": 370
         },
+        "printTop": 480,
         "instructions": "The purpose of this assignment is to present an example of work on environmental policy. This assignment relates to being able to characterize the roles of individuals and organizations in environmental policy, learning outcome associated with your degree. It also relates to the second learning outcome of this course, being able to reflect and improve upon work.",
         "due_date": "13-04.png",
         "percentage": "10.png",
@@ -106,6 +109,7 @@
         "buttonPos":{
         	"left": 495
         },
+        "printTop": 730,
         "instructions": "The purpose of this assignment is to present an example of work on successful collaboration. This assignment relates to being able to use knowledge and skills required for successful collaboration as well as information literacy.",
         "due_date": "27-04.png",
         "percentage": "10.png",
@@ -134,6 +138,7 @@
         "buttonPos":{
         	"left": 620
         },
+        "printTop": 975,
         "instructions": "The purpose of this assignment is to present an example of work that demonstrates numeracy. This assignment relates to being able to use knowledge and skills related to analyzing data.",
         "due_date": "11-5-04.png",
         "percentage": "10.png",
@@ -162,6 +167,7 @@
         "buttonPos":{
         	"left": 745
         },
+        "printTop": 1220,
         "instructions": "The purpose of this assignment is to present an example of work that demonstrates awareness of multiple audiences. This assignment relates to being able to communicate typically complex information about an environmental issue to multiple audiences. It is based upon learning outcomes for the major and course.",
         "due_date": "29-11-04.png",
         "percentage": "10.png",
@@ -190,6 +196,7 @@
         "buttonPos":{
         	"left": 870
         },
+        "printTop": 1500,
         "instructions": "The purpose of this assignment is to create an electronic portfolio of your work in college that exemplifies each learning outcome in your degree.",
         "due_date": "12-1-04.png",
         "percentage": "20_percent-05.png",
@@ -211,6 +218,7 @@
         "buttonPos":{
         	"left": 993
         },
+        "printTop": 1675,
         "instructions": "The purpose of this assignment is to present your portfolio created in this course to your classmates and guests.",
         "due_date": "12-13-04.png",
         "percentage": "10.png",
