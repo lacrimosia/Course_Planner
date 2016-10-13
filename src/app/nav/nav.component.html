@@ -1,4 +1,7 @@
 <div class="template">
+  <div class="helpImage animated" *ngIf="data.help==true" [ngClass]="{'fadeOut': data.help==false}">
+    <img [src]="imageSrc(data.picture)" (click)="data.help=false" />
+  </div>
     <div class="wrappers" *ngFor="let d of data.assignments | keys; let i = index">
 
       <div class="print" *ngIf="print==true">
@@ -56,7 +59,16 @@
                 <div class="intro" *ngIf="i==0">
                     <b>Instructions:</b>
                     <p>{{ d.value.instructions }}</p>
+                    <h2 class="titled"> Keyboard Shortcuts </h2>
+                    <ul>
+                      <li>NEXT/PREV - <i class="fa fa-arrow-right green"></i> and <i class="fa fa-arrow-left green"></i></li>
+                      <li>Help Menu - PRESS H</li>
+                      <li>Reload Activity - PRESS R</li>
+                      <li>PRINT Activity - PRESS P</li>
+                    </ul>
+                    <button class="select" (click)="data.help=true">More Information</button>
                 </div>
+                <div class="clear"></div>
                 <!-- show this only when clicking assignments one -->
                 <div class="oneTasks animated fadeIn" *ngIf="d.value.type=='one'">
                     <h2 class="titles">Assignment Information</h2>

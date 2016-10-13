@@ -185,3 +185,13 @@ button{
 .vertCircles{
   position: absolute;
 }
+
+.helpImage{
+  position: absolute;
+  z-index: 1232323232323;
+}
+
+.helpImage img{
+ height: 100%;
+ cursor: pointer;
+}

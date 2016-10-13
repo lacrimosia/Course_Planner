@@ -1,6 +1,8 @@
 {
     "course_title": "ENV 498 Capstone",
     "instructions": "",
+    "picture": "helper-image.png",
+    "help": false,
     "assignments": [{
         "type": "instructions",
         "title": "Start",

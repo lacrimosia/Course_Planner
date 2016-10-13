@@ -61,7 +61,7 @@ h3{
 }
 
 // copy text
-p, span{
+p, span, ul li{
 	@include titles(sans-serif, 0.9em, $text, 0px);
 }
 
@@ -299,4 +299,17 @@ hr{
 	width:23.5%;
 	height: 100%;
 	z-index: 2000000;
+}
+
+.green{
+	color: $green;
+}
+
+.titled{
+  font-family: subHeadings;
+}
+
+ul li{
+	list-style: none;
+	font-weight: bold;
 }
