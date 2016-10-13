@@ -124,6 +124,7 @@ reload(){
 // help button
   help(){
     this.value = 0;
+    this.print = false;
   }
 
 
