@@ -9,9 +9,10 @@
               <h1 class="t"> {{ d.value.title }} </h1>
           </div>
           <div class="outputs">
+            <img [src]="imageSrc(d.value.due_date)" class="resize"/>
+            <img [src]="imageSrc(d.value.percentage)" class="resize"/>
+            <div class="clear"></div>
             <div class="taskAselected" *ngIf="d.value.taskA">
-          <!--    <img [src]="imageSrc(d.value.due_date)" class="resize"/>
-              <img [src]="imageSrc(d.value.percentage)" class="resize"/>-->
               <h2 class="h"> {{ d.value.taskA.name }} </h2>
               <span> {{ d.value.taskA.information }} </span>
             </div>
