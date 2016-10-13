@@ -119,11 +119,10 @@ button{
 
 .print{
   width: 100%;
-  min-height: 300px;
-  height: auto;
-  padding: 15px;
+  height: 1875px;
+  padding: 20px;
   position: absolute;
-  top: 100px;
+  top: 66px;
 }
 
 .contentAreaPrint{
@@ -131,11 +130,6 @@ button{
   height: auto;
   position: absolute;
   z-index: 4000;
-}
-
-#hidePrint{
-  z-index: 3000;
-  position: relative;
 }
 
 .taskImage1{
@@ -157,4 +151,28 @@ button{
 .floatingTasks div{
   float: left;
   width: 50%;
+}
+
+#hidePrint{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.outputs{
+  width: 80%;
+  float: left;
+  margin-left: 80px;
+  margin-top: -20px;
+}
+
+.verticalPath{
+  position: absolute;
+  float: left;
+  width: 40px;
+  height: auto;
+}
+
+.vertCircles{
+  position: absolute;
 }

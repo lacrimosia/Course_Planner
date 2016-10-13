@@ -2,30 +2,33 @@
     <div class="wrappers" *ngFor="let d of data.assignments | keys; let i = index">
 
       <div class="print" *ngIf="print==true">
-        <h1>Assignment's Path</h1>
-        <button id="hidePrint" class="select" (click)="hidePrintContent()">Hide Print</button>
+        <button id="hidePrint" class="selections" (click)="hidePrintContent()">Hide Print</button>
         <div class="contentAreaPrint" [ngStyle]="{'position': 'absolute', 'top': d.value.printTop+'px'}" *ngIf="i>0">
-          <h1> {{ d.value.title }} </h1>
-
-          <div class="taskAselected" *ngIf="d.value.taskA">
-        <!--    <img [src]="imageSrc(d.value.due_date)" class="resize"/>
-            <img [src]="imageSrc(d.value.percentage)" class="resize"/>-->
-            <h2> {{ d.value.taskA.name }} </h2>
-            <p> {{ d.value.taskA.information }} </p>
+          <div class="titleLeft">
+              <button class="circle" (click)="goTo(i); print=false;" [ngStyle]="{'float': 'left'}">{{ d.value.symbol }}</button>
+              <h1 class="t"> {{ d.value.title }} </h1>
           </div>
-          <div class="taskBselected" *ngIf="d.value.taskB">
-            <h2> {{ d.value.taskB.name }} </h2>
-            <p> {{ d.value.taskB.information }} </p>
+          <div class="outputs">
+            <div class="taskAselected" *ngIf="d.value.taskA">
+          <!--    <img [src]="imageSrc(d.value.due_date)" class="resize"/>
+              <img [src]="imageSrc(d.value.percentage)" class="resize"/>-->
+              <h2 class="h"> {{ d.value.taskA.name }} </h2>
+              <span> {{ d.value.taskA.information }} </span>
+            </div>
+            <div class="taskBselected" *ngIf="d.value.taskB">
+              <h2 class="h"> {{ d.value.taskB.name }} </h2>
+              <span> {{ d.value.taskB.information }} </span>
+            </div>
+            <hr />
           </div>
         </div>
-        <div class="clear"></div>
       </div>
 
       <div class="heading" *ngIf="i==value">
       <!--	<h1>{{ d.value.course_title }}</h1> -->
       	    <button class="circle" (click)="printContent()">P</button>
       	    <button class="circle" (click)="reload()">R</button>
-      	    <button class="circle" (click)="help()">H</button>
+      	    <button class="circle" (click)="help(); print=false;">H</button>
       	    <div class="clear"></div> <!--clear floats-->
       </div>
 

@@ -61,7 +61,7 @@ h3{
 }
 
 // copy text
-p{
+p, span{
 	@include titles(sans-serif, 0.9em, $text, 0px);
 }
 
@@ -203,6 +203,20 @@ p{
 //	background: $blue;
 }
 
+.selections{
+	background: $darkBlue;
+	color: $white;
+	font-family: subHeadings;
+	font-size: 1.5em;
+	width: 11%;
+	height: 5%;
+	text-align: center;
+	border: none;
+	padding: 15px;
+	cursor: pointer;
+	z-index: 100000;
+}
+
 hr{
 	color: $blue;
 	opacity: 0.4;
@@ -244,4 +258,14 @@ hr{
 
 .print{
 	background: $white;
+}
+
+.h{
+  font-family: subHeadings;
+}
+
+.t{
+	width: 900px;
+	float: left;
+	margin-left: 17px;
 }
