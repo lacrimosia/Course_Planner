@@ -69,6 +69,12 @@ export class NavComponent implements OnInit {
             return false; // Prevent bubbling
         }));
 
+// The print keyboard shorcut
+        this._hotkeysService.add(new Hotkey('p', (event: KeyboardEvent): boolean => {
+          this.print = !this.print;
+            return false; // Prevent bubbling
+        }));
+
         // select A for the option A task
             this._hotkeysService.add(new Hotkey('a', (event: KeyboardEvent): boolean => {
               if(this.assignments[this.value].type=="two"){
