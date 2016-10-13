@@ -260,6 +260,11 @@ hr{
 	background: $red;
 }
 
+.selectedTask{
+	color: $green;
+	transition: color 0.2s linear;
+}
+
 .print{
 	background: $white;
 }

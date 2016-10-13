@@ -14,11 +14,11 @@
             <img [src]="imageSrc(d.value.percentage)" class="resize"/>
             <div class="clear"></div>
             <div class="taskAselected" *ngIf="d.value.taskA">
-              <h2 class="h"> {{ d.value.taskA.name }} </h2>
+              <h2 class="h"> {{ d.value.taskA.name }} <i class="fa fa-check" [ngClass]="{'selectedTask': d.value.taskA.selectA==true}" *ngIf="d.value.taskA.selectA==true"></i></h2>
               <span> {{ d.value.taskA.information }} </span>
             </div>
             <div class="taskBselected" *ngIf="d.value.taskB">
-              <h2 class="h"> {{ d.value.taskB.name }} </h2>
+              <h2 class="h"> {{ d.value.taskB.name }} <i class="fa fa-check" [ngClass]="{'selectedTask': d.value.taskB.selectB==true}" *ngIf="d.value.taskB.selectB==true"></i></h2>
               <span> {{ d.value.taskB.information }} </span>
             </div>
             <hr />
