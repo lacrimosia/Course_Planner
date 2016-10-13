@@ -79,7 +79,7 @@ export class NavComponent implements OnInit {
 
   // show the correct picture
   imageSrc(picture){
-  	return "../../assets/images/" + picture;
+  	return "assets/images/" + picture;
   }
 
 // reload function
@@ -105,11 +105,11 @@ reload(){
   }
 
 // add selections to printing array
-addSelections(actual, selected, title, option, description, pick, index){
+addSelections(actual, selectedA, selectedB, title, option, description, pick, index){
   console.log("index selected", this.contentList);
-  if(actual == 0){
+
   //  this.content = ;
-  if(selected==true){
+  if(selectedA==true){
     this.contentList.push({
         Title: title,
         Option: option,
@@ -118,37 +118,37 @@ addSelections(actual, selected, title, option, description, pick, index){
         due: this.data.assignments[index].due_date,
         percent: this.data.assignments[index].percentage
       });
+    console.log("Selection A");
   }else{
     for(let x=0; x<this.contentList.length; x++){
       if(this.contentList[x].index === pick){
         this.contentList.splice(pick, 1);
-        console.log("Is this working?", this.contentList[x].index === pick);
-        console.log("content List", this.contentList);
+      //  console.log("Is this working?", this.contentList[x].index === pick);
+       // console.log("content List", this.contentList);
+      }
+    }
+
+
+  if(selectedB==true){
+    this.contentList.push({
+        Title: title,
+        Option: option,
+        Description: description,
+        index: pick,
+        due: this.data.assignments[index].due_date,
+        percent: this.data.assignments[index].percentage
+      });
+    console.log("Selection B");
+  }else{
+    for(let x=0; x<this.contentList.length; x++){
+      if(this.contentList[x].index === pick){
+        this.contentList.splice(pick, 1);
+      //  console.log("Is this working?", this.contentList[x].index === pick);
+      //  console.log("content List", this.contentList);
       }
     }
   }
 
-  }
-
-  if(actual == 1){
-    if(selected==true){
-      this.contentList.push({
-          Title: title,
-          Option: option,
-          Description: description,
-          index: pick,
-          due: this.data.assignments[index].due_date,
-          percent: this.data.assignments[index].percentage
-        });
-    }else{
-      for(let x=0; x<this.contentList.length; x++){
-        if(this.contentList[x].index === pick){
-          this.contentList.splice(pick, 1);
-          console.log("Is this working 2?", this.contentList[x].index === pick);
-          console.log("content List", this.contentList);
-        }
-      }
-    }
   }
 
 }

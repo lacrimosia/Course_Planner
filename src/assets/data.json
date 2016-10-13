@@ -29,13 +29,13 @@
         "instructions": "The purpose of this assignment is to examine personal development as an environmental studies major. This assignment relates to being able to communicate information to multiple audiences as well as demonstrate information literacy, two learning outcomes associated with your degree. It also can be linked with the first learning outcome of this course, being able to describe how coursework from different disciplines provides new perspectives on environmental issues.",
         "due_date": "sept-15.png",
         "percentage": "10.png",
-        "tasks": [{
+        "taskA": {
             "name": "Option A",
             "title": "Comprehensive review of coursework assignment",
             "information": "To complete this assignment you will write an essay about what you have learned in college and how this prepares you for life after college as an environmentalist. See course assignment posted online for details.",
-            "select": false,
+            "selectA": false,
             "symbol": 1
-        }]
+        }
     }, {
         "type": "two",
         "title": "Sustainability assignment",
@@ -51,19 +51,20 @@
         "instructions": "The purpose of this assignment is to present an example of work on sustainability. This assignment relates to being able to examine whether a community meets multiple conditions of sustainability, a learning outcome associated with your degree. It also relates to the second learning outcome of this course, being able to reflect and improve upon work.",
         "due_date": "29.png",
         "percentage": "10.png",
-        "tasks": [{
+        "taskA": {
           "title": "Sustainability assignment",
             "name": "Option A",
             "information": "Select an example of previous coursework that illustrates the learning outcome. Prepare the example to be attached and uploaded as part of the essay. Write a reflection essay that makes the case why it illustrates the learning outcome. Your essay will contain an introductory paragraph with a thesis statement. It will have approximately three paragraphs with information that backs up thesis. Finally, it will have a conclusion that completes the argument begun in the introduction as well as provides the reader a final broad statement that can persuade your audience you know how to apply the concept of sustainability to a community.",
-            "select": false,
+            "selectA": false,
             "symbol": 2
-        }, {
+        },
+        "taskB": {
           "title": "Sustainability assignment",
             "name": "Option B",
             "information": "Write an essay about the Las Vegas area and sustainability. Your essay will need to contain an introductory paragraph with a thesis statement, at least five interior paragraphs of information backing up thesis statement and ends with a paragraph that wraps up the argument.",
-            "select": false,
+            "selectB": false,
             "symbol": 2
-        }]
+        }
     },
 {
         "type": "two",
@@ -80,17 +81,18 @@
         "instructions": "The purpose of this assignment is to present an example of work on environmental policy. This assignment relates to being able to characterize the roles of individuals and organizations in environmental policy, learning outcome associated with your degree. It also relates to the second learning outcome of this course, being able to reflect and improve upon work.",
         "due_date": "13-04.png",
         "percentage": "10.png",
-        "tasks": [{
+        "taskA":{
           "title": "Environmental Policy Assignment",
             "name": "Option A",
             "information": "Select an example of previous coursework that illustrates the learning outcome on environmental policy and write a reflection essay.",
-            "select": false
-        }, {
+            "selectA": false
+        },
+        "taskB":{
           "title": "Environmental Policy Assignment",
             "name": "Option B",
             "information": "Write an essay about Las Vegas area and water.",
-            "select": false
-        }]
+            "selectB": false
+        }
     },
     {
         "type": "two",
@@ -107,17 +109,18 @@
         "instructions": "The purpose of this assignment is to present an example of work on successful collaboration. This assignment relates to being able to use knowledge and skills required for successful collaboration as well as information literacy.",
         "due_date": "27-04.png",
         "percentage": "10.png",
-        "tasks": [{
+        "taskA": {
           "title": "Collaboration assignment",
             "name": "Option A",
             "information": "Select an example of previous coursework that illustrates the learning outcome on collaboration and write a reflection essay.",
-            "select": false
-        }, {
+            "selectA": false
+        },
+        "taskB": {
           "title": "Collaboration assignment",
             "name": "Option B",
             "information": "Write an essay about successful collaboration and environmental problem solving.",
-            "select": false
-        }]
+            "selectB": false
+        }
     },
 {
         "type": "two",
@@ -134,17 +137,18 @@
         "instructions": "The purpose of this assignment is to present an example of work that demonstrates numeracy. This assignment relates to being able to use knowledge and skills related to analyzing data.",
         "due_date": "11-5-04.png",
         "percentage": "10.png",
-        "tasks": [{
+        "taskA": {
           "title": "Data Analysis assignment",
             "name": "Option A",
             "information": "Select an example of previous coursework that illustrates the learning outcome on numeracy and write a reflection essay.",
-            "select": false
-        }, {
+            "selectA": false
+        },
+        "taskB": {
           "title": "Data Analysis assignment",
             "name": "Option B",
             "information": "Complete assignment relating to an analysis of Las Vegas metropolitan area using a data set provided. Present work in essay format.",
-            "select": false
-        }]
+            "selectB": false
+        }
     },
     {
         "type": "two",
@@ -161,17 +165,18 @@
         "instructions": "The purpose of this assignment is to present an example of work that demonstrates awareness of multiple audiences. This assignment relates to being able to communicate typically complex information about an environmental issue to multiple audiences. It is based upon learning outcomes for the major and course.",
         "due_date": "29-11-04.png",
         "percentage": "10.png",
-        "tasks": [{
+        "taskA": {
           "title": "Communication assignment",
             "name": "Option A",
             "information": "Select an example of previous coursework that illustrates learning outcomes related to communication and sharing findings with others. Prepare a presentation and give it to the class.",
-            "select": false
-        }, {
+            "selectA": false
+        },
+        "taskB": {
           "title": "Communication assignment",
             "name": "Option B",
             "information": "Identify a complex environmental issue and prepare two five-minute presentations for two different groups. Prepare each presentation and give both presentations to the class.",
-            "select": false
-        }]
+            "selectB": false
+        }
     },
 {
         "type": "one",
@@ -188,12 +193,12 @@
         "instructions": "The purpose of this assignment is to create an electronic portfolio of your work in college that exemplifies each learning outcome in your degree.",
         "due_date": "12-1-04.png",
         "percentage": "20_percent-05.png",
-        "tasks": [{
+        "taskA": {
             "name": "Option A",
             "title": "Electronic Portfolio assignment",
             "information": "Prepare an overview that enables reviewers examining your work to understand how your work meets or exceeds each learning outcome required for the degree.",
-            "select": false
-        }]
+            "selectA": false
+        }
     },{
         "type": "one",
         "title": "Presentation of Portfolio",
@@ -209,11 +214,11 @@
         "instructions": "The purpose of this assignment is to present your portfolio created in this course to your classmates and guests.",
         "due_date": "12-13-04.png",
         "percentage": "10.png",
-        "tasks": [{
+        "taskA": {
             "name": "Option A",
             "title": "Presentation of Portfolio",
             "information": "To complete this assignment you will: Synthesize elements into a coherent 15-minute presentation. Provide an introduction to your portfolio. Describe how you approached each element. Summarize what you learned and identify what you plan to do next. Be prepared to answer questions.",
-            "select": false
-        }]
+            "selectA": false
+        }
     }]
 }
