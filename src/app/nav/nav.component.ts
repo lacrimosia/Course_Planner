@@ -69,6 +69,22 @@ export class NavComponent implements OnInit {
             return false; // Prevent bubbling
         }));
 
+        // select A for the option A task
+            this._hotkeysService.add(new Hotkey('a', (event: KeyboardEvent): boolean => {
+              if(this.assignments[this.value].type=="two"){
+                this.buttonOneClick();
+              }
+                return false; // Prevent bubbling
+            }));
+
+            // select B for the option B task
+                this._hotkeysService.add(new Hotkey('b', (event: KeyboardEvent): boolean => {
+                  if(this.assignments[this.value].type=="two"){
+                    this.buttonTwoClick();
+                  }
+                    return false; // Prevent bubbling
+                }));
+
   }
 
   // go to link onclick
@@ -111,6 +127,16 @@ printContent(){
 
 hidePrintContent(){
   this.print = false;
+}
+
+buttonOneClick(){
+  this.data.assignments[this.value].taskA.selectA = !this.data.assignments[this.value].taskA.selectA;
+  this.data.assignments[this.value].taskB.selectB=false;
+}
+
+buttonTwoClick(){
+  this.data.assignments[this.value].taskB.selectB = !this.data.assignments[this.value].taskB.selectB;
+  this.data.assignments[this.value].taskA.selectA=false;
 }
 
 }
