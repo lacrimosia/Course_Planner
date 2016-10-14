@@ -4,7 +4,6 @@ import { Observable } from 'rxjs/Rx';
 import {KeysPipe} from '../keys.pipe';
 import {HotkeysService, Hotkey} from 'angular2-hotkeys';
 import * as jsPDF from 'jspdf';
-// jsPDF.method();
 
 
 @Component({
@@ -161,6 +160,13 @@ toPdf(){
     doc.text(20, 30, 'This is some normal sized text underneath.');
 
     doc.save('Test.pdf');
+}
+
+printPdf(data){
+  let doc = new jsPDF();
+  doc.setFontSize(22);
+  doc.text(20, 20, data);
+  doc.save('ENV498_Planner.pdf');
 }
 
 }
