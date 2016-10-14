@@ -147,6 +147,10 @@ buttonTwoClick(){
   this.data.assignments[this.value].taskA.selectA=false;
 }
 
+taskSelected(task){
+  return task;
+}
+
 /*toPdf(){
     let doc = new jsPDF();
     doc.setFontSize(22);
