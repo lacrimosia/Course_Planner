@@ -16,13 +16,24 @@
             <img [src]="imageSrc(d.value.due_date)" class="resize"/>
             <img [src]="imageSrc(d.value.percentage)" class="resize"/>
             <div class="clear"></div>
-            <div class="taskAselected" [ngClass]="{'show': !d.value.taskA.selectA, 'hide': 'd.value.taskA.selectA'}">
+
+            <div class="taskAselected" *ngIf="d.value.type=='one'">
               <h2 class="h"> {{ d.value.taskA.name }}</h2>
               <span> {{ d.value.taskA.information }} </span>
             </div>
-           <div class="taskBselected" [ngClass]="{'show': !d.value.taskB.selectB, 'hide': 'd.value.taskB.selectB'}">
+
+           <div class="taskBselected" *ngIf="d.value.type=='two'">
+
+          <div class="ae" [ngClass]="{'show': d.value.taskA.selectA, 'hide': !d.value.taskA.selectA }">
+              <h2 class="h"> {{ d.value.taskA.name }}</h2>
+              <span> {{ d.value.taskA.information }} </span>
+            </div>
+
+            <div class="be" [ngClass]="{'show': d.value.taskB.selectB, 'hide': !d.value.taskB.selectB }">
               <h2 class="h"> {{ d.value.taskB.name }}</h2>
               <span> {{ d.value.taskB.information }} </span>
+            </div>
+
             </div>
             <hr />
           </div>

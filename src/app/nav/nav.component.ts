@@ -3,7 +3,7 @@ import { DataService} from '../data.service';
 import { Observable } from 'rxjs/Rx';
 import {KeysPipe} from '../keys.pipe';
 import {HotkeysService, Hotkey} from 'angular2-hotkeys';
-// import {jsPDF} from 'assets/jspdf';
+// import {jsPDF} from 'jspdf';
 
 
 @Component({
