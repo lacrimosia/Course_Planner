@@ -18,23 +18,31 @@
             <div class="clear"></div>
 
             <div class="taskAselected" *ngIf="d.value.type=='one'">
-              <h2 class="h"> {{ d.value.taskA.name }}</h2>
+              <h2 class="h"><i class="fa fa-check green"></i> {{ d.value.taskA.name }}</h2>
               <span> {{ d.value.taskA.information }} </span>
             </div>
 
            <div class="taskBselected" *ngIf="d.value.type=='two'">
 
           <div class="ae" [ngClass]="{'show': d.value.taskA.selectA, 'hide': !d.value.taskA.selectA }">
-              <h2 class="h"> {{ d.value.taskA.name }}</h2>
+              <h2 class="h"><i class="fa fa-check green"></i>  {{ d.value.taskA.name }}</h2>
               <span> {{ d.value.taskA.information }} </span>
             </div>
 
             <div class="be" [ngClass]="{'show': d.value.taskB.selectB, 'hide': !d.value.taskB.selectB }">
-              <h2 class="h"> {{ d.value.taskB.name }}</h2>
+              <h2 class="h"><i class="fa fa-check green"></i>  {{ d.value.taskB.name }}</h2>
               <span> {{ d.value.taskB.information }} </span>
             </div>
 
             </div>
+
+            <div class="noneselected" *ngIf="d.value.type=='two' && (d.value.taskA.selectA==false && d.value.taskB.selectB==false)">
+              <div class="ae">
+                <h2 class="h">Nothing Selected <i class="fa fa-frown-o"></i></h2>
+                <span> Please click {{i}} to go back and select an assignment. </span>
+              </div>
+             </div>
+
             <hr />
           </div>
         </div>
