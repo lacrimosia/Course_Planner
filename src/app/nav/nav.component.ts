@@ -3,7 +3,8 @@ import { DataService} from '../data.service';
 import { Observable } from 'rxjs/Rx';
 import {KeysPipe} from '../keys.pipe';
 import {HotkeysService, Hotkey} from 'angular2-hotkeys';
-// import {jsPDF} from 'jspdf';
+import * as jsPDF from 'jspdf';
+// jsPDF.method();
 
 
 @Component({
@@ -151,7 +152,7 @@ taskSelected(task){
   return task;
 }
 
-/*toPdf(){
+toPdf(){
     let doc = new jsPDF();
     doc.setFontSize(22);
     doc.text(20, 20, 'This is a title');
@@ -160,6 +161,6 @@ taskSelected(task){
     doc.text(20, 30, 'This is some normal sized text underneath.');
 
     doc.save('Test.pdf');
-}*/
+}
 
 }
