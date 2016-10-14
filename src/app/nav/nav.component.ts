@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Rx';
 import {KeysPipe} from '../keys.pipe';
 import {HotkeysService, Hotkey} from 'angular2-hotkeys';
 import * as jsPDF from 'jspdf';
+import * as html2canvas from 'html2canvas';
 
 
 @Component({
@@ -162,11 +163,36 @@ toPdf(){
     doc.save('Test.pdf');
 }
 
-printPdf(data){
-  let doc = new jsPDF();
-  doc.setFontSize(22);
-  doc.text(20, 20, data);
+printPdf(dataA){
+  let doc = new jsPDF('p','pt','a4');
+  let data = this.assignments;
+  let start = 80;
+
+  doc.setFontSize(20);
+  doc.text(20, 50, "ENV 498 Capstone Planner");
+
+ for(let x=1; x<data.length; x++){
+    doc.setFontSize(16);
+    let startingPointVal = (x*start);
+
+    doc.text(20, startingPointVal, x+") "+data[x].title);
+
+    let splitTitle = doc.splitTextToSize(data[x].taskA.information, 800);
+
+    doc.setFontSize(12);
+    doc.text(20, (startingPointVal + 25), splitTitle);
+
+  }
+
+  /* html2canvas(document.getElementById('prints'), {
+    onrendered: function (canvas) {
+        doc.addHTML(canvas, 15, 15 );
+    }
+});*/
+
+//  doc.addPage();
   doc.save('ENV498_Planner.pdf');
 }
+
 
 }
