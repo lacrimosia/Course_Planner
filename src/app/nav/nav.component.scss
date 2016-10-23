@@ -204,3 +204,31 @@ button{
 .show{
   display: block;
 }
+
+
+
+// Print area
+@media print{
+
+  #c5, #c6, #c7, #c8{
+    position: relative !important;
+  }
+
+  #c5{
+    top: 1075px !important;
+    page-break-after: always !important;
+  }
+
+  #c6{
+    top: 1375px !important;
+  }
+
+  #c7{
+    top: 1575px !important;
+  }
+
+  #c8{
+    top: 1775px !important;
+  }
+
+}

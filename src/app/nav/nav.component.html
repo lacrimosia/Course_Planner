@@ -6,9 +6,9 @@
 
       <div class="print" *ngIf="print==true" id="prints">
         <!--<button id="hidePrint" class="selections" (click)="hidePrintContent()">Hide Print</button>-->
-        <button id="hidePrint" class="selections" (click)="printPdf(d.value.type)"><i class="fa fa-print"></i> Print</button>
+        <button id="hidePrint" class="selections" (click)="printPage()"><i class="fa fa-print"></i> Print</button>
 
-        <div class="contentAreaPrint animated fadeIn" [ngStyle]="{'position': 'absolute', 'top': d.value.printTop+'px'}" *ngIf="i>0">
+        <div class="contentAreaPrint animated fadeIn" id='c{{i}}' [ngStyle]="{'position': 'absolute', 'top': d.value.printTop+'px'}" *ngIf="i>0">
           <div class="lines" *ngIf="i<8"></div>
           <div class="titleLeft">
               <button class="circle" (click)="goTo(i); print=false;" [ngStyle]="{'float': 'left', 'z-index': '2000'}">{{ d.value.symbol }}</button>

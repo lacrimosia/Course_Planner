@@ -152,6 +152,10 @@ taskSelected(task){
   return task;
 }
 
+printPage(){
+  window.print();
+}
+
 toPdf(){
     let doc = new jsPDF();
     doc.setFontSize(22);
