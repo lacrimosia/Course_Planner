@@ -155,8 +155,13 @@ taskSelected(task){
 printPdf(){
   let doc = new jsPDF('portrait','pt','a4');
   let data = this.assignments;
+  let info = this.data;
   let start = 130;
   let splitTitle;
+
+  // images for percentage of either 10% or 20%
+  let tenPercent = info.ten;
+  let twentyPercent = info.twenty;
 
   doc.setFontSize(20);
   doc.text(20, 50, "ENV 498 Capstone Planner");
@@ -166,9 +171,16 @@ printPdf(){
  for(let x=1; x<data.length-3; x++){
     doc.setFontSize(16);
     let startingPointVal = (x*start);
-
+    // base 64 encoding of images
     // title information
+    doc.setTextColor(96,125,139);
     doc.text(20, startingPointVal, x+") "+data[x].title);
+    // add image
+    if(data[x].percentage=="10.png"){
+      doc.addImage(tenPercent, 'JPEG', 420, (x*start)-20, 30, 30);
+    }else{
+      doc.addImage(twentyPercent, 'JPEG', 420, (x*start)-20, 30, 30);
+    }
     // check which to display on the pdf
     // if task is A, B or nothing selected
       if(data[x].taskA.selectA==true){
@@ -180,6 +192,7 @@ printPdf(){
       }
     // set the information
     doc.setFontSize(10);
+    doc.setTextColor(77,77,77);
     doc.text(20, (startingPointVal + 20), splitTitle);
   }
 
@@ -194,9 +207,20 @@ doc.text(20, 50, "ENV 498 Capstone Planner");
 for(let x=6; x<data.length; x++){
    doc.setFontSize(16);
    let startingPointVal = ((x-5)*start);
-
    // title information
+   doc.setTextColor(96,125,139);
    doc.text(20, startingPointVal, x+") "+data[x].title);
+
+   if(data[x].due){
+     doc.addImage(data[x].due, 'JPEG', 375, startingPointVal-20, 30, 30);
+   }
+
+   if(data[x].percentage=="10.png"){
+     doc.addImage(tenPercent, 'JPEG', 420, startingPointVal-20, 30, 30);
+   }else{
+     doc.addImage(twentyPercent, 'JPEG', 420, startingPointVal-20, 30, 30);
+   }
+
    // check which to display on the pdf
    // if task is A, B or nothing selected
      if(data[x].taskA.selectA==true){
@@ -208,6 +232,7 @@ for(let x=6; x<data.length; x++){
      }
    // set the information
    doc.setFontSize(10);
+   doc.setTextColor(77,77,77);
    doc.text(20, (startingPointVal + 20), splitTitle);
  }
   doc.save('ENV498_Planner.pdf');
