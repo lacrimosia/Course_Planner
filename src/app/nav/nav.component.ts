@@ -152,49 +152,86 @@ taskSelected(task){
   return task;
 }
 
-printPage(){
-  window.print();
-}
-
-toPdf(){
-    let doc = new jsPDF();
-    doc.setFontSize(22);
-    doc.text(20, 20, 'This is a title');
-
-    doc.setFontSize(16);
-    doc.text(20, 30, 'This is some normal sized text underneath.');
-
-    doc.save('Test.pdf');
-}
-
-printPdf(dataA){
-  let doc = new jsPDF('p','pt','a4');
+printPdf(){
+  let doc = new jsPDF('portrait','pt','a4');
   let data = this.assignments;
-  let start = 80;
+  let start = 130;
+  let splitTitle;
 
   doc.setFontSize(20);
   doc.text(20, 50, "ENV 498 Capstone Planner");
 
- for(let x=1; x<data.length; x++){
+// first page
+// this is numbers 1 - 5
+ for(let x=1; x<data.length-3; x++){
     doc.setFontSize(16);
     let startingPointVal = (x*start);
 
+    // title information
     doc.text(20, startingPointVal, x+") "+data[x].title);
-
-    let splitTitle = doc.splitTextToSize(data[x].taskA.information, 800);
-
-    doc.setFontSize(12);
-    doc.text(20, (startingPointVal + 25), splitTitle);
-
+    // check which to display on the pdf
+    // if task is A, B or nothing selected
+      if(data[x].taskA.selectA==true){
+        splitTitle = doc.splitTextToSize(data[x].taskA.information, 700);
+      }else if(data[x].taskB.selectB==true){
+        splitTitle = doc.splitTextToSize(data[x].taskB.information, 700);
+      }else{
+        splitTitle = doc.splitTextToSize("Nothing selected :(", 800);
+      }
+    // set the information
+    doc.setFontSize(10);
+    doc.text(20, (startingPointVal + 20), splitTitle);
   }
 
-  /* html2canvas(document.getElementById('prints'), {
-    onrendered: function (canvas) {
-        doc.addHTML(canvas, 15, 15 );
-    }
-});*/
+// the second page
+// from number 7 to 8
+doc.addPage();
 
-//  doc.addPage();
+// number 6 is starting at the top position
+/*doc.setFontSize(16);
+start = 40;
+let startingPointVal = start;
+
+// title information
+doc.text(20, startingPointVal, 6+") "+data[6].title);
+// check which to display on the pdf
+// if task is A, B or nothing selected
+  if(data[6].taskA.selectA==true){
+    splitTitle = doc.splitTextToSize(data[6].taskA.information, 700);
+  }else if(data[6].taskB.selectB==true){
+    splitTitle = doc.splitTextToSize(data[6].taskB.information, 700);
+  }else{
+    splitTitle = doc.splitTextToSize("Nothing selected :(", 800);
+  }
+
+// set the information
+doc.setFontSize(10);
+doc.text(20, (startingPointVal + 20), splitTitle);
+*/
+// this is number 7 and 8 on the second page
+
+doc.setFontSize(20);
+doc.text(20, 50, "ENV 498 Capstone Planner");
+
+for(let x=6; x<data.length; x++){
+   doc.setFontSize(16);
+   let startingPointVal = ((x-5)*start);
+
+   // title information
+   doc.text(20, startingPointVal, x+") "+data[x].title);
+   // check which to display on the pdf
+   // if task is A, B or nothing selected
+     if(data[x].taskA.selectA==true){
+       splitTitle = doc.splitTextToSize(data[x].taskA.information, 700);
+     }else if(data[x].taskB.selectB==true){
+       splitTitle = doc.splitTextToSize(data[x].taskB.information, 700);
+     }else{
+       splitTitle = doc.splitTextToSize("Nothing selected :(", 800);
+     }
+   // set the information
+   doc.setFontSize(10);
+   doc.text(20, (startingPointVal + 20), splitTitle);
+ }
   doc.save('ENV498_Planner.pdf');
 }
 
