@@ -157,7 +157,7 @@ printPdf(){
   let data = this.assignments;
   let info = this.data;
   let start = 130;
-  let textWidth = 800;
+  let textWidth = 700;
   let imageThumb = 40;
   let splitTitle, optionName;
 
@@ -173,10 +173,18 @@ printPdf(){
  for(let x=1; x<data.length-3; x++){
     doc.setFontSize(16);
     let startingPointVal = (x*start);
-    // base 64 encoding of images
+
+    // green shape ellipse
+    doc.setFillColor(159,186,143);
+    doc.ellipse(20, startingPointVal-5, 10, 10, 'F');
+    // The number of the item inside of the ellipse
+    doc.setTextColor(255, 255, 255);
+    doc.setFontSize(14);
+    doc.text(16, startingPointVal, x.toString());
+
     // title information
     doc.setTextColor(96,125,139);
-    doc.text(20, startingPointVal, x+") "+data[x].title);
+    doc.text(40, startingPointVal, data[x].title);
 
     // add the due image
     if(data[x].due){
@@ -206,16 +214,16 @@ printPdf(){
 
     // only show checkmark if an option is selected
     if(data[x].taskA.selectA==true || data[x].taskB.selectB==true){
-      doc.addImage(info.checkmark, 'JPEG', 20, startingPointVal + 12, imageThumb-30, imageThumb-30);
+      doc.addImage(info.checkmark, 'JPEG', 40, startingPointVal + 12, imageThumb-30, imageThumb-30);
       doc.setTextColor(0,0,0);
-      doc.text(34, (startingPointVal + 20), optionName);
+      doc.text(54, (startingPointVal + 20), optionName);
     }else{
       doc.setTextColor(0,0,0);
-      doc.text(20, (startingPointVal + 20), optionName);
+      doc.text(50, (startingPointVal + 20), optionName);
     }
 
     doc.setTextColor(77,77,77);
-    doc.text(20, (startingPointVal + 40), splitTitle);
+    doc.text(60, (startingPointVal + 40), splitTitle);
   }
 
 // the second page
@@ -229,9 +237,19 @@ doc.text(20, 50, "ENV 498 Capstone Planner");
 for(let x=6; x<data.length; x++){
    doc.setFontSize(16);
    let startingPointVal = ((x-5)*start);
+
+   // green shape ellipse
+   doc.setFillColor(159,186,143);
+   doc.ellipse(20, startingPointVal-5, 10, 10, 'F');
+   // The number of the item inside of the ellipse
+   doc.setTextColor(255, 255, 255);
+   doc.setFontSize(14);
+   doc.text(16, startingPointVal, x.toString());
+
+
    // title information
    doc.setTextColor(96,125,139);
-   doc.text(20, startingPointVal, x+") "+data[x].title);
+   doc.text(40, startingPointVal, data[x].title);
 
    // add the due image
    if(data[x].due){
@@ -262,16 +280,16 @@ for(let x=6; x<data.length; x++){
    // only show checkmark if an option is selected
    // only show checkmark if an option is selected
    if(data[x].taskA.selectA==true || data[x].taskB.selectB==true){
-     doc.addImage(info.checkmark, 'JPEG', 20, startingPointVal + 12, imageThumb-30, imageThumb-30);
+     doc.addImage(info.checkmark, 'JPEG', 40, startingPointVal + 12, imageThumb-30, imageThumb-30);
      doc.setTextColor(0,0,0);
-     doc.text(34, (startingPointVal + 20), optionName);
+     doc.text(54, (startingPointVal + 20), optionName);
    }else{
      doc.setTextColor(0,0,0);
-     doc.text(20, (startingPointVal + 20), optionName);
+     doc.text(54, (startingPointVal + 20), optionName);
    }
 
    doc.setTextColor(77,77,77);
-   doc.text(20, (startingPointVal + 40), splitTitle);
+   doc.text(60, (startingPointVal + 40), splitTitle);
  }
   doc.save('ENV498_Planner.pdf');
 }
