@@ -187,29 +187,7 @@ printPdf(){
 // from number 7 to 8
 doc.addPage();
 
-// number 6 is starting at the top position
-/*doc.setFontSize(16);
-start = 40;
-let startingPointVal = start;
-
-// title information
-doc.text(20, startingPointVal, 6+") "+data[6].title);
-// check which to display on the pdf
-// if task is A, B or nothing selected
-  if(data[6].taskA.selectA==true){
-    splitTitle = doc.splitTextToSize(data[6].taskA.information, 700);
-  }else if(data[6].taskB.selectB==true){
-    splitTitle = doc.splitTextToSize(data[6].taskB.information, 700);
-  }else{
-    splitTitle = doc.splitTextToSize("Nothing selected :(", 800);
-  }
-
-// set the information
-doc.setFontSize(10);
-doc.text(20, (startingPointVal + 20), splitTitle);
-*/
 // this is number 7 and 8 on the second page
-
 doc.setFontSize(20);
 doc.text(20, 50, "ENV 498 Capstone Planner");
 
