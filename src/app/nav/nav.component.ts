@@ -8,14 +8,14 @@ import * as googleAuth from 'google-auth-library';
 import * as jsPDF from 'jspdf';
 import * as fs from 'file-system';
 import * as readline from 'readline';
-import { AuthenticationService } from '../authentication.service';
-import * as gapi from 'gapi';
+// import { AuthenticationService } from '../authentication.service';
+// import * as gapi from 'gapi';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
-  providers: [DataService, HotkeysService, AuthenticationService]
+  providers: [DataService, HotkeysService]
 })
 export class NavComponent implements OnInit {
 	public data;
@@ -27,7 +27,7 @@ export class NavComponent implements OnInit {
   public print;
   public assignments;
 
-  constructor(private dataService: DataService, private _hotkeysService: HotkeysService, private auth: AuthenticationService) {
+  constructor(private dataService: DataService, private _hotkeysService: HotkeysService) {
   	// this.dataService = dataService;
   	this.value = this.dataService.value;
   	this.selected = false;
@@ -55,8 +55,6 @@ export class NavComponent implements OnInit {
          //this.goTo();
          if(this.value >= 0 && this.value < (this.amount - 1)){
            this.value++;
-         }else{
-           this.value = 0;
          }
 
         return false; // Prevent bubbling
