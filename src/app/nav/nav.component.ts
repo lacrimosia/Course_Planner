@@ -7,12 +7,15 @@ import * as google from 'googleapis';
 import * as googleAuth from 'google-auth-library';
 import * as jsPDF from 'jspdf';
 import * as fs from 'file-system';
+import * as readline from 'readline';
+import { AuthenticationService } from '../authentication.service';
+import * as gapi from 'gapi';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
-  providers: [DataService, HotkeysService]
+  providers: [DataService, HotkeysService, AuthenticationService]
 })
 export class NavComponent implements OnInit {
 	public data;
@@ -24,8 +27,7 @@ export class NavComponent implements OnInit {
   public print;
   public assignments;
 
-
-  constructor(private dataService: DataService, private _hotkeysService: HotkeysService) {
+  constructor(private dataService: DataService, private _hotkeysService: HotkeysService, private auth: AuthenticationService) {
   	// this.dataService = dataService;
   	this.value = this.dataService.value;
   	this.selected = false;
@@ -34,6 +36,7 @@ export class NavComponent implements OnInit {
   }
 
   ngOnInit() {
+
   this.data = this.dataService.getData()
     .subscribe(
        data => {
@@ -295,25 +298,5 @@ for(let x=6; x<data.length; x++){
  }
   doc.save('ENV498_Planner.pdf');
 }
-
-// authentication
-authorize(credentials, callback) {
-  let clientSecret = credentials.installed.client_secret;
-  let clientId = credentials.installed.client_id;
-  let redirectUrl = credentials.installed.redirect_uris[0];
-  let auth = new googleAuth();
-  var oauth2Client = new auth.OAuth2(clientId, clientSecret, redirectUrl);
-
-  // Check if we have previously stored a token.
-  fs.readFile(TOKEN_PATH, function(err, token) {
-    if (err) {
-      getNewToken(oauth2Client, callback);
-    } else {
-      oauth2Client.credentials = JSON.parse(token);
-      callback(oauth2Client);
-    }
-  });
-}
-
 
 }

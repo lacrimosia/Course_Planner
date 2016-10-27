@@ -7,3 +7,5 @@ declare module 'jspdf';
 declare module 'googleapis';
 declare module 'google-auth-library';
 declare module 'file-system';
+declare module 'readline';
+declare module 'gapi';

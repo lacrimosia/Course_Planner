@@ -20,6 +20,7 @@
     "@angular/platform-browser": "2.0.0",
     "@angular/platform-browser-dynamic": "2.0.0",
     "@angular/router": "3.0.0",
+    "@types/gapi": "0.0.29",
     "angular2-hotkeys": "^0.4.0",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
@@ -39,6 +40,7 @@
   "devDependencies": {
     "@types/d3": "^3.5.36",
     "@types/jasmine": "^2.2.30",
+    "@types/node": "^6.0.46",
     "angular-cli": "1.0.0-beta.16",
     "codelyzer": "~0.0.26",
     "jasmine-core": "2.4.1",
