@@ -314,3 +314,16 @@ ul li{
 	list-style: none;
 	font-weight: bold;
 }
+
+.loading{
+	position: relative;
+	width: 50px;
+	margin: 20% auto;
+	height: 100%;
+}
+
+.loading i{
+	text-align: center;
+	color: $text;
+	opacity: 0.6;
+}
