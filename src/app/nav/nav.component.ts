@@ -6,6 +6,7 @@ import {HotkeysService, Hotkey} from 'angular2-hotkeys';
 import * as google from 'googleapis';
 import * as googleAuth from 'google-auth-library';
 import * as jsPDF from 'jspdf';
+import * as fs from 'file-system';
 
 @Component({
   selector: 'app-nav',
@@ -294,5 +295,25 @@ for(let x=6; x<data.length; x++){
  }
   doc.save('ENV498_Planner.pdf');
 }
+
+// authentication
+authorize(credentials, callback) {
+  let clientSecret = credentials.installed.client_secret;
+  let clientId = credentials.installed.client_id;
+  let redirectUrl = credentials.installed.redirect_uris[0];
+  let auth = new googleAuth();
+  var oauth2Client = new auth.OAuth2(clientId, clientSecret, redirectUrl);
+
+  // Check if we have previously stored a token.
+  fs.readFile(TOKEN_PATH, function(err, token) {
+    if (err) {
+      getNewToken(oauth2Client, callback);
+    } else {
+      oauth2Client.credentials = JSON.parse(token);
+      callback(oauth2Client);
+    }
+  });
+}
+
 
 }

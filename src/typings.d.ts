@@ -6,3 +6,4 @@ declare var System: any;
 declare module 'jspdf';
 declare module 'googleapis';
 declare module 'google-auth-library';
+declare module 'file-system';
