@@ -22,6 +22,7 @@ export class NavComponent implements OnInit {
   public contentList;
   public print;
   public assignments;
+  
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) {
   	// this.dataService = dataService;
@@ -293,6 +294,5 @@ for(let x=6; x<data.length; x++){
  }
   doc.save('ENV498_Planner.pdf');
 }
-
 
 }

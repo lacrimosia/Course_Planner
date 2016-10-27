@@ -7,6 +7,7 @@
       <div class="print" *ngIf="print==true" id="prints">
         <!--<button id="hidePrint" class="selections" (click)="hidePrintContent()">Hide Print</button>-->
         <button id="hidePrint" class="selections" (click)="printPdf()"><i class="fa fa-download"></i> Save</button>
+        <button id="addCalendar" class="selections"><i class="fa fa-calendar-plus-o"></i> Add to Calendar</button>
 
         <div class="contentAreaPrint animated fadeIn" id='c{{i}}' [ngStyle]="{'position': 'absolute', 'top': d.value.printTop+'px'}" *ngIf="i>0">
           <div class="lines" *ngIf="i<8"></div>
@@ -52,9 +53,9 @@
 
       <div class="heading" *ngIf="i==value">
       <!--	<h1>{{ d.value.course_title }}</h1> -->
-      	    <button class="circle" (click)="printContent()">P</button>
-      	    <button class="circle" (click)="reload()">R</button>
-      	    <button class="circle" (click)="help(); print=false;">H</button>
+      	    <button class="circle" (click)="printContent()"><i class="fa fa-print"></i></button>
+      	    <button class="circle" (click)="reload()"><i class="fa fa-refresh"></i></button>
+      	    <button class="circle" (click)="help(); print=false;"><i class="fa fa-question"></i></button>
       	    <div class="clear"></div> <!--clear floats-->
       </div>
 
