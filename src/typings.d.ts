@@ -4,4 +4,5 @@
 
 declare var System: any;
 declare module 'jspdf';
-declare module 'html2canvas';
+declare module 'googleapis';
+declare module 'google-auth-library';

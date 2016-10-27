@@ -3,9 +3,9 @@ import { DataService} from '../data.service';
 import { Observable } from 'rxjs/Rx';
 import {KeysPipe} from '../keys.pipe';
 import {HotkeysService, Hotkey} from 'angular2-hotkeys';
+import * as google from 'googleapis';
+import * as googleAuth from 'google-auth-library';
 import * as jsPDF from 'jspdf';
-import * as html2canvas from 'html2canvas';
-
 
 @Component({
   selector: 'app-nav',
@@ -22,7 +22,7 @@ export class NavComponent implements OnInit {
   public contentList;
   public print;
   public assignments;
-  
+
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) {
   	// this.dataService = dataService;
