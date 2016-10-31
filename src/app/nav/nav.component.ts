@@ -56,7 +56,11 @@ export class NavComponent implements OnInit {
          if(this.value >= 0 && this.value < (this.amount - 1)){
            this.value++;
          }
-
+         if(this.value == this.assignments.length-1){
+           this.printContent();
+         }else{
+           this.hidePrintContent();
+         }
         return false; // Prevent bubbling
     }));
 
@@ -64,6 +68,11 @@ export class NavComponent implements OnInit {
     this._hotkeysService.add(new Hotkey('left', (event: KeyboardEvent): boolean => {
       if(this.value > 0 && this.value < (this.amount)){
         this.value--;
+      }
+      if(this.value == this.assignments.length-1){
+        this.printContent();
+      }else{
+        this.hidePrintContent();
       }
         return false; // Prevent bubbling
     }));
@@ -103,6 +112,8 @@ export class NavComponent implements OnInit {
   	this.value = value;
     if(value == this.assignments.length-1){
       this.printContent();
+    }else{
+      this.hidePrintContent();
     }
   	return this.value;
   }

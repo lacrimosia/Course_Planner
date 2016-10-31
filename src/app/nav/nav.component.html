@@ -103,10 +103,10 @@
 
 
         <!-- previous and next buttons -->
-        <button id="next" (click)="next(value)" *ngIf="value<i && print==false"></button>
-        <button id="prev" (click)="prev(value)" *ngIf="value>i && print==false"></button>
+        <button id="next" (click)="next(value)" *ngIf="value<i"></button>
+        <button id="prev" (click)="prev(value)" *ngIf="value>i"></button>
         <!-- title and subtitle with symbol -->
-        <div id="titleArea" *ngIf="i==value && print==false">
+        <div id="titleArea" *ngIf="i==value">
             <div class="symbol"> {{ d.value.symbol }} </div>
             <h1 class="sub" *ngIf="i!=1">{{ d.value.title }}</h1>
             <!--show if short text -->
@@ -115,7 +115,7 @@
             <div class="clear"></div>
             <!--clear floats-->
         </div>
-        <div class="workArea" *ngIf="i==value && print==false">
+        <div class="workArea" *ngIf="i==value">
             <h3 *ngIf="i==0" class="animated fadeIn"> {{ d.value.sub_title }}</h3>
             <div class="box animated fadeIn">
                 <!-- only shown in the intstructions page -->
@@ -225,12 +225,12 @@
         <div class="tooltip animated fadeIn" *ngIf="d.value.show==true && i==0;" [ngStyle]="{'left': d.value.tooltip.left+'px'}">
           <i class="fa fa-book"></i>  Instructions
         </div>
-        <button class="numButtons circle" id={{i}} *ngIf="print==false" on-mouseover="d.value.show = !d.value.show;" on-mouseleave="d.value.show = !d.value.show;" (click)="goTo(i)" [ngStyle]="{'position': 'absolute', 'top': '787px', 'left': d.value.buttonPos.left+'px'}" [ngClass]="{'highlight': i==value}">
+        <button class="numButtons circle" id={{i}}  on-mouseover="d.value.show = !d.value.show;" on-mouseleave="d.value.show = !d.value.show;" (click)="goTo(i)" [ngStyle]="{'position': 'absolute', 'top': '787px', 'left': d.value.buttonPos.left+'px'}" [ngClass]="{'highlight': i==value}">
             {{ d.value.symbol }}
         </button>
 
 
     </div>
-    <div class="navArea" *ngIf="print==false">
+    <div class="navArea">
         <div id="line"></div>
     </div>
