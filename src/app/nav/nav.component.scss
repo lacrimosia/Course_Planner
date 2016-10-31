@@ -211,30 +211,23 @@ button{
   display: block;
 }
 
+.size{
+  width: 20%;
+}
 
+.ae, .be{
+  width: 47%;
+  float: left;
+  padding: 5px;
+}
 
-// Print area
-@media print{
+.aed, .bed{
+  width: 100%;
+  float: left;
+  padding: 5px;
+}
 
-  #c5, #c6, #c7, #c8{
-    position: relative !important;
-  }
-
-  #c5{
-    top: 1075px !important;
-    page-break-after: always !important;
-  }
-
-  #c6{
-    top: 1375px !important;
-  }
-
-  #c7{
-    top: 1575px !important;
-  }
-
-  #c8{
-    top: 1775px !important;
-  }
-
+.pics{
+  width:100%;
+  float: left;
 }

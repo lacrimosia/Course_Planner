@@ -4,10 +4,9 @@
   </div>
     <div class="wrappers" *ngFor="let d of data.assignments | keys; let i = index">
 
-      <div class="print" *ngIf="print==true" id="prints">
+      <div class="print" *ngIf="print==true && i<8" id="prints">
         <!--<button id="hidePrint" class="selections" (click)="hidePrintContent()">Hide Print</button>-->
         <button id="hidePrint" class="selections" (click)="printPdf()"><i class="fa fa-download"></i> Save</button>
-      <button id="addCalendar" class="selections"><i class="fa fa-times"></i> Hide</button>
 
         <div class="contentAreaPrint animated fadeIn" id='c{{i}}' [ngStyle]="{'position': 'absolute', 'top': d.value.printTop+'px'}" *ngIf="i>0">
           <div class="lines" *ngIf="i<8"></div>
@@ -15,29 +14,73 @@
               <button class="circle" (click)="goTo(i); print=false;" [ngStyle]="{'float': 'left', 'z-index': '2000'}">{{ d.value.symbol }}</button>
               <h1 class="t"> {{ d.value.title }} </h1>
           </div>
-          <div class="outputs">
-            <img [src]="imageSrc(d.value.due_date)" class="resize"/>
-            <img [src]="imageSrc(d.value.percentage)" class="resize"/>
-            <div class="clear"></div>
+        <div class="outputs">
+          <!--  <img [src]="imageSrc(d.value.due_date)" *ngIf="i<7" class="resize"/>
+            <img [src]="imageSrc(d.value.percentage)" *ngIf="i<7" class="resize"/>
+            <div class="clear"></div> -->
 
             <div class="taskAselected" *ngIf="d.value.type=='one'">
-              <h2 class="h"><i class="fa fa-check green"></i> {{ d.value.taskA.name }}</h2>
-              <span> {{ d.value.taskA.information }} </span>
+              <div class="textPart">
+                <h2 class="h"><i class="fa fa-check green"></i>  {{ d.value.taskA.name }}</h2>
+                <div class="pics">
+                  <img [src]="imageSrc(d.value.due_date)" *ngIf="i<7" class="resize"/>
+                  <img [src]="imageSrc(d.value.percentage)" *ngIf="i<7"  class="resize" />
+                </div>
+                <p>{{ d.value.taskA.information }}</p>
+              </div>
             </div>
 
            <div class="taskBselected" *ngIf="d.value.type=='two'">
 
-          <div class="ae" [ngClass]="{'show': d.value.taskA.selectA, 'hide': !d.value.taskA.selectA }">
+          <div class="aed" [ngClass]="{'show': d.value.taskA.selectA, 'hide': !d.value.taskA.selectA }">
+            <div class="textPart">
               <h2 class="h"><i class="fa fa-check green"></i>  {{ d.value.taskA.name }}</h2>
-              <span> {{ d.value.taskA.information }} </span>
+              <div class="pics">
+                <img [src]="imageSrc(d.value.due_date)" *ngIf="i<7" class="resize"/>
+                <img [src]="imageSrc(d.value.percentage)" *ngIf="i<7" class="resize" />
+              </div>
+              <p>{{ d.value.taskA.information }}</p>
+            </div>
             </div>
 
-            <div class="be" [ngClass]="{'show': d.value.taskB.selectB, 'hide': !d.value.taskB.selectB }">
-              <h2 class="h"><i class="fa fa-check green"></i>  {{ d.value.taskB.name }}</h2>
-              <span> {{ d.value.taskB.information }} </span>
+            <div class="bed" [ngClass]="{'show': d.value.taskB.selectB, 'hide': !d.value.taskB.selectB }">
+              <div class="textPart">
+                <h2 class="h"><i class="fa fa-check green"></i>  {{ d.value.taskA.name }}</h2>
+                <div class="pics">
+                  <img [src]="imageSrc(d.value.due_date)" *ngIf="i<7" class="resize"/>
+                  <img [src]="imageSrc(d.value.percentage)" *ngIf="i<7"  class="resize" />
+                </div>
+                <p>{{ d.value.taskA.information }}</p>
+              </div>
             </div>
 
             </div>
+
+            <div class="taskBselected" *ngIf="d.value.type=='custom'">
+
+           <div class="ae" [ngClass]="{'show': d.value.taskA.selectA, 'hide': !d.value.taskA.selectA }">
+               <div class="textPart">
+                 <h2 class="h"><i class="fa fa-check green"></i>  {{ d.value.taskA.name }}</h2>
+                 <div class="pics">
+                   <img [src]="imageSrc(d.value.taskA.due_date)" class="size" />
+                   <img [src]="imageSrc(d.value.taskA.percentage)"  class="size" />
+                 </div>
+                 <p>{{ d.value.taskA.information }}</p>
+               </div>
+             </div>
+
+             <div class="be" [ngClass]="{'show': d.value.taskB.selectB, 'hide': !d.value.taskB.selectB }">
+               <div class="textPart">
+                 <h2 class="h"><i class="fa fa-check green"></i>  {{ d.value.taskB.name }}</h2>
+                 <div class="pics">
+                   <img [src]="imageSrc(d.value.taskB.due_date)" class="size" />
+                   <img [src]="imageSrc(d.value.taskB.percentage)" class="size" />
+                 </div>
+                 <p>{{ d.value.taskB.information }}</p>
+               </div>
+             </div>
+
+             </div>
 
             <div class="noneselected" *ngIf="d.value.type=='two' && (d.value.taskA.selectA==false && d.value.taskB.selectB==false)">
               <div class="ae">
@@ -45,8 +88,6 @@
                 <span> Please click {{i}} to go back and select an assignment. </span>
               </div>
              </div>
-
-            <hr />
           </div>
         </div>
       </div>
@@ -101,7 +142,7 @@
                     <!-- show all the tasks in a list -->
                     <div class="tasks">
                       <div class="taskA">
-                          <h2 class="titles">{{ d.value.taskA.name }}</h2>
+                          <h2 class="titles"><i class="fa fa-check green"></i> {{ d.value.taskA.name }}</h2>
                         <img [src]="imageSrc(d.value.due_date)" class="taskImage1" />
                         <img [src]="imageSrc(d.value.percentage)" class="taskImage2" />
                           <p>{{ d.value.taskA.information }}</p>
@@ -122,8 +163,8 @@
                     <div class="tasks floatingTasks">
                       <div class="taskA">
                           <h2 class="titles">{{ d.value.taskA.name }}</h2>
-                        <img [src]="imageSrc(d.value.due_date)" class="taskImage1" />
-                        <img [src]="imageSrc(d.value.percentage)" class="taskImage2" />
+                        <img [src]="imageSrc(d.value.due_date)" class="taskImage1"/>
+                        <img [src]="imageSrc(d.value.percentage)" class="taskImage2"/>
                           <p>{{ d.value.taskA.information }}</p>
                         <button class="select" (click)="buttonOneClick()" [ngClass]="{'yes': d.value.taskA.selectA, 'no': !d.value.taskA.selectA}"><i class="fa fa-times" *ngIf="!d.value.taskA.selectA"></i> <i class="fa fa-check" *ngIf="d.value.taskA.selectA"></i> Select Task</button>
                       </div>
@@ -138,6 +179,44 @@
                     <div class="clear"></div>
                     <!-- clear floats -->
                 </div>
+                <!-- custom view -->
+                <div class="twoTasks" *ngIf="d.value.type=='custom'">
+                    <h2 class="titles">Assignment Information</h2>
+                    <p> {{ d.value.instructions }} </p>
+                    <hr />
+                    <!-- <img [src]="imageSrc(d.value.due_date)" class="resize" />
+                    <img [src]="imageSrc(d.value.percentage)" class="resize" /> -->
+                    <div class="tasks floatingTasks">
+                      <div class="taskA">
+                          <h2 class="titles"><i class="fa fa-check green"></i> {{ d.value.taskA.name }}</h2>
+                        <img [src]="imageSrc(d.value.taskA.due_date)" class="taskImage1"/>
+                        <img [src]="imageSrc(d.value.taskA.percentage)" class="taskImage2"/>
+                          <p>{{ d.value.taskA.information }}</p>
+                      </div>
+                      <div class="taskB">
+                          <h2 class="titles"><i class="fa fa-check green"></i> {{ d.value.taskB.name }}</h2>
+                        <img [src]="imageSrc(d.value.taskB.due_date)" class="taskImage1" />
+                        <img [src]="imageSrc(d.value.taskB.percentage)" class="taskImage2" />
+                          <p>{{ d.value.taskB.information }}</p>
+                      </div>
+                    </div>
+                    <div class="clear"></div>
+                    <!-- clear floats -->
+                </div>
+
+                <!-- review view -->
+                <div class="oneTasks animated fadeIn" *ngIf="d.value.type=='review'">
+                    <h2 class="titles">Information</h2>
+                    <p> {{ d.value.instructions }} </p>
+                    <hr />
+                    <!-- show all the tasks in a list -->
+                    <div class="tasks">
+
+                    </div>
+
+                    <div class="clear"></div>
+                </div>
+
             </div>
         </div>
         <div class="tooltip animated fadeIn" *ngIf="d.value.show==true" [ngStyle]="{'left': d.value.tooltip.left+'px'}">
