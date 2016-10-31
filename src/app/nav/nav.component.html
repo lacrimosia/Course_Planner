@@ -7,7 +7,7 @@
       <div class="print" *ngIf="print==true" id="prints">
         <!--<button id="hidePrint" class="selections" (click)="hidePrintContent()">Hide Print</button>-->
         <button id="hidePrint" class="selections" (click)="printPdf()"><i class="fa fa-download"></i> Save</button>
-      <!--  <button id="addCalendar" class="selections"><i class="fa fa-calendar-plus-o"></i> Add to Calendar</button> -->
+      <button id="addCalendar" class="selections"><i class="fa fa-times"></i> Hide</button>
 
         <div class="contentAreaPrint animated fadeIn" id='c{{i}}' [ngStyle]="{'position': 'absolute', 'top': d.value.printTop+'px'}" *ngIf="i>0">
           <div class="lines" *ngIf="i<8"></div>
