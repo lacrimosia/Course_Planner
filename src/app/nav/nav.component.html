@@ -3,7 +3,7 @@
   <div class="helpImage animated" *ngIf="data.help==true" [ngClass]="{'fadeOut': data.help==false}">
     <img [src]="imageSrc(data.picture)" (click)="data.help=false" />
   </div>
-    <div class="wrappers" *ngFor="let d of data.assignments | keys; let i = index">
+    <div class="wrappers" *ngFor="let d of assignments | keys; let i = index">
 
       <div class="heading" *ngIf="i==value">
       <!--	<h1>{{ d.value.course_title }}</h1> -->
@@ -12,6 +12,10 @@
       	    <button class="circle" (click)="help(); print=false;"><i class="fa fa-question"></i></button>
       	    <div class="clear"></div> <!--clear floats-->
       </div>
+
+      <ul *ngIf="d.type=='one'">
+        <li><h2>{{ d.value.title }}</h2> <p>{{ d.value.taskA.information }}</p></li>
+      </ul>
 
         <!-- previous and next buttons -->
         <button id="next" (click)="next(value)" *ngIf="value<i"></button>
@@ -142,7 +146,6 @@
 
 
     </div>
-    <!--<app-print></app-print>-->
     <div class="navArea">
         <div id="line"></div>
     </div>

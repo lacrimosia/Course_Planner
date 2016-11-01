@@ -3,5 +3,10 @@
 <!--<a href="/q">Click</a>-->
 <div id="container">
 	<app-title><!--app title area --></app-title>
-	<app-nav><!--app information area --></app-nav>
+	<app-nav [d]="d" [data]="data" [assignments]="assignments"><!--app information area --></app-nav>
+	<div class="print" *ngIf="data.print==true">
+		<ul>
+			<app-print [data]="data" [assignments]="assignments"></app-print>
+		</ul>
+	</div>
 </div>

@@ -1,15 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { DataService} from '../data.service';
 import { Observable } from 'rxjs/Rx';
 import {KeysPipe} from '../keys.pipe';
 import {HotkeysService, Hotkey} from 'angular2-hotkeys';
-// import * as google from 'googleapis';
-// import * as googleAuth from 'google-auth-library';
 import * as jsPDF from 'jspdf';
-// import * as fs from 'file-system';
-// import * as readline from 'readline';
-// import { AuthenticationService } from '../authentication.service';
-// import * as gapi from 'gapi';
+
 
 @Component({
   selector: 'app-nav',
@@ -18,14 +13,15 @@ import * as jsPDF from 'jspdf';
   providers: [DataService, HotkeysService]
 })
 export class NavComponent implements OnInit {
-	public data;
-	public value:number;
+	@Input() d:number = 0;
+  @Input() assignments;
+  @Input() data;
 	public selected:boolean;
   public amount: number;
   public content;
   public contentList;
   public print;
-  public assignments;
+  value:number = 0;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) {
   	// this.dataService = dataService;
@@ -36,20 +32,6 @@ export class NavComponent implements OnInit {
   }
 
   ngOnInit() {
-
-  this.data = this.dataService.getData()
-    .subscribe(
-       data => {
-        this.data = data;
-        this.amount = this.data.assignments.length;
-        this.assignments = this.data.assignments;
-      //  console.log("the data list", this.amount);
-       },
-       err => console.error(err),
-       () => console.log('nav data loaded')
-
-    );
-
     // left keyboard shortcut
     this._hotkeysService.add(new Hotkey('right', (event: KeyboardEvent): boolean => {
          //this.goTo();
@@ -149,10 +131,12 @@ reload(){
 
 printContent(){
   this.print = true;
+  this.data.print = true;
 }
 
 hidePrintContent(){
   this.print = false;
+  this.data.print = false;
 }
 
 buttonOneClick(){
