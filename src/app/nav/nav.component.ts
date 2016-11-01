@@ -17,7 +17,7 @@ export class NavComponent implements OnInit {
   @Input() assignments;
   @Input() data;
 	public selected:boolean;
-  public amount: number;
+  @Input() amount;
   public content;
   public contentList;
   public print;
@@ -25,7 +25,7 @@ export class NavComponent implements OnInit {
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) {
   	// this.dataService = dataService;
-  	this.value = this.dataService.value;
+  	this.value = 0;
   	this.selected = false;
     this.contentList = [];
     this.print = false;
