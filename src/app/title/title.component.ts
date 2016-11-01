@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DataService} from '../data.service';
 import { Observable } from 'rxjs/Rx';
-import {HotkeysService} from 'angular2-hotkeys';
-import {Hotkey} from 'angular2-hotkeys';
+import {KeysPipe} from '../keys.pipe';
+import {HotkeysService, Hotkey} from 'angular2-hotkeys';
 
 @Component({
   selector: 'app-title',
@@ -11,25 +11,16 @@ import {Hotkey} from 'angular2-hotkeys';
   providers: [DataService, HotkeysService]
 })
 export class TitleComponent implements OnInit {
-	public titleData;
-  public value: number;
+  @Input() data;
+  @Input() amount;
+  @Input() d:number;
+  @Input() assignments;
+  value: number;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) {
-  	this.dataService = dataService;
-    this.value = this.dataService.value;
   }
 
   ngOnInit() {
-
-  	this.titleData = this.dataService.getData()
-    .subscribe(
-       data => {
-        this.titleData = data;
-       },
-       err => console.error(err),
-       () => console.log('tile and information loaded')
-    );
-
     // refresh the app
     this._hotkeysService.add(new Hotkey('r', (event: KeyboardEvent): boolean => {
         this.reload();

@@ -2,7 +2,7 @@
 </div>-->
 <!--<a href="/q">Click</a>-->
 <div id="container">
-	<app-title><!--app title area --></app-title>
+	<app-title [data]="data" [assignments]="assignments" [amount]="amount"><!--app title area --></app-title>
 	<app-nav [d]="d" [data]="data" [assignments]="assignments" [amount]="amount"><!--app information area --></app-nav>
 	<!-- print area -->
 	<div class="print animated fadeIn" *ngIf="data.print==true">

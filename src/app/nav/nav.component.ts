@@ -114,12 +114,20 @@ reload(){
   next(value){
   	this.value = value;
   	this.value++;
+    if(this.value == this.assignments.length-1){
+      this.data.print = true;
+    }else{
+      this.data.print = false;
+    }
   }
 
   // Prev button
   prev(value){
   	this.value = value;
   	this.value--;
+    if(this.value < this.assignments.length-1){
+      this.data.print = false;
+    }
   }
 
 // help button
