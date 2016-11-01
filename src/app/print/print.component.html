@@ -1,13 +1,15 @@
 <li *ngFor="let d of assignments | keys; let i = index">
-      <h2 *ngIf="i>0 && i<8">{{ d.value.title }}</h2>
+      <h2 *ngIf="i>0 && i<8">{{i}}) {{ d.value.title }}</h2>
       <div class="one" *ngIf="d.value.type=='one'">
         <p> {{ d.value.taskA.information }}</p>
       </div>
       <div class="two" *ngIf="d.value.type=='two'">
-        value A: {{ d.value.taskA.selectA }}
         <p *ngIf="d.value.taskA.selectA==true">Task A: {{ d.value.taskA.information }}</p>
         <p *ngIf="d.value.taskB.selectB==true">Task B: {{ d.value.taskB.information }}</p>
       </div>
       <div class="custom" *ngIf="d.value.type=='custom'">
+        <p *ngIf="d.value.taskA.selectA==true">Task A: {{ d.value.taskA.information }}</p>
+        <p *ngIf="d.value.taskB.selectB==true">Task B: {{ d.value.taskB.information }}</p>
       </div>
+      <p *ngIf="d.value.type=='two' && d.value.taskA.selectA==false && d.value.taskA.selectA==false"> Nothing Selected </p>
 </li>
