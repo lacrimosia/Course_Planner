@@ -10,6 +10,7 @@ import { KeysPipe } from './keys.pipe';
 
 import {HotkeyModule} from 'angular2-hotkeys';
 import { PrintComponent } from './print/print.component';
+import { DownloadComponent } from './download/download.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PrintComponent } from './print/print.component';
     TitleComponent,
     NavComponent,
     KeysPipe,
-    PrintComponent
+    PrintComponent,
+    DownloadComponent
   ],
   imports: [
     BrowserModule,
