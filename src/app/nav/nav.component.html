@@ -1,106 +1,17 @@
+
 <div class="template">
   <div class="helpImage animated" *ngIf="data.help==true" [ngClass]="{'fadeOut': data.help==false}">
     <img [src]="imageSrc(data.picture)" (click)="data.help=false" />
   </div>
     <div class="wrappers" *ngFor="let d of data.assignments | keys; let i = index">
 
-      <div class="print" *ngIf="print==true && i<8" id="prints">
-        <!--<button id="hidePrint" class="selections" (click)="hidePrintContent()">Hide Print</button>-->
-        <button id="hidePrint" class="selections" (click)="printPdf()"><i class="fa fa-download"></i> Save</button>
-
-        <div class="contentAreaPrint animated fadeIn" id='c{{i}}' [ngStyle]="{'position': 'absolute', 'top': d.value.printTop+'px'}" *ngIf="i>0">
-          <div class="lines" *ngIf="i<8"></div>
-          <div class="titleLeft">
-              <button class="circle" (click)="goTo(i); print=false;" [ngStyle]="{'float': 'left', 'z-index': '2000'}">{{ d.value.symbol }}</button>
-              <h1 class="t"> {{ d.value.title }} </h1>
-          </div>
-        <div class="outputs">
-          <!--  <img [src]="imageSrc(d.value.due_date)" *ngIf="i<7" class="resize"/>
-            <img [src]="imageSrc(d.value.percentage)" *ngIf="i<7" class="resize"/>
-            <div class="clear"></div> -->
-
-            <div class="taskAselected" *ngIf="d.value.type=='one'">
-              <div class="textPart">
-                <h2 class="h"><i class="fa fa-check green"></i>  {{ d.value.taskA.name }}</h2>
-                <div class="pics">
-                  <img [src]="imageSrc(d.value.due_date)" *ngIf="i<7" class="resize"/>
-                  <img [src]="imageSrc(d.value.percentage)" *ngIf="i<7"  class="resize" />
-                </div>
-                <p>{{ d.value.taskA.information }}</p>
-              </div>
-            </div>
-
-           <div class="taskBselected" *ngIf="d.value.type=='two'">
-
-          <div class="aed" [ngClass]="{'show': d.value.taskA.selectA, 'hide': !d.value.taskA.selectA }">
-            <div class="textPart">
-              <h2 class="h"><i class="fa fa-check green"></i>  {{ d.value.taskA.name }}</h2>
-              <div class="pics">
-                <img [src]="imageSrc(d.value.due_date)" *ngIf="i<7" class="resize"/>
-                <img [src]="imageSrc(d.value.percentage)" *ngIf="i<7" class="resize" />
-              </div>
-              <p>{{ d.value.taskA.information }}</p>
-            </div>
-            </div>
-
-            <div class="bed" [ngClass]="{'show': d.value.taskB.selectB, 'hide': !d.value.taskB.selectB }">
-              <div class="textPart">
-                <h2 class="h"><i class="fa fa-check green"></i>  {{ d.value.taskA.name }}</h2>
-                <div class="pics">
-                  <img [src]="imageSrc(d.value.due_date)" *ngIf="i<7" class="resize"/>
-                  <img [src]="imageSrc(d.value.percentage)" *ngIf="i<7"  class="resize" />
-                </div>
-                <p>{{ d.value.taskA.information }}</p>
-              </div>
-            </div>
-
-            </div>
-
-            <div class="taskBselected" *ngIf="d.value.type=='custom'">
-
-           <div class="ae" [ngClass]="{'show': d.value.taskA.selectA, 'hide': !d.value.taskA.selectA }">
-               <div class="textPart">
-                 <h2 class="h"><i class="fa fa-check green"></i>  {{ d.value.taskA.name }}</h2>
-                 <div class="pics">
-                   <img [src]="imageSrc(d.value.taskA.due_date)" class="size" />
-                   <img [src]="imageSrc(d.value.taskA.percentage)"  class="size" />
-                 </div>
-                 <p>{{ d.value.taskA.information }}</p>
-               </div>
-             </div>
-
-             <div class="be" [ngClass]="{'show': d.value.taskB.selectB, 'hide': !d.value.taskB.selectB }">
-               <div class="textPart">
-                 <h2 class="h"><i class="fa fa-check green"></i>  {{ d.value.taskB.name }}</h2>
-                 <div class="pics">
-                   <img [src]="imageSrc(d.value.taskB.due_date)" class="size" />
-                   <img [src]="imageSrc(d.value.taskB.percentage)" class="size" />
-                 </div>
-                 <p>{{ d.value.taskB.information }}</p>
-               </div>
-             </div>
-
-             </div>
-
-            <div class="noneselected" *ngIf="d.value.type=='two' && (d.value.taskA.selectA==false && d.value.taskB.selectB==false)">
-              <div class="ae">
-                <h2 class="h">Nothing Selected <i class="fa fa-frown-o"></i></h2>
-                <span> Please click {{i}} to go back and select an assignment. </span>
-              </div>
-             </div>
-          </div>
-        </div>
-      </div>
-
       <div class="heading" *ngIf="i==value">
       <!--	<h1>{{ d.value.course_title }}</h1> -->
-      	    <button class="circle" (click)="printContent()"><i class="fa fa-print"></i></button>
+      	   <!-- <button class="circle" (click)="printContent()"><i class="fa fa-print"></i></button> -->
       	    <button class="circle" (click)="reload()"><i class="fa fa-refresh"></i></button>
       	    <button class="circle" (click)="help(); print=false;"><i class="fa fa-question"></i></button>
       	    <div class="clear"></div> <!--clear floats-->
       </div>
-
-
 
         <!-- previous and next buttons -->
         <button id="next" (click)="next(value)" *ngIf="value<i"></button>
@@ -231,6 +142,7 @@
 
 
     </div>
+    <!--<app-print></app-print>-->
     <div class="navArea">
         <div id="line"></div>
     </div>

@@ -3,11 +3,11 @@ import { DataService} from '../data.service';
 import { Observable } from 'rxjs/Rx';
 import {KeysPipe} from '../keys.pipe';
 import {HotkeysService, Hotkey} from 'angular2-hotkeys';
-import * as google from 'googleapis';
-import * as googleAuth from 'google-auth-library';
+// import * as google from 'googleapis';
+// import * as googleAuth from 'google-auth-library';
 import * as jsPDF from 'jspdf';
-import * as fs from 'file-system';
-import * as readline from 'readline';
+// import * as fs from 'file-system';
+// import * as readline from 'readline';
 // import { AuthenticationService } from '../authentication.service';
 // import * as gapi from 'gapi';
 

@@ -9,13 +9,15 @@ import { NavComponent } from './nav/nav.component';
 import { KeysPipe } from './keys.pipe';
 
 import {HotkeyModule} from 'angular2-hotkeys';
+import { PrintComponent } from './print/print.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TitleComponent,
     NavComponent,
-    KeysPipe
+    KeysPipe,
+    PrintComponent
   ],
   imports: [
     BrowserModule,
