@@ -20,5 +20,4 @@ export class PrintComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
