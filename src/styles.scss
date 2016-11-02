@@ -65,6 +65,12 @@ p, span, ul li{
 	@include titles(sans-serif, 0.9em, $text, 0px);
 }
 
+//print text
+.text{
+	@include titles(sans-serif, 0.9em, $text, 0px);
+	font-weight: lighter;
+}
+
 // circle navigation buttons
 .circle{
 	@include buttonStyles(50px, 50px, $green, 100px, $green, subHeadings);
@@ -75,6 +81,12 @@ p, span, ul li{
 .circle:hover{
 	background: $red;
 	border: 1px solid $red;
+}
+
+// circle navigation buttons
+.smallcircle{
+	@include buttonStyles(40px, 40px, $green, 100px, $green, subHeadings);
+	text-align: center;
 }
 
 // circle symbol
@@ -326,4 +338,9 @@ ul li{
 	text-align: center;
 	color: $text;
 	opacity: 0.6;
+}
+
+.printTitle{
+	color: $blue;
+	font-family: subHeadings, sans-serif;
 }

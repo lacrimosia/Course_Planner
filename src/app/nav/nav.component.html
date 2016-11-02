@@ -31,7 +31,7 @@
         </div>
         <div class="workArea" *ngIf="i==value">
             <h3 *ngIf="i==0" class="animated fadeIn"> {{ d.value.sub_title }}</h3>
-            <div class="box animated fadeIn">
+            <div class="box animated fadeIn" *ngIf="data.print == false">
                 <!-- only shown in the intstructions page -->
                 <div class="intro" *ngIf="i==0">
                     <b>Instructions:</b>
@@ -117,20 +117,6 @@
                     <div class="clear"></div>
                     <!-- clear floats -->
                 </div>
-
-                <!-- review view -->
-                <div class="oneTasks animated fadeIn" *ngIf="d.value.type=='review'">
-                    <h2 class="titles">Information</h2>
-                    <p> {{ d.value.instructions }} </p>
-                    <hr />
-                    <!-- show all the tasks in a list -->
-                    <div class="tasks">
-
-                    </div>
-
-                    <div class="clear"></div>
-                </div>
-
             </div>
         </div>
         <div class="tooltip animated fadeIn" *ngIf="d.value.show==true" [ngStyle]="{'left': d.value.tooltip.left+'px'}">

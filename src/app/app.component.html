@@ -7,6 +7,9 @@
 	<app-nav [d]="d" [data]="data" [assignments]="assignments" [amount]="amount"><!--app information area --></app-nav>
 	<!-- print area -->
 	<div class="print animated fadeIn" *ngIf="data.print==true">
+		<h2 class="titles">Information</h2>
+		<p> {{ data.review_instructions }} </p>
+		<hr/>
 		<ul>
 			<app-print [data]="data" [assignments]="assignments" [amount]="amount"></app-print>
 		</ul>

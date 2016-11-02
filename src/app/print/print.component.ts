@@ -13,7 +13,7 @@ import {HotkeysService, Hotkey} from 'angular2-hotkeys';
 export class PrintComponent implements OnInit {
   @Input() data;
   @Input() amount;
-  @Input() d:number;
+  @Input() d;
   @Input() assignments;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) { }
