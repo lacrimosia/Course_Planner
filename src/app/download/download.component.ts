@@ -17,9 +17,14 @@ export class DownloadComponent implements OnInit {
   @Input() amount;
   @Input() assignments;
 
-  constructor() { }
+  constructor(private dataService: DataService, private _hotkeysService: HotkeysService) { }
 
   ngOnInit() {
+    // Print pdf
+    this._hotkeysService.add(new Hotkey('p', (event: KeyboardEvent): boolean => {
+        this.printPdf();
+        return false; // Prevent bubbling
+    }));
   }
 
   printPdf(){
