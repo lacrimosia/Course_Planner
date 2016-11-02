@@ -235,6 +235,29 @@ p, span, ul li{
 	z-index: 100000;
 }
 
+.errorselections{
+	background: $darkBlue;
+	color: $white;
+	font-family: subHeadings;
+	font-size: 1.5em;
+	width: 50%;
+	min-height: 3%;
+	height: auto;
+	text-align: center;
+	border: none;
+	padding: 15px;
+	cursor: pointer;
+	z-index: 100000;
+}
+
+.right{
+	float: right;
+}
+
+.left{
+	float: left;
+}
+
 hr{
 	color: $blue;
 	opacity: 0.4;
@@ -343,4 +366,8 @@ ul li{
 .printTitle{
 	color: $blue;
 	font-family: subHeadings, sans-serif;
+}
+
+.errorMessageArea{
+	background: $white;
 }

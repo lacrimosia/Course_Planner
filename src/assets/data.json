@@ -8,6 +8,11 @@
     "help": false,
     "review": false,
     "print": false,
+    "error": {
+      "open": false,
+      "title": "Assignments not selected",
+      "message": "You did not select an assignment for each module. Please make the selections and return to the review section."
+    },
     "review_instructions": "Please review your selected tasks. Click the print button to save your custom planner.",
     "q": true,
     "assignments": [{
