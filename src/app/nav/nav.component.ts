@@ -42,6 +42,7 @@ export class NavComponent implements OnInit {
            this.printContent();
          }else{
            this.hidePrintContent();
+           this.data.error.open = false;
          }
         return false; // Prevent bubbling
     }));
@@ -55,6 +56,7 @@ export class NavComponent implements OnInit {
         this.printContent();
       }else{
         this.hidePrintContent();
+        this.data.error.open = false;
       }
         return false; // Prevent bubbling
     }));
