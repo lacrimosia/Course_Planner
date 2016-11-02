@@ -16,19 +16,14 @@ export class NavComponent implements OnInit {
 	@Input() d:number = 0;
   @Input() assignments;
   @Input() data;
-	public selected:boolean;
+	selected:boolean;
   @Input() amount;
-  public content;
-  public contentList;
-  public print;
   value:number = 0;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) {
   	// this.dataService = dataService;
   	this.value = 0;
   	this.selected = false;
-    this.contentList = [];
-    this.print = false;
   }
 
   ngOnInit() {
@@ -62,32 +57,33 @@ export class NavComponent implements OnInit {
     }));
 
     // help keyboard shortcut
-        this._hotkeysService.add(new Hotkey('h', (event: KeyboardEvent): boolean => {
+    this._hotkeysService.add(new Hotkey('h', (event: KeyboardEvent): boolean => {
           this.help();
+          this.hidePrintContent();
             return false; // Prevent bubbling
-        }));
+    }));
 
-// The print keyboard shorcut
-        this._hotkeysService.add(new Hotkey('p', (event: KeyboardEvent): boolean => {
-          this.print = !this.print;
+   // The print keyboard shorcut
+   this._hotkeysService.add(new Hotkey('p', (event: KeyboardEvent): boolean => {
+          this.printContent();
             return false; // Prevent bubbling
-        }));
+  }));
 
-        // select A for the option A task
-            this._hotkeysService.add(new Hotkey('a', (event: KeyboardEvent): boolean => {
-              if(this.assignments[this.value].type=="two"){
-                this.buttonOneClick();
-              }
-                return false; // Prevent bubbling
-            }));
+  // select A for the option A task
+  this._hotkeysService.add(new Hotkey('a', (event: KeyboardEvent): boolean => {
+      if(this.assignments[this.value].type=="two"){
+          this.buttonOneClick();
+      }
+      return false; // Prevent bubbling
+  }));
 
-            // select B for the option B task
-                this._hotkeysService.add(new Hotkey('b', (event: KeyboardEvent): boolean => {
-                  if(this.assignments[this.value].type=="two"){
-                    this.buttonTwoClick();
-                  }
-                    return false; // Prevent bubbling
-                }));
+// select B for the option B task
+  this._hotkeysService.add(new Hotkey('b', (event: KeyboardEvent): boolean => {
+      if(this.assignments[this.value].type=="two"){
+          this.buttonTwoClick();
+      }
+      return false; // Prevent bubbling
+      }));
 
   }
 
@@ -135,12 +131,11 @@ reload(){
 // help button
   help(){
     this.value = 0;
-    this.print = false;
+    this.data.print = false;
   }
 
 
 printContent(){
-  this.print = true;
   this.data.print = true;
   // If any of the buttons have not been selected, trigger error message
   // If they user selects all the assignments, then the print area becomes visible
@@ -164,7 +159,6 @@ printContent(){
 
 // hide the print area
 hidePrintContent(){
-  this.print = false;
   this.data.print = false;
 }
 
