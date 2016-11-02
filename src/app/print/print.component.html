@@ -6,7 +6,7 @@
       <div class="two" *ngIf="d.value.type=='two'">
         <p class="text" *ngIf="d.value.taskA.selectA==true">Task A: {{ d.value.taskA.information }}</p>
         <p class="text" *ngIf="d.value.taskB.selectB==true">Task B: {{ d.value.taskB.information }}</p>
-        <p class="text" *ngIf="d.value.taskA.selectA==false && d.value.taskB.selectB==false">Please select an assignment.</p>
+      <!--  <p class="text" *ngIf="d.value.taskA.selectA==false && d.value.taskB.selectB==false">Please select an assignment.</p>-->
       </div>
       <div class="custom" *ngIf="d.value.type=='custom'">
         <p class="text" *ngIf="d.value.taskA.selectA==true">Task A: {{ d.value.taskA.information }}</p>
