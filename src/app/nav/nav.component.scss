@@ -133,19 +133,66 @@ button{
   z-index: 4000;
 }
 
+// ONLY FOR SPECIAL CUSTOM ICONS
+$imageTop: 136px; // top pos
+$imageWidth: 8%; // image width
+$taskA_left: 268px; // first group A pos
+$taskB_left: 701px; // second group B pos
+$space: 68; // space between images
+
+// DEFAULT ICONS Settings
+$mainTopA: -30px; // main top for default 1 icon
+$mainTopB: -25px; // main top for default 1 icon
+$mainLeft: 700px; // default pos left for default icon 1
+$mainWidth: 10%; // default width
+$mainSpace: 90; // space between images
+// these are the default icons
 .taskImage1{
   position: absolute;
-  top: -30px;
-  left: 700px;
-  width: 10%;
+  top: $mainTopA;
+  left: $mainLeft;
+  width: $mainWidth;
   height: auto;
 }
 
 .taskImage2{
   position: absolute;
-  top: -25px;
-  left: 790px;
-  width: 10%;
+  top: $mainTopB;
+  left: $mainLeft + $mainSpace;
+  width: $mainWidth;
+  height: auto;
+}
+
+// Special icons for custom
+.taskImage1A{
+  position: absolute;
+  top: $imageTop;
+  left: $taskA_left;
+  width: $imageWidth;
+  height: auto;
+}
+
+.taskImage2A{
+  position: absolute;
+  top: $imageTop;
+  left: $taskA_left + $space;
+  width: $imageWidth;
+  height: auto;
+}
+
+.taskImage3B{
+  position: absolute;
+  top: $imageTop;
+  left: $taskB_left;
+  width: $imageWidth;
+  height: auto;
+}
+
+.taskImage4B{
+  position: absolute;
+  top: $imageTop;
+  left: $taskB_left + $space;
+  width: $imageWidth;
   height: auto;
 }
 
