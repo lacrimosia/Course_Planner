@@ -2,13 +2,15 @@
 </div>-->
 <!--<a href="/q">Click</a>-->
 <div id="container">
-<app-title [data]="data" [assignments]="assignments" [amount]="amount"><!--app title area --></app-title>
-<app-download [data]="data" [assignments]="assignments" [amount]="amount"></app-download>
+	<app-title [data]="data" [assignments]="assignments" [amount]="amount"><!--app title area --></app-title>
+	<!-- save button -->
+	<app-download [data]="data" [assignments]="assignments" [amount]="amount"></app-download>
+	<!-- the tasks -->
 	<app-nav [d]="d" [data]="data" [assignments]="assignments" [amount]="amount"><!--app information area --></app-nav>
 	<!-- print area -->
 	<div class="print animated fadeIn" *ngIf="data.print==true">
-		<h2 class="titles">Information</h2>
-		<p> {{ data.review_instructions }} </p>
+		<h2 class="titles">Review Information</h2>
+			<p> {{ data.review_instructions }} </p>
 		<hr/>
 		<ul>
 			<app-print [data]="data" [assignments]="assignments" [amount]="amount"></app-print>
