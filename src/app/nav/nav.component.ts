@@ -59,7 +59,6 @@ export class NavComponent implements OnInit {
     // help keyboard shortcut
     this._hotkeysService.add(new Hotkey('h', (event: KeyboardEvent): boolean => {
           this.help();
-          this.hidePrintContent();
             return false; // Prevent bubbling
     }));
 
