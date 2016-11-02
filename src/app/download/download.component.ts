@@ -173,9 +173,6 @@ export class DownloadComponent implements OnInit {
        doc.setTextColor(0,0,0);
        doc.text(50, (startingPointVal + 20), optionName);
      }
-
-     doc.setTextColor(77,77,77);
-     doc.text(60, (startingPointVal + 40), splitTitle);
    }
 
      doc.setTextColor(77,77,77);
