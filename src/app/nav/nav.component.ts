@@ -162,11 +162,13 @@ printContent(){
   }
 }
 
+// hide the print area
 hidePrintContent(){
   this.print = false;
   this.data.print = false;
 }
 
+// toggle buttons for selection
 buttonOneClick(){
   this.data.assignments[this.value].taskA.selectA = !this.data.assignments[this.value].taskA.selectA;
   this.data.assignments[this.value].taskB.selectB=false;
