@@ -16,7 +16,7 @@ export class AppComponent implements OnInit{
  data:any;
  amount:number;
  assignments: any;
- 
+
  constructor(private dataService: DataService, private _hotkeysService: HotkeysService){
 
  }
