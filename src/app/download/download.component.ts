@@ -75,14 +75,11 @@ export class DownloadComponent implements OnInit {
       // check which to display on the pdf
       // if task is A, B or nothing selected
         if(data[x].taskA.selectA==true){
-          optionName = doc.splitTextToSize("Option A", textWidth);
+          optionName = doc.splitTextToSize("Task A", textWidth);
           splitTitle = doc.splitTextToSize(data[x].taskA.information, textWidth);
         }else if(data[x].taskB.selectB==true){
-          optionName = doc.splitTextToSize("Option B", textWidth);
+          optionName = doc.splitTextToSize("Task B", textWidth);
           splitTitle = doc.splitTextToSize(data[x].taskB.information, textWidth);
-        }else{
-          optionName = doc.splitTextToSize("Option not selected", textWidth);
-          splitTitle = doc.splitTextToSize("No task selected :(", textWidth);
         }
       // set the information
       doc.setFontSize(10);
@@ -109,7 +106,7 @@ export class DownloadComponent implements OnInit {
   doc.setFontSize(20);
   doc.text(20, 50, "ENV 498 Capstone Planner");
 
-  for(let x=6; x<data.length-2; x++){
+  for(let x=6; x<data.length-1; x++){
      doc.setFontSize(16);
      let startingPointVal = ((x-5)*start);
 
@@ -140,14 +137,15 @@ export class DownloadComponent implements OnInit {
      // check which to display on the pdf
      // if task is A, B or nothing selected
      if(data[x].taskA.selectA==true){
-       optionName = doc.splitTextToSize("Option A", textWidth);
+       optionName = doc.splitTextToSize("Task A", textWidth);
        splitTitle = doc.splitTextToSize(data[x].taskA.information, textWidth);
      }else if(data[x].taskB.selectB==true){
-       optionName = doc.splitTextToSize("Option B", textWidth);
+       optionName = doc.splitTextToSize("Task B", textWidth);
        splitTitle = doc.splitTextToSize(data[x].taskB.information, textWidth);
-     }else{
-       optionName = doc.splitTextToSize("Option not selected", textWidth);
-       splitTitle = doc.splitTextToSize("No task selected :(", textWidth);
+     }
+     if(data[x].taskA.selectA==true && data[x].taskB.selectB==true){
+       optionName = doc.splitTextToSize("Task A and B", textWidth);
+      splitTitle = doc.splitTextToSize(data[x].taskA.information +" "+data[x].taskB.information, textWidth);
      }
      // set the information
      doc.setFontSize(10);
@@ -158,7 +156,9 @@ export class DownloadComponent implements OnInit {
        doc.addImage(info.checkmark, 'JPEG', 40, startingPointVal + 12, imageThumb-30, imageThumb-30);
        doc.setTextColor(0,0,0);
        doc.text(54, (startingPointVal + 20), optionName);
-     }else{
+     }
+     if(data[x].taskA.selectA==true && data[x].taskB.selectB==true){
+       doc.addImage(info.checkmark, 'JPEG', 40, startingPointVal + 12, imageThumb-30, imageThumb-30);
        doc.setTextColor(0,0,0);
        doc.text(54, (startingPointVal + 20), optionName);
      }
