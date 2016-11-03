@@ -12,6 +12,7 @@ import {HotkeyModule} from 'angular2-hotkeys';
 import { PrintComponent } from './print/print.component';
 import { DownloadComponent } from './download/download.component';
 import { ErrorComponent } from './error/error.component';
+import { SavedComponent } from './saved/saved.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ErrorComponent } from './error/error.component';
     KeysPipe,
     PrintComponent,
     DownloadComponent,
-    ErrorComponent
+    ErrorComponent,
+    SavedComponent
   ],
   imports: [
     BrowserModule,
