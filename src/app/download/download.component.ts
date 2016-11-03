@@ -17,6 +17,7 @@ export class DownloadComponent implements OnInit {
   @Input() amount;
   @Input() assignments;
   @Input() alert;
+  downloaded:boolean = true;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) { }
 
@@ -26,9 +27,16 @@ export class DownloadComponent implements OnInit {
         this.printPdf();
         return false; // Prevent bubbling
     }));
+
+    this._hotkeysService.add(new Hotkey('enter', (event: KeyboardEvent): boolean => {
+        this.data.alert = false;
+        return false; // Prevent bubbling
+    }));
   }
 
   printPdf(){
+    this.downloaded = false;
+    this.data.alert=true;
     this.data.print = true;
     let doc = new jsPDF('portrait','pt','a4');
     let data = this.assignments;

@@ -18,6 +18,10 @@ export class ErrorComponent implements OnInit {
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) { }
 
   ngOnInit() {
+    this._hotkeysService.add(new Hotkey('enter', (event: KeyboardEvent): boolean => {
+        this.data.error.open=false;
+        return false; // Prevent bubbling
+    }));
   }
 
 }
