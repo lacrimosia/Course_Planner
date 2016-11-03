@@ -19,6 +19,7 @@ export class NavComponent implements OnInit {
 	selected:boolean;
   @Input() amount;
   value:number = 0;
+  textSelected: string;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) {
   	// this.dataService = dataService;
@@ -175,6 +176,7 @@ buttonTwoClick(){
 taskSelected(task){
   return task;
 }
+
 
 
 }
