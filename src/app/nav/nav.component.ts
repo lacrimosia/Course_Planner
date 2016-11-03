@@ -163,12 +163,12 @@ hidePrintContent(){
 
 // toggle buttons for selection
 buttonOneClick(){
-  this.data.assignments[this.value].taskA.selectA = !this.data.assignments[this.value].taskA.selectA;
+  this.data.assignments[this.value].taskA.selectA = true;
   this.data.assignments[this.value].taskB.selectB=false;
 }
 
 buttonTwoClick(){
-  this.data.assignments[this.value].taskB.selectB = !this.data.assignments[this.value].taskB.selectB;
+  this.data.assignments[this.value].taskB.selectB = true;
   this.data.assignments[this.value].taskA.selectA=false;
 }
 
