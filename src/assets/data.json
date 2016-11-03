@@ -8,6 +8,7 @@
     "help": false,
     "review": false,
     "print": false,
+    "alert": false,
     "error": {
       "open": false,
       "title": "Assignments not selected",

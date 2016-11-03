@@ -16,6 +16,7 @@ export class AppComponent implements OnInit{
  data:any;
  amount:number;
  assignments: any;
+ alert:boolean;
 
  constructor(private dataService: DataService, private _hotkeysService: HotkeysService){
 
@@ -28,10 +29,11 @@ export class AppComponent implements OnInit{
          this.data = data;
          this.amount = this.data.assignments.length;
          this.assignments = this.data.assignments;
-       //  console.log("the data list", this.amount);
+         this.alert = this.data.alert;
+      //  console.log("the data alert", this.alert);
         },
         err => console.error(err),
-        () => console.log('nav data loaded')
+        () => console.log('app component data loaded')
 
      );
  }

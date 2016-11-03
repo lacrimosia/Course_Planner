@@ -6,7 +6,9 @@
 	<app-error [data]="data" [assignments]="assignments" [amount]="amount"></app-error>
 	<app-title [data]="data" [assignments]="assignments" [amount]="amount"><!--app title area --></app-title>
 	<!-- save button -->
-	<app-download [data]="data" [assignments]="assignments" [amount]="amount"></app-download>
+	<app-download [data]="data" [assignments]="assignments" [amount]="amount" [alert]="alert"></app-download>
+	<!-- when print is saved -->
+	<app-saved [data]="data" [assignments]="assignments" [amount]="amount" [alert]="alert"></app-saved>
 	<!-- the tasks -->
 	<app-nav [d]="d" [data]="data" [assignments]="assignments" [amount]="amount"><!--app information area --></app-nav>
 	<!-- print area -->

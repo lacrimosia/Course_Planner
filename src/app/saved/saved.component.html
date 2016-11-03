@@ -1,3 +1,7 @@
-<p>
-  saved works!
-</p>
+<div class="savedBackdrop animated fadeIn" *ngIf="data.alert==true">
+  <div class="savedMessageArea animated jello">
+    <h2 class="titles center"><i class="fa fa-checkmark"></i> Print Saved!</h2>
+    <button class="errorselections right" (click)="close()"><i class="fa fa-times"></i> Ok!</button>
+    <div class="clear"></div>
+  </div>
+</div>
