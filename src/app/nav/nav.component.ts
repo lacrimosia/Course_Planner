@@ -31,28 +31,28 @@ export class NavComponent implements OnInit {
     // left keyboard shortcut
     this._hotkeysService.add(new Hotkey('right', (event: KeyboardEvent): boolean => {
          //this.goTo();
-         if(this.value >= 0 && this.value < (this.amount - 1)){
+         if(this.value >= 0 && this.value < (this.amount - 1) && this.data.error.open==false && this.data.alert==false){
            this.value++;
          }
          if(this.value == this.assignments.length-1){
            this.printContent();
          }else{
            this.hidePrintContent();
-           this.data.error.open = false;
+          // this.data.error.open = false;
          }
         return false; // Prevent bubbling
     }));
 
 // right keyboard shortcut
     this._hotkeysService.add(new Hotkey('left', (event: KeyboardEvent): boolean => {
-      if(this.value > 0 && this.value < (this.amount)){
+      if(this.value > 0 && this.value < (this.amount) && this.data.error.open==false && this.data.alert==false){
         this.value--;
       }
       if(this.value == this.assignments.length-1){
         this.printContent();
       }else{
         this.hidePrintContent();
-        this.data.error.open = false;
+      //  this.data.error.open = false;
       }
         return false; // Prevent bubbling
     }));
@@ -133,7 +133,6 @@ reload(){
     this.value = 0;
     this.data.print = false;
   }
-
 
 printContent(){
   this.data.print = true;
