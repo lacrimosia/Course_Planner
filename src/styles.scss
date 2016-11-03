@@ -375,3 +375,14 @@ ul li{
 .savedMessageArea{
 	background: $white;
 }
+
+.close{
+	position: absolute;
+	top:0px;
+	right: 0px;
+	border: none;
+	background: transparent;
+	color: $text;
+	font-size: 1.2em;
+	cursor: pointer;
+}

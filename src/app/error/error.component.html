@@ -1,5 +1,6 @@
 <div class="errorBackdrop animated fadeIn" *ngIf="data.error.open==true">
-  <div class="errorMessageArea animated shake" *ngIf="data.error.open==true">
+  <div class="errorMessageArea animated flipInX" *ngIf="data.error.open==true">
+    <button class="close" (click)="data.error.open=false"><i class="fa fa-times"></i></button>
     <h2 class="titles">{{ data.error.title }}</h2>
     <p>{{ data.error.message }}</p>
     <button class="errorselections right" (click)="data.error.open=false"><i class="fa fa-times"></i> Got it!</button>
