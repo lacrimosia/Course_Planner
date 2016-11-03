@@ -50,7 +50,7 @@
                 <div class="oneTasks animated fadeIn" *ngIf="d.value.type=='one'">
                     <h2 class="titles">Assignment Information</h2>
                     <img [src]="imageSrc(d.value.due_date)" class="taskImage1"/>
-                    <img [src]="imageSrc(d.value.percentage)" class="taskImage2"/>
+                <!--    <img [src]="imageSrc(d.value.percentage)" class="taskImage2"/> -->
                     <p> {{ d.value.instructions }} </p>
                     <hr />
                     <!-- <img [src]="imageSrc(d.value.due_date)" class="resize" />
@@ -69,7 +69,7 @@
                 <div class="twoTasks" *ngIf="d.value.type=='two'">
                     <h2 class="titles">Assignment Information</h2>
                     <img [src]="imageSrc(d.value.due_date)" class="taskImage1"/>
-                    <img [src]="imageSrc(d.value.percentage)" class="taskImage2"/>
+                  <!--  <img [src]="imageSrc(d.value.percentage)" class="taskImage2"/> -->
                     <p> {{ d.value.instructions }} </p>
                     <hr />
                     <!-- <img [src]="imageSrc(d.value.due_date)" class="resize" />
@@ -93,9 +93,9 @@
                 <div class="twoTasks" *ngIf="d.value.type=='custom'">
                     <h2 class="titles">Assignment Information</h2>
                     <img [src]="imageSrc(d.value.taskA.due_date)" class="taskImage1A" />
-                    <img [src]="imageSrc(d.value.taskA.percentage)" class="taskImage2A" />
+            <!--        <img [src]="imageSrc(d.value.taskA.percentage)" class="taskImage2A" /> -->
                     <img [src]="imageSrc(d.value.taskB.due_date)" class="taskImage3B" />
-                    <img [src]="imageSrc(d.value.taskB.percentage)" class="taskImage4B" />
+              <!--      <img [src]="imageSrc(d.value.taskB.percentage)" class="taskImage4B" /> -->
 
                     <p> {{ d.value.instructions }} </p>
                     <hr />
