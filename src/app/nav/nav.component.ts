@@ -7,13 +7,14 @@ import * as jsPDF from 'jspdf';
 import { ButtonAComponent } from '../button-a/button-a.component';
 import { ButtonBComponent } from '../button-b/button-b.component';
 import { TasksComponent } from '../tasks/tasks.component';
+import { ValueService } from '../value.service';
 
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
-  providers: [DataService, HotkeysService]
+  providers: [DataService, HotkeysService, ValueService]
 })
 export class NavComponent implements OnInit {
 	@Input() d:number = 0;
@@ -24,7 +25,7 @@ export class NavComponent implements OnInit {
   @Input() value;
   textSelected: string;
 
-  constructor(private dataService: DataService, private _hotkeysService: HotkeysService) {
+  constructor(private dataService: DataService, private _hotkeysService: HotkeysService, public valueService: ValueService) {
   	// this.dataService = dataService;
   //	this.value = 0;
   	this.selected = false;
@@ -78,7 +79,6 @@ export class NavComponent implements OnInit {
   // go to link onclick
   goTo(i){
   	this.value = i;
-    console.log('updated', this.value);
     if(this.value == this.assignments.length-1){
       this.printContent();
     }else{
