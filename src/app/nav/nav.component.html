@@ -78,12 +78,12 @@
                       <div class="taskA">
                           <h2 class="titles">{{ d.value.taskA.name }}</h2>
                           <p>{{ d.value.taskA.information }}</p>
-                        <button class="select" (click)="buttonOneClick()" on-mouseover="d.value.q = !d.value.q" on-mouseleave="d.value.q = !d.value.q" [ngClass]="{'yes': d.value.taskA.selectA, 'no': !d.value.taskA.selectA, 'animated bounce': !d.value.q}"><i class="fa fa-times" *ngIf="!d.value.taskA.selectA"></i> <i class="fa fa-check" *ngIf="d.value.taskA.selectA"></i> {{ d.value.taskA.selectA ? "Selected" : "Unselected" }}</button>
+                        <button class="select" (click)="buttonOneClick()" [ngClass]="{'yes': d.value.taskA.selectA, 'no': !d.value.taskA.selectA}"><i class="fa fa-times" *ngIf="!d.value.taskA.selectA"></i> <i class="fa fa-check" *ngIf="d.value.taskA.selectA"></i> {{ d.value.taskA.selectA ? "Selected" : "Unselected" }}</button>
                       </div>
                       <div class="taskB">
                           <h2 class="titles">{{ d.value.taskB.name }}</h2>
                           <p>{{ d.value.taskB.information }}</p>
-                        <button class="select" (click)="buttonTwoClick()" on-mouseover="d.value.t = !d.value.t" on-mouseleave="d.value.t = !d.value.t" [ngClass]="{'yes': d.value.taskB.selectB, 'no': !d.value.taskB.selectB, 'animated bounce': !d.value.t}"><i class="fa fa-times" *ngIf="!d.value.taskB.selectB"></i> <i class="fa fa-check" *ngIf="d.value.taskB.selectB"></i> {{ d.value.taskB.selectB ? "Selected" : "Unselected" }}</button>
+                        <button class="select" (click)="buttonTwoClick()" [ngClass]="{'yes': d.value.taskB.selectB, 'no': !d.value.taskB.selectB}"><i class="fa fa-times" *ngIf="!d.value.taskB.selectB"></i> <i class="fa fa-check" *ngIf="d.value.taskB.selectB"></i> {{ d.value.taskB.selectB ? "Selected" : "Unselected" }}</button>
                       </div>
                     </div>
                     <div class="clear"></div>
