@@ -4,11 +4,7 @@
   </div>
   <div class="wrappers" *ngFor="let d of assignments | keys; let i = index">
 
-      <div class="heading" *ngIf="i==value">
-      	    <button class="circle" (click)="reload()"><i class="fa fa-refresh"></i></button>
-      	    <button class="circle" (click)="help();"><i class="fa fa-question"></i></button>
-      	    <div class="clear"></div> <!--clear floats-->
-      </div>
+      
 
       <ul *ngIf="d.type=='one'">
         <li><h2>{{ d.value.title }}</h2> <p>{{ d.value.taskA.information }}</p></li>
