@@ -1,81 +1,13 @@
-<div class="template">
-  <div class="helpImage animated" *ngIf="data.help==true" [ngClass]="{'fadeOut': data.help==false}">
-    <img [src]="imageSrc(data.picture)" (click)="data.help=false" />
-  </div>
-  <div class="wrappers" *ngFor="let d of assignments | keys; let i = index">
+<div class="tooltip animated fadeIn" *ngIf="d.value.show==true" [ngStyle]="{'left': d.value.tooltip.left+'px'}">
+    <i class="fa fa-book"></i> Assignment: {{ d.value.symbol}}
+</div>
+<div class="tooltip animated fadeIn" *ngIf="d.value.show==true && i==0;" [ngStyle]="{'left': d.value.tooltip.left+'px'}">
+    <i class="fa fa-book"></i>  Instructions
+</div>
+<button class="numButtons circle" id={{i}}  on-mouseover="d.value.show = !d.value.show;" on-mouseleave="d.value.show = !d.value.show;" (click)="goTo(i)" [ngStyle]="{'position': 'absolute', 'top': '787px', 'left': d.value.buttonPos.left+'px'}" [ngClass]="{'highlight': i==value}">
+  {{ d.value.symbol }}
+</button>
 
-
-
-      <ul *ngIf="d.type=='one'">
-        <li><h2>{{ d.value.title }}</h2> <p>{{ d.value.taskA.information }}</p></li>
-      </ul>
-
-        <!-- previous and next buttons -->
-        
-
-        <!-- title and subtitle with symbol -->
-        <div id="titleArea" *ngIf="i==value">
-            <div class="symbol"> {{ d.value.symbol }} </div>
-            <h1 class="sub" *ngIf="i!=1">{{ d.value.title }}</h1>
-            <!--show if short text -->
-            <h1 class="subForLarge" *ngIf="i==1">{{ d.value.title }}</h1>
-            <!--show if long text -->
-            <div class="clear"></div>
-            <!--clear floats-->
-        </div>
-        <div class="workArea" *ngIf="i==value">
-            <h3 *ngIf="i==0" class="animated fadeIn"> {{ d.value.sub_title }}</h3>
-            <div class="box animated fadeIn" *ngIf="data.print == false">
-                <!-- only shown in the intstructions page -->
-
-                <div class="clear"></div>
-                <!-- show this only when clicking assignments one -->
-                <div class="oneTasks animated fadeIn" *ngIf="d.value.type=='one'">
-                    <h2 class="titles">Assignment Information</h2>
-                    <img [src]="imageSrc(d.value.due_date)" class="taskImage1"/>
-                    <p> {{ d.value.instructions }} </p>
-                    <hr />
-                </div>
-                <!-- show this only when clicking assignments two -->
-                <div class="twoTasks" *ngIf="d.value.type=='two'">
-                    <h2 class="titles">Assignment Information</h2>
-                    <img [src]="imageSrc(d.value.due_date)" class="taskImage1"/>
-                  <!--  <img [src]="imageSrc(d.value.percentage)" class="taskImage2"/> -->
-                    <p> {{ d.value.instructions }} </p>
-                    <hr />
-                </div>
-                <!-- custom view -->
-                <div class="twoTasks" *ngIf="d.value.type=='custom'">
-                    <h2 class="titles">Assignment Information</h2>
-                    <img [src]="imageSrc(d.value.taskA.due_date)" class="taskImage1A" />
-            <!--        <img [src]="imageSrc(d.value.taskA.percentage)" class="taskImage2A" /> -->
-                    <img [src]="imageSrc(d.value.taskB.due_date)" class="taskImage3B" />
-              <!--      <img [src]="imageSrc(d.value.taskB.percentage)" class="taskImage4B" /> -->
-
-                    <p> {{ d.value.instructions }} </p>
-                    <hr />
-                    <!-- <img [src]="imageSrc(d.value.due_date)" class="resize" />
-                    <img [src]="imageSrc(d.value.percentage)" class="resize" /> -->
-                    <div class="tasks floatingTasks">
-                      <!--Task A and B -->
-                      <app-tasks class="taskA" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [title]="d.value.taskA.name" [information]="d.value.taskA.information"></app-tasks>
-                      <app-tasks class="taskB" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [title]="d.value.taskB.name" [information]="d.value.taskB.information"></app-tasks>
-                    </div>
-                    <div class="clear"></div>
-                    <!-- clear floats -->
-                </div>
-            </div>
-        </div>
-        <div class="tooltip animated fadeIn" *ngIf="d.value.show==true" [ngStyle]="{'left': d.value.tooltip.left+'px'}">
-            <i class="fa fa-book"></i> Assignment: {{ d.value.symbol}}
-        </div>
-        <div class="tooltip animated fadeIn" *ngIf="d.value.show==true && i==0;" [ngStyle]="{'left': d.value.tooltip.left+'px'}">
-          <i class="fa fa-book"></i>  Instructions
-        </div>
-        <button class="numButtons circle" id={{i}}  on-mouseover="d.value.show = !d.value.show;" on-mouseleave="d.value.show = !d.value.show;" (click)="goTo(i)" [ngStyle]="{'position': 'absolute', 'top': '787px', 'left': d.value.buttonPos.left+'px'}" [ngClass]="{'highlight': i==value}">
-            {{ d.value.symbol }}
-        </button>
-    </div>
-    <div class="navArea">
-        <div id="line"></div>
-    </div>
+<div class="navArea">
+    <div id="line"></div>
+</div>
