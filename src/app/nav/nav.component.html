@@ -52,9 +52,7 @@
                     <img [src]="imageSrc(d.value.due_date)" class="taskImage1"/>
                     <p> {{ d.value.instructions }} </p>
                     <hr />
-                    <div class="tasks">
-                      <app-tasks class="taskOne" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [title]="d.value.taskA.name" [information]="d.value.taskA.information"></app-tasks>
-                    </div>
+                    
                     <div class="clear"></div>
                 </div>
                 <!-- show this only when clicking assignments two -->
@@ -64,7 +62,7 @@
                   <!--  <img [src]="imageSrc(d.value.percentage)" class="taskImage2"/> -->
                     <p> {{ d.value.instructions }} </p>
                     <hr />
-                    
+
 
                     <!-- clear floats -->
                     <div class="clear"></div>
