@@ -17,6 +17,7 @@ import { ButtonAComponent } from './button-a/button-a.component';
 import { ButtonBComponent } from './button-b/button-b.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { TwoTasksComponent } from './two-tasks/two-tasks.component';
+import { OneTaskComponent } from './one-task/one-task.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { TwoTasksComponent } from './two-tasks/two-tasks.component';
     ButtonAComponent,
     ButtonBComponent,
     TasksComponent,
-    TwoTasksComponent
+    TwoTasksComponent,
+    OneTaskComponent
   ],
   imports: [
     BrowserModule,
