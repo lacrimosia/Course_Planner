@@ -15,6 +15,7 @@ import { ErrorComponent } from './error/error.component';
 import { SavedComponent } from './saved/saved.component';
 import { ButtonAComponent } from './button-a/button-a.component';
 import { ButtonBComponent } from './button-b/button-b.component';
+import { TasksComponent } from './tasks/tasks.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ButtonBComponent } from './button-b/button-b.component';
     ErrorComponent,
     SavedComponent,
     ButtonAComponent,
-    ButtonBComponent
+    ButtonBComponent,
+    TasksComponent
   ],
   imports: [
     BrowserModule,
