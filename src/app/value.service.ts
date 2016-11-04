@@ -3,13 +3,14 @@ import { Observable } from 'rxjs/Rx';
 
 @Injectable()
 export class ValueService {
-  value:number = 0;
+  value:number;
 
-  constructor() { }
+  constructor() {
+    this.value = 0;
+  }
 
   goTo(value){
     this.value = value;
     console.log('value service inside', this.value);
   }
-
 }
