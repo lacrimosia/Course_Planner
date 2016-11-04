@@ -1,3 +1,9 @@
-<p>
-  two-tasks works!
-</p>
+<div class="taskA">
+  <app-tasks class="tasks" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [title]="d.value.taskA.name" [information]="d.value.taskA.information"></app-tasks>
+  <app-button-a [data]="data" [assignments]="assignments" [amount]="amount" [value]="value"></app-button-a>
+</div>
+  <!-- task B -->
+<div class="taskB">
+  <app-tasks class="tasks" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [title]="d.value.taskB.name" [information]="d.value.taskB.information"></app-tasks>
+  <app-button-b [data]="data" [assignments]="assignments" [amount]="amount" [value]="value"></app-button-b>
+</div>

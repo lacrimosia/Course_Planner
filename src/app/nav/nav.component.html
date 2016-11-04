@@ -64,18 +64,10 @@
                   <!--  <img [src]="imageSrc(d.value.percentage)" class="taskImage2"/> -->
                     <p> {{ d.value.instructions }} </p>
                     <hr />
-                    <!-- task A -->
-                    <div class="taskA">
-                      <app-tasks class="tasks" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [title]="d.value.taskA.name" [information]="d.value.taskA.information"></app-tasks>
-                      <app-button-a [data]="data" [assignments]="assignments" [amount]="amount" [value]="value"></app-button-a>
-                    </div>
-                      <!-- task B -->
-                    <div class="taskB">
-                      <app-tasks class="tasks" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [title]="d.value.taskB.name" [information]="d.value.taskB.information"></app-tasks>
-                      <app-button-b [data]="data" [assignments]="assignments" [amount]="amount" [value]="value"></app-button-b>
-                    </div>
+                    
+
                     <!-- clear floats -->
-                    <div class="clear"></div>                
+                    <div class="clear"></div>
                 </div>
                 <!-- custom view -->
                 <div class="twoTasks" *ngIf="d.value.type=='custom'">

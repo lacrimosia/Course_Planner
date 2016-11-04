@@ -10,7 +10,14 @@
 	<!-- when print is saved -->
 	<app-saved [data]="data" [assignments]="assignments" [amount]="amount" [alert]="alert"></app-saved>
 	<!-- the tasks -->
+	<!-- one task -->
+
+	<!-- two tasks -->
+	<app-two-tasks></app-two-tasks>
+
+	<!-- navigation bar -->
 	<app-nav [d]="d" [data]="data" [assignments]="assignments" [amount]="amount"><!--app information area --></app-nav>
+
 	<!-- print area -->
 	<div class="print animated fadeIn" *ngIf="data.print==true">
 		<h2 class="titles">Review Information</h2>
@@ -20,4 +27,5 @@
 			<app-print [data]="data" [assignments]="assignments" [amount]="amount"></app-print>
 		</ul>
 	</div>
-</div>
+
+</div><!-- end main component -->
