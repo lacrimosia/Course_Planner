@@ -50,19 +50,11 @@
                 <div class="oneTasks animated fadeIn" *ngIf="d.value.type=='one'">
                     <h2 class="titles">Assignment Information</h2>
                     <img [src]="imageSrc(d.value.due_date)" class="taskImage1"/>
-                <!--    <img [src]="imageSrc(d.value.percentage)" class="taskImage2"/> -->
                     <p> {{ d.value.instructions }} </p>
                     <hr />
-                    <!-- <img [src]="imageSrc(d.value.due_date)" class="resize" />
-                    <img [src]="imageSrc(d.value.percentage)" class="resize" /> -->
-                    <!-- show all the tasks in a list -->
                     <div class="tasks">
-                      <div class="taskA">
-                          <h2 class="titles"><i class="fa fa-check green"></i> {{ d.value.taskA.name }}</h2>
-                          <p>{{ d.value.taskA.information }}</p>
-                      </div>
+                      <app-tasks class="tasks" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [title]="d.value.taskA.name" [information]="d.value.taskA.information"></app-tasks>
                     </div>
-
                     <div class="clear"></div>
                 </div>
                 <!-- show this only when clicking assignments two -->
@@ -75,16 +67,10 @@
                     <!-- <img [src]="imageSrc(d.value.due_date)" class="resize" />
                     <img [src]="imageSrc(d.value.percentage)" class="resize" /> -->
                     <div class="tasks floatingTasks">
-                      <div class="taskA">
-                          <h2 class="titles">{{ d.value.taskA.name }}</h2>
-                          <p>{{ d.value.taskA.information }}</p>
-                          <app-button-a [data]="data" [assignments]="assignments" [amount]="amount" [value]="value"></app-button-a>
-                      </div>
-                      <div class="taskB">
-                          <h2 class="titles">{{ d.value.taskB.name }}</h2>
-                          <p>{{ d.value.taskB.information }}</p>
-                          <app-button-b [data]="data" [assignments]="assignments" [amount]="amount" [value]="value"></app-button-b>
-                      </div>
+                      <!-- task A -->
+                      <app-tasks class="tasks" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [title]="d.value.taskA.name" [information]="d.value.taskA.information"></app-tasks>
+                      <!-- task B -->
+                      <app-tasks class="tasks" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [title]="d.value.taskB.name" [information]="d.value.taskB.information"></app-tasks>
                     </div>
                     <div class="clear"></div>
                     <!-- clear floats -->
@@ -102,14 +88,9 @@
                     <!-- <img [src]="imageSrc(d.value.due_date)" class="resize" />
                     <img [src]="imageSrc(d.value.percentage)" class="resize" /> -->
                     <div class="tasks floatingTasks">
-                      <div class="taskA">
-                          <h2 class="titles"><i class="fa fa-check green"></i> {{ d.value.taskA.name }}</h2>
-                          <p>{{ d.value.taskA.information }}</p>
-                      </div>
-                      <div class="taskB">
-                          <h2 class="titles"><i class="fa fa-check green"></i> {{ d.value.taskB.name }}</h2>
-                          <p>{{ d.value.taskB.information }}</p>
-                      </div>
+                      <!--Task A and B -->
+                      <app-tasks class="taskA" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [title]="d.value.taskA.name" [information]="d.value.taskA.information"></app-tasks>
+                      <app-tasks class="taskB" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [title]="d.value.taskB.name" [information]="d.value.taskB.information"></app-tasks>
                     </div>
                     <div class="clear"></div>
                     <!-- clear floats -->
