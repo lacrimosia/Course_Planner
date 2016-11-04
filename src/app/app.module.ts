@@ -21,6 +21,8 @@ import { OneTaskComponent } from './one-task/one-task.component';
 import { InstructionsComponent } from './instructions/instructions.component';
 import { InformationComponent } from './information/information.component';
 import { MenuComponent } from './menu/menu.component';
+import { PreviousComponent } from './previous/previous.component';
+import { NextComponent } from './next/next.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { MenuComponent } from './menu/menu.component';
     OneTaskComponent,
     InstructionsComponent,
     InformationComponent,
-    MenuComponent
+    MenuComponent,
+    PreviousComponent,
+    NextComponent
   ],
   imports: [
     BrowserModule,

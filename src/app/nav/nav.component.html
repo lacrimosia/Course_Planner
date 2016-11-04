@@ -4,15 +4,15 @@
   </div>
   <div class="wrappers" *ngFor="let d of assignments | keys; let i = index">
 
-      
+
 
       <ul *ngIf="d.type=='one'">
         <li><h2>{{ d.value.title }}</h2> <p>{{ d.value.taskA.information }}</p></li>
       </ul>
 
         <!-- previous and next buttons -->
-        <button id="next" (click)="next(value)" *ngIf="value<i"></button>
-        <button id="prev" (click)="prev(value)" *ngIf="value>i"></button>
+        
+
         <!-- title and subtitle with symbol -->
         <div id="titleArea" *ngIf="i==value">
             <div class="symbol"> {{ d.value.symbol }} </div>
