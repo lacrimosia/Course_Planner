@@ -13,6 +13,7 @@ import { PrintComponent } from './print/print.component';
 import { DownloadComponent } from './download/download.component';
 import { ErrorComponent } from './error/error.component';
 import { SavedComponent } from './saved/saved.component';
+import { ButtonAComponent } from './button-a/button-a.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SavedComponent } from './saved/saved.component';
     PrintComponent,
     DownloadComponent,
     ErrorComponent,
-    SavedComponent
+    SavedComponent,
+    ButtonAComponent
   ],
   imports: [
     BrowserModule,

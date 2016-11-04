@@ -78,7 +78,7 @@
                       <div class="taskA">
                           <h2 class="titles">{{ d.value.taskA.name }}</h2>
                           <p>{{ d.value.taskA.information }}</p>
-                        <button class="select" (click)="buttonOneClick()" [ngClass]="{'yes': d.value.taskA.selectA, 'no': !d.value.taskA.selectA}"><i class="fa fa-times" *ngIf="!d.value.taskA.selectA"></i> <i class="fa fa-check" *ngIf="d.value.taskA.selectA"></i> {{ d.value.taskA.selectA ? "Selected" : "Unselected" }}</button>
+                          <app-button-a [d]="d" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value"></app-button-a>
                       </div>
                       <div class="taskB">
                           <h2 class="titles">{{ d.value.taskB.name }}</h2>

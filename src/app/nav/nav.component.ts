@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Rx';
 import {KeysPipe} from '../keys.pipe';
 import {HotkeysService, Hotkey} from 'angular2-hotkeys';
 import * as jsPDF from 'jspdf';
+import { ButtonAComponent } from '../button-a/button-a.component';
 
 
 @Component({
@@ -18,7 +19,7 @@ export class NavComponent implements OnInit {
   @Input() data;
 	selected:boolean;
   @Input() amount;
-  value:number = 0;
+  @Input() value:number = 0;
   textSelected: string;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) {
@@ -69,13 +70,7 @@ export class NavComponent implements OnInit {
             return false; // Prevent bubbling
   }));
 
-  // select A for the option A task
-  this._hotkeysService.add(new Hotkey('a', (event: KeyboardEvent): boolean => {
-      if(this.assignments[this.value].type=="two"){
-          this.buttonOneClick();
-      }
-      return false; // Prevent bubbling
-  }));
+
 
 // select B for the option B task
   this._hotkeysService.add(new Hotkey('b', (event: KeyboardEvent): boolean => {
@@ -161,11 +156,7 @@ hidePrintContent(){
   this.data.print = false;
 }
 
-// toggle buttons for selection
-buttonOneClick(){
-  this.data.assignments[this.value].taskA.selectA = true;
-  this.data.assignments[this.value].taskB.selectB=false;
-}
+
 
 buttonTwoClick(){
   this.data.assignments[this.value].taskB.selectB = true;
