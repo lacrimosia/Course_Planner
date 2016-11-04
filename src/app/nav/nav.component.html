@@ -52,8 +52,6 @@
                     <img [src]="imageSrc(d.value.due_date)" class="taskImage1"/>
                     <p> {{ d.value.instructions }} </p>
                     <hr />
-                    
-                    <div class="clear"></div>
                 </div>
                 <!-- show this only when clicking assignments two -->
                 <div class="twoTasks" *ngIf="d.value.type=='two'">
@@ -62,10 +60,6 @@
                   <!--  <img [src]="imageSrc(d.value.percentage)" class="taskImage2"/> -->
                     <p> {{ d.value.instructions }} </p>
                     <hr />
-
-
-                    <!-- clear floats -->
-                    <div class="clear"></div>
                 </div>
                 <!-- custom view -->
                 <div class="twoTasks" *ngIf="d.value.type=='custom'">
