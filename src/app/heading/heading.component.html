@@ -1,12 +1,10 @@
 <!--
     title and subtitle with symbol
  -->
-<div id="titleArea" *ngIf="i==value">
-    <div class="symbol"> {{ d.value.symbol }} </div>
-    <h1 class="sub" *ngIf="i!=1">{{ d.value.title }}</h1>
-    <!--show if short text -->
-    <h1 class="subForLarge" *ngIf="i==1">{{ d.value.title }}</h1>
-    <!--show if long text -->
-    <div class="clear"></div>
-    <!--clear floats-->
-</div>
+    <div class="topHeadingArea" *ngFor="let d of assignments | keys; let i = index">
+      <div class="symbol" *ngIf="i==value"> {{ d.value.symbol }} </div>
+      <h1 class="sub" *ngIf="i!=1 && i==value">{{  d.value.title }}</h1>
+      <!--show if short text -->
+      <h1 class="subForLarge" *ngIf="i==1 && i==value">{{ d.value.title }}</h1>
+      <!--show if long text -->
+    </div>

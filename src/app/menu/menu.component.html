@@ -2,9 +2,9 @@
   Information:
   Course Name, help(), reload()
 -->
-<div class="heading" *ngIf="i==value">
+<div class="heading">
       <!-- course name -->
-      <app-course-name></app-course-name>
+      <app-course-name [data]="data" [courseName]="data.course_title"></app-course-name>
       <!-- menu -->
       <button class="circle" (click)="reload()"><i class="fa fa-refresh"></i></button>
       <button class="circle" (click)="help();"><i class="fa fa-question"></i></button>

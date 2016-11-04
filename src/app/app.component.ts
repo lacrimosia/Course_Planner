@@ -12,11 +12,14 @@ import * as jsPDF from 'jspdf';
   providers: [DataService, HotkeysService]
 })
 export class AppComponent implements OnInit{
- d:number = 0;
+
  data:any;
  amount:number;
  assignments: any;
  alert:boolean;
+ value:number;
+ instructions:string;
+ 
 
  constructor(private dataService: DataService, private _hotkeysService: HotkeysService){
 
@@ -30,7 +33,9 @@ export class AppComponent implements OnInit{
          this.amount = this.data.assignments.length;
          this.assignments = this.data.assignments;
          this.alert = this.data.alert;
-      //  console.log("the data alert", this.alert);
+         this.value = this.data.value;
+         this.instructions = data.instructions;
+        // console.log("the data alert", this.value);
         },
         err => console.error(err),
         () => console.log('app component data loaded')

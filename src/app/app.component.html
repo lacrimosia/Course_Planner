@@ -1,16 +1,20 @@
 <!-- main app component -->
 <div id="container">
 	<!-- top menu -->
-	<app-menu></app-menu>
+	<app-menu [data]="data" [courseName]="data.course_title"></app-menu>
 
 	<!-- heading with symbol and title -->
-	<app-heading></app-heading>
+	<div id="titleArea">
+		<app-heading [data]="data" [assignments]="assignments" [value]="value"></app-heading>
+		<div class="clear"></div>
+		<!--clear floats-->
+	</div>
 
 	<!-- title of the interactive -->
 	<h3 class="animated fadeIn"> title here </h3>
 
 	<!--instructions -->
-	<app-instructions></app-instructions>
+	<app-instructions [data]="data" [instructions]="instructions"></app-instructions>
 
 	<!-- previous button -->
 	<app-previous></app-previous>
@@ -28,16 +32,16 @@
 
 	<!-- the tasks -->
 <div class="animated fadeIn box">
-		<!-- assignment information -->
-		<app-information></app-information>
-		<!-- one task -->
-		<app-one-task></app-one-task>
-		<!-- two tasks -->
-		<app-two-tasks></app-two-tasks>
+		<!-- assignment information
+		<app-information></app-information> -->
+		<!-- one task
+		<app-one-task></app-one-task>-->
+		<!-- two tasks
+		<app-two-tasks></app-two-tasks> -->
 </div>
 
 	<!-- bottom nav bar and tooltips -->
-	<app-nav [d]="d" [data]="data" [assignments]="assignments" [amount]="amount"><!--app information area --></app-nav>
+	<!--<app-nav *ngFor="let d of assignments | keys; let i = index" [d]="d" [data]="data" [assignments]="assignments" [amount]="amount"></app-nav> -->
 
 	<!-- print area -->
 	<div class="print animated fadeIn" *ngIf="data.print==true">
