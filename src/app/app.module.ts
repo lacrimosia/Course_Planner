@@ -16,6 +16,7 @@ import { SavedComponent } from './saved/saved.component';
 import { ButtonAComponent } from './button-a/button-a.component';
 import { ButtonBComponent } from './button-b/button-b.component';
 import { TasksComponent } from './tasks/tasks.component';
+import { TwoTasksComponent } from './two-tasks/two-tasks.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { TasksComponent } from './tasks/tasks.component';
     SavedComponent,
     ButtonAComponent,
     ButtonBComponent,
-    TasksComponent
+    TasksComponent,
+    TwoTasksComponent
   ],
   imports: [
     BrowserModule,
