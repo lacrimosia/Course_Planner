@@ -180,9 +180,9 @@ $mainSpace: 90; // space between images
   height: auto;
 }
 
-.floatingTasks div{
+.floatingTasks{
   float: left;
-  width: 49%;
+  width: 100%;
 }
 
 #hidePrint{
