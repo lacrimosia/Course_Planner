@@ -1,13 +1,8 @@
-<div class="tooltip animated fadeIn" *ngIf="d.value.show==true" [ngStyle]="{'left': d.value.tooltip.left+'px'}">
-    <i class="fa fa-book"></i> Assignment: {{ d.value.symbol}}
-</div>
-<div class="tooltip animated fadeIn" *ngIf="d.value.show==true && i==0;" [ngStyle]="{'left': d.value.tooltip.left+'px'}">
-    <i class="fa fa-book"></i>  Instructions
-</div>
+<!-- These are the cicle buttons at the bottom nav-->
 <button class="numButtons circle" id={{i}}  on-mouseover="d.value.show = !d.value.show;" on-mouseleave="d.value.show = !d.value.show;" (click)="goTo(i)" [ngStyle]="{'position': 'absolute', 'top': '787px', 'left': d.value.buttonPos.left+'px'}" [ngClass]="{'highlight': i==value}">
   {{ d.value.symbol }}
 </button>
-
+<!-- This is the line going across the bottom of the buttons -->
 <div class="navArea">
     <div id="line"></div>
 </div>

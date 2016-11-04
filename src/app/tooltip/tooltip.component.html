@@ -1,3 +1,3 @@
-<p>
-  tooltip works!
-</p>
+<div class="tooltip animated fadeIn" *ngIf="d.value.show==true" [ngStyle]="{'left': d.value.tooltip.left+'px'}">
+    <i class="fa fa-book"></i> Assignment: {{ d.value.symbol}}
+</div>

@@ -25,6 +25,7 @@ import { PreviousComponent } from './previous/previous.component';
 import { NextComponent } from './next/next.component';
 import { HeadingComponent } from './heading/heading.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
+import { CourseNameComponent } from './course-name/course-name.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { TooltipComponent } from './tooltip/tooltip.component';
     PreviousComponent,
     NextComponent,
     HeadingComponent,
-    TooltipComponent
+    TooltipComponent,
+    CourseNameComponent
   ],
   imports: [
     BrowserModule,

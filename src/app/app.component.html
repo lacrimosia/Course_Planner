@@ -1,13 +1,14 @@
-<!--<div class="blockDiv">
-</div>-->
-<!--<a href="/q">Click</a>-->
+<!-- main app component -->
 <div id="container">
+
+	<!-- course name -->
+	
 	<!-- top menu -->
 	<app-menu></app-menu>
 
 	<!-- heading with symbol and title -->
 	<app-heading></app-heading>
-	
+
 	<!--instructions -->
 	<app-instructions></app-instructions>
 
@@ -33,7 +34,10 @@
 	<!-- two tasks -->
 	<app-two-tasks></app-two-tasks>
 
-	<!-- navigation bar -->
+	<!-- tooltips for bottom nav bar -->
+	<app-tooltip></app-tooltip>
+
+	<!-- bottom nav bar -->
 	<app-nav [d]="d" [data]="data" [assignments]="assignments" [amount]="amount"><!--app information area --></app-nav>
 
 	<!-- print area -->
