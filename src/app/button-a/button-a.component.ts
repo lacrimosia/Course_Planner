@@ -3,7 +3,6 @@ import { DataService} from '../data.service';
 import { Observable } from 'rxjs/Rx';
 import {KeysPipe} from '../keys.pipe';
 import {HotkeysService, Hotkey} from 'angular2-hotkeys';
-import * as jsPDF from 'jspdf';
 
 @Component({
   selector: 'app-button-a',
@@ -27,16 +26,19 @@ export class ButtonAComponent implements OnInit {
     // select A for the option A task
     this._hotkeysService.add(new Hotkey('a', (event: KeyboardEvent): boolean => {
         if(this.assignments[this.value].type=="two"){
-            this.buttonOneClick();
+            this.buttonOneClick(this.value);
+            return;
         }
         return false; // Prevent bubbling
     }));
   }
 
   // toggle buttons for selection
-  buttonOneClick(){
-    this.data.assignments[this.value].taskA.selectA = true;
-    this.data.assignments[this.value].taskB.selectB=false;
+  buttonOneClick(value){
+    console.log("value A", value);
+    this.data.assignments[value].taskA.selectA = true;
+    this.data.assignments[value].taskB.selectB= false;
+    return;
   }
 
 }
