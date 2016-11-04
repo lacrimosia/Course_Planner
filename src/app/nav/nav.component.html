@@ -1,3 +1,6 @@
+
+<!-- tooltips for bottom nav bar -->
+<app-tooltip></app-tooltip>
 <!-- These are the cicle buttons at the bottom nav-->
 <button class="numButtons circle" id={{i}}  on-mouseover="d.value.show = !d.value.show;" on-mouseleave="d.value.show = !d.value.show;" (click)="goTo(i)" [ngStyle]="{'position': 'absolute', 'top': '787px', 'left': d.value.buttonPos.left+'px'}" [ngClass]="{'highlight': i==value}">
   {{ d.value.symbol }}

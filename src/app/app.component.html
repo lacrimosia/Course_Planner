@@ -1,14 +1,13 @@
 <!-- main app component -->
 <div id="container">
-
-	<!-- course name -->
-	<app-course-name></app-course-name>
-	
 	<!-- top menu -->
 	<app-menu></app-menu>
 
 	<!-- heading with symbol and title -->
 	<app-heading></app-heading>
+
+	<!-- title of the interactive -->
+	<h3 class="animated fadeIn"> title here </h3>
 
 	<!--instructions -->
 	<app-instructions></app-instructions>
@@ -28,17 +27,16 @@
 	<app-saved [data]="data" [assignments]="assignments" [amount]="amount" [alert]="alert"></app-saved>
 
 	<!-- the tasks -->
-	<!-- assignment information -->
-	<app-information></app-information>
-	<!-- one task -->
-	<app-one-task></app-one-task>
-	<!-- two tasks -->
-	<app-two-tasks></app-two-tasks>
+<div class="animated fadeIn box">
+		<!-- assignment information -->
+		<app-information></app-information>
+		<!-- one task -->
+		<app-one-task></app-one-task>
+		<!-- two tasks -->
+		<app-two-tasks></app-two-tasks>
+</div>
 
-	<!-- tooltips for bottom nav bar -->
-	<app-tooltip></app-tooltip>
-
-	<!-- bottom nav bar -->
+	<!-- bottom nav bar and tooltips -->
 	<app-nav [d]="d" [data]="data" [assignments]="assignments" [amount]="amount"><!--app information area --></app-nav>
 
 	<!-- print area -->
