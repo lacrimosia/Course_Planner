@@ -33,18 +33,7 @@
             <h3 *ngIf="i==0" class="animated fadeIn"> {{ d.value.sub_title }}</h3>
             <div class="box animated fadeIn" *ngIf="data.print == false">
                 <!-- only shown in the intstructions page -->
-                <div class="intro" *ngIf="i==0">
-                    <b>Instructions:</b>
-                    <p>{{ d.value.instructions }}</p>
-                    <h2 class="titled"> Keyboard Shortcuts </h2>
-                    <ul>
-                      <li>NEXT/PREV - <i class="fa fa-arrow-right green"></i> and <i class="fa fa-arrow-left green"></i></li>
-                      <li>Help Menu - PRESS H</li>
-                      <li>Reload Activity - PRESS R</li>
-                      <li>PRINT Activity - PRESS P</li>
-                    </ul>
-                  <!--  <button class="select" (click)="data.help=true">More Information</button> -->
-                </div>
+                
                 <div class="clear"></div>
                 <!-- show this only when clicking assignments one -->
                 <div class="oneTasks animated fadeIn" *ngIf="d.value.type=='one'">

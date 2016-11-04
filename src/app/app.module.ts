@@ -19,6 +19,7 @@ import { TasksComponent } from './tasks/tasks.component';
 import { TwoTasksComponent } from './two-tasks/two-tasks.component';
 import { OneTaskComponent } from './one-task/one-task.component';
 import { InstructionsComponent } from './instructions/instructions.component';
+import { InformationComponent } from './information/information.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { InstructionsComponent } from './instructions/instructions.component';
     TasksComponent,
     TwoTasksComponent,
     OneTaskComponent,
-    InstructionsComponent
+    InstructionsComponent,
+    InformationComponent
   ],
   imports: [
     BrowserModule,
