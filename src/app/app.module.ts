@@ -23,6 +23,7 @@ import { InformationComponent } from './information/information.component';
 import { MenuComponent } from './menu/menu.component';
 import { PreviousComponent } from './previous/previous.component';
 import { NextComponent } from './next/next.component';
+import { HeadingComponent } from './heading/heading.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { NextComponent } from './next/next.component';
     InformationComponent,
     MenuComponent,
     PreviousComponent,
-    NextComponent
+    NextComponent,
+    HeadingComponent
   ],
   imports: [
     BrowserModule,
