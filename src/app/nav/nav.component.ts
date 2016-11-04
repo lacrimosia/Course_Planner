@@ -5,6 +5,7 @@ import {KeysPipe} from '../keys.pipe';
 import {HotkeysService, Hotkey} from 'angular2-hotkeys';
 import * as jsPDF from 'jspdf';
 import { ButtonAComponent } from '../button-a/button-a.component';
+import { ButtonBComponent } from '../button-b/button-b.component';
 
 
 @Component({
@@ -69,16 +70,6 @@ export class NavComponent implements OnInit {
           this.printContent();
             return false; // Prevent bubbling
   }));
-
-
-
-// select B for the option B task
-  this._hotkeysService.add(new Hotkey('b', (event: KeyboardEvent): boolean => {
-      if(this.assignments[this.value].type=="two"){
-          this.buttonTwoClick();
-      }
-      return false; // Prevent bubbling
-      }));
 
   }
 
@@ -157,16 +148,8 @@ hidePrintContent(){
 }
 
 
-
-buttonTwoClick(){
-  this.data.assignments[this.value].taskB.selectB = true;
-  this.data.assignments[this.value].taskA.selectA=false;
-}
-
 taskSelected(task){
   return task;
 }
-
-
 
 }

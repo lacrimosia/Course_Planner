@@ -14,6 +14,7 @@ import { DownloadComponent } from './download/download.component';
 import { ErrorComponent } from './error/error.component';
 import { SavedComponent } from './saved/saved.component';
 import { ButtonAComponent } from './button-a/button-a.component';
+import { ButtonBComponent } from './button-b/button-b.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ButtonAComponent } from './button-a/button-a.component';
     DownloadComponent,
     ErrorComponent,
     SavedComponent,
-    ButtonAComponent
+    ButtonAComponent,
+    ButtonBComponent
   ],
   imports: [
     BrowserModule,

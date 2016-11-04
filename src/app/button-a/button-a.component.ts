@@ -12,7 +12,7 @@ import * as jsPDF from 'jspdf';
   providers: [DataService, HotkeysService]
 })
 export class ButtonAComponent implements OnInit {
-  @Input() d:number = 0;
+  @Input() d:number;
   @Input() assignments;
   @Input() data;
 	selected:boolean;
@@ -20,13 +20,14 @@ export class ButtonAComponent implements OnInit {
   @Input() value;
   textSelected: string;
 
-  constructor(private dataService: DataService, private _hotkeysService: HotkeysService) { }
+  constructor(private dataService: DataService, private _hotkeysService: HotkeysService) {
+  }
 
   ngOnInit() {
     // select A for the option A task
     this._hotkeysService.add(new Hotkey('a', (event: KeyboardEvent): boolean => {
         if(this.assignments[this.value].type=="two"){
-          //  this.buttonOneClick();
+            this.buttonOneClick();
         }
         return false; // Prevent bubbling
     }));
