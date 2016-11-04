@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { DataService} from './data.service';
 import { Observable } from 'rxjs/Rx';
 import {KeysPipe} from './keys.pipe';
@@ -17,15 +17,15 @@ export class AppComponent implements OnInit{
  amount:number;
  assignments: any;
  alert:boolean;
- value:number;
+ value:number = 0;
  instructions:string;
- 
+
 
  constructor(private dataService: DataService, private _hotkeysService: HotkeysService){
-
  }
 
  ngOnInit() {
+
    this.data = this.dataService.getData()
      .subscribe(
         data => {
@@ -33,8 +33,7 @@ export class AppComponent implements OnInit{
          this.amount = this.data.assignments.length;
          this.assignments = this.data.assignments;
          this.alert = this.data.alert;
-         this.value = this.data.value;
-         this.instructions = data.instructions;
+         this.instructions = this.assignments[0].instructions;
         // console.log("the data alert", this.value);
         },
         err => console.error(err),

@@ -2,11 +2,12 @@
   Information:
   Course Name, help(), reload()
 -->
-<div class="heading">
-      <!-- course name -->
-      <app-course-name [data]="data" [courseName]="data.course_title"></app-course-name>
-      <!-- menu -->
-      <button class="circle" (click)="reload()"><i class="fa fa-refresh"></i></button>
-      <button class="circle" (click)="help();"><i class="fa fa-question"></i></button>
-      <div class="clear"></div> <!--clear floats-->
+<!-- course name -->
+<div>
+<app-course-name [data]="data" [courseName]="data.course_title"></app-course-name>
+  <!-- menu -->
+<div class="buttonMenu">
+  <button class="circle" (click)="reload()"><i class="fa fa-refresh"></i></button>
+  <button class="circle" (click)="help();"><i class="fa fa-question"></i></button>
 </div>
+<div>

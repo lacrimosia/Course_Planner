@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { DataService} from '../data.service';
 import { Observable } from 'rxjs/Rx';
 import {KeysPipe} from '../keys.pipe';
@@ -21,13 +21,14 @@ export class NavComponent implements OnInit {
   @Input() data;
 	selected:boolean;
   @Input() amount;
-  @Input() value:number = 0;
+  @Input() value;
   textSelected: string;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) {
   	// this.dataService = dataService;
-  	this.value = 0;
+  //	this.value = 0;
   	this.selected = false;
+
   }
 
   ngOnInit() {
@@ -75,9 +76,10 @@ export class NavComponent implements OnInit {
   }
 
   // go to link onclick
-  goTo(value){
-  	this.value = value;
-    if(value == this.assignments.length-1){
+  goTo(i){
+  	this.value = i;
+    console.log('updated', this.value);
+    if(this.value == this.assignments.length-1){
       this.printContent();
     }else{
       this.hidePrintContent();

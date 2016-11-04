@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { DataService} from '../data.service';
 import { Observable } from 'rxjs/Rx';
 import {KeysPipe} from '../keys.pipe';
@@ -14,6 +14,7 @@ export class HeadingComponent implements OnInit {
   @Input() data;
   @Input() assignments;
   @Input() value;
+  @Input() valueChanged;
   title:string;
   symbol:any;
 
