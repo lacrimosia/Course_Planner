@@ -5,8 +5,6 @@
   <div class="wrappers" *ngFor="let d of assignments | keys; let i = index">
 
       <div class="heading" *ngIf="i==value">
-      <!--	<h1>{{ d.value.course_title }}</h1> -->
-      	   <!-- <button class="circle" (click)="printContent()"><i class="fa fa-print"></i></button> -->
       	    <button class="circle" (click)="reload()"><i class="fa fa-refresh"></i></button>
       	    <button class="circle" (click)="help();"><i class="fa fa-question"></i></button>
       	    <div class="clear"></div> <!--clear floats-->
@@ -33,7 +31,7 @@
             <h3 *ngIf="i==0" class="animated fadeIn"> {{ d.value.sub_title }}</h3>
             <div class="box animated fadeIn" *ngIf="data.print == false">
                 <!-- only shown in the intstructions page -->
-                
+
                 <div class="clear"></div>
                 <!-- show this only when clicking assignments one -->
                 <div class="oneTasks animated fadeIn" *ngIf="d.value.type=='one'">
