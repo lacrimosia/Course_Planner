@@ -78,7 +78,7 @@ export class NavComponent implements OnInit {
 
   // go to link onclick
   goTo(i){
-  	this.valueService.value = i;
+  	this.data.value = i;
     if(this.value == this.assignments.length-1){
       this.printContent();
     }else{

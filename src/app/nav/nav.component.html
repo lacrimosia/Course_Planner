@@ -2,7 +2,7 @@
 <!-- tooltips for bottom nav bar -->
 <!--<app-tooltip></app-tooltip>-->
 <!-- These are the cicle buttons at the bottom nav-->
-<button *ngFor="let d of assignments | keys; let i = index" class="numButtons circle" id={{i}}  on-mouseover="d.value.show = !d.value.show;" on-mouseleave="d.value.show = !d.value.show;" (click)="valueService.goTo(i)" [ngStyle]="{'position': 'absolute', 'top': '787px', 'left': d.value.buttonPos.left+'px'}" [ngClass]="{'highlight': i==valueService.value}">
+<button *ngFor="let d of assignments | keys; let i = index" class="numButtons circle" id={{i}}  on-mouseover="d.value.show = !d.value.show;" on-mouseleave="d.value.show = !d.value.show;" (click)="goTo(i)" [ngStyle]="{'position': 'absolute', 'top': '787px', 'left': d.value.buttonPos.left+'px'}" [ngClass]="{'highlight': i==data.value}">
   {{ d.value.symbol }}
 </button>
 <!-- This is the line going across the bottom of the buttons -->
