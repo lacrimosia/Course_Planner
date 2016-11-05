@@ -34,9 +34,9 @@
 
 			<div class="animated fadeIn box">
 				<!--instructions -->
-				<app-instructions [data]="data" [instructions]="instructions"></app-instructions>
-					<!-- assignment information
-						<app-information></app-information> -->
+				<app-instructions *ngIf="data.value==0" [data]="data" [instructions]="instructions"></app-instructions>
+					<!-- assignment information -->
+						<app-information *ngIf="data.value>0&& data.value < amount-1" [data]="data" [assignments]="assignments"></app-information> 
 					<!-- one task
 						<app-one-task></app-one-task>-->
 					<!-- two tasks

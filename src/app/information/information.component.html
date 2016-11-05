@@ -1,4 +1,6 @@
 <h2 class="titles">Assignment Information</h2>
-<img [src]="imageSrc(d.value.due_date)" class="taskImage1"/>
-<p> {{ d.value.instructions }} </p>
+<div class="infos" *ngFor="let d of assignments | keys; let i = index">
+	<!-- <img [src]="imageSrc(d.value.due_date)" class="taskImage1" /> -->
+	<p *ngIf="i==data.value"> {{ d.value.instructions }} </p>
+</div>
 <hr />

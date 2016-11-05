@@ -84,7 +84,6 @@ export class NavComponent implements OnInit {
     }else{
       this.hidePrintContent();
     }
-  	return this.value;
   }
 
   // show the correct picture
