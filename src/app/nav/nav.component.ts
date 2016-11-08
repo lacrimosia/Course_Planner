@@ -36,10 +36,10 @@ export class NavComponent implements OnInit {
     // left keyboard shortcut
     this._hotkeysService.add(new Hotkey('right', (event: KeyboardEvent): boolean => {
          //this.goTo();
-         if(this.value >= 0 && this.value < (this.amount - 1) && this.data.error.open==false && this.data.alert==false){
-           this.value++;
+         if(this.data.value >= 0 && this.data.value < (this.amount - 1) && this.data.error.open==false && this.data.alert==false){
+           this.data.value++;
          }
-         if(this.value == this.assignments.length-1){
+         if(this.data.value == this.assignments.length-1){
            this.printContent();
          }else{
            this.hidePrintContent();
@@ -50,10 +50,10 @@ export class NavComponent implements OnInit {
 
 // right keyboard shortcut
     this._hotkeysService.add(new Hotkey('left', (event: KeyboardEvent): boolean => {
-      if(this.value > 0 && this.value < (this.amount) && this.data.error.open==false && this.data.alert==false){
-        this.value--;
+      if(this.data.value > 0 && this.data.value < (this.amount) && this.data.error.open==false && this.data.alert==false){
+        this.data.value--;
       }
-      if(this.value == this.assignments.length-1){
+      if(this.data.value == this.assignments.length-1){
         this.printContent();
       }else{
         this.hidePrintContent();
