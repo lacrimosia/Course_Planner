@@ -21,7 +21,7 @@ export class ButtonBComponent implements OnInit {
   ngOnInit() {
     // select B for the option B task
       this._hotkeysService.add(new Hotkey('b', (event: KeyboardEvent): boolean => {
-          if(this.assignments[this.value].type=="two"){
+          if(this.d.value.type=="two"){
               this.buttonTwoClick();
               return;
           }

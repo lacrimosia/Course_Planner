@@ -1,4 +1,4 @@
-<div class="errorBackdrop animated fadeIn" *ngIf="data.error.open==true">
+<div class="errorBackdrop animated fadeIn col-md-12 col-lg-12" *ngIf="data.error.open==true">
   <div class="errorMessageArea animated flipInX" *ngIf="data.error.open==true">
     <button class="close" (click)="data.error.open=false"><i class="fa fa-times"></i></button>
     <h2 class="titles"><i class="fa fa-thumbs-down"></i> {{ data.error.title }}</h2>

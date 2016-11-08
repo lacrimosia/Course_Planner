@@ -5,7 +5,9 @@ h1{
 }
 
 .print{
-  width: 79%;
+	height: 350px;
+	overflow-y: auto;
+/*  width: 79%;
   margin: 0 auto;
   height: 528px;
   overflow-y: scroll;
@@ -13,7 +15,7 @@ h1{
   position: absolute;
   top: 190px;
   left: 107px;
-  z-index: 123000;
+  z-index: 123000; */
 }
 
 .workArea {
