@@ -25,9 +25,6 @@
         "tooltip": {
             "left": -25
         },
-        "buttonPos":{
-        	"left": 20
-        },
         "instructions": "The interactive will show information on each assignment due to for this course. Please click each button to view the current assignments and information about them."
     }, {
         "type": "one",
@@ -40,9 +37,6 @@
         "sub_title": "Assignment Information",
         "tooltip": {
             "left": 82
-        },
-        "buttonPos":{
-        	"left": 130
         },
         "printTop": 0,
         "instructions": "The purpose of this assignment is to examine personal development as an environmental studies major. This assignment relates to being able to communicate information to multiple audiences as well as demonstrate information literacy, two learning outcomes associated with your degree. It also can be linked with the first learning outcome of this course, being able to describe how coursework from different disciplines provides new perspectives on environmental issues.",
@@ -66,9 +60,6 @@
         "sub_title": "Assignment Information",
         "tooltip": {
             "left": 200
-        },
-        "buttonPos":{
-        	"left": 250
         },
         "printTop": 250,
         "instructions": "The purpose of this assignment is to present an example of work on sustainability. This assignment relates to being able to examine whether a community meets multiple conditions of sustainability, a learning outcome associated with your degree. It also relates to the second learning outcome of this course, being able to reflect and improve upon work.",
@@ -101,9 +92,6 @@
         "tooltip": {
             "left": 325
         },
-        "buttonPos":{
-        	"left": 370
-        },
         "printTop": 560,
         "instructions": "The purpose of this assignment is to present an example of work on environmental policy. This assignment relates to being able to characterize the roles of individuals and organizations in environmental policy, learning outcome associated with your degree. It also relates to the second learning outcome of this course, being able to reflect and improve upon work.",
         "due_date": "13-04.png",
@@ -132,9 +120,6 @@
         "sub_title": "Assignment Information",
         "tooltip": {
             "left": 450
-        },
-        "buttonPos":{
-        	"left": 495
         },
         "printTop": 800,
         "instructions": "The purpose of this assignment is to present an example of work on successful collaboration. This assignment relates to being able to use knowledge and skills required for successful collaboration as well as information literacy.",
@@ -165,9 +150,6 @@
         "tooltip": {
             "left": 570
         },
-        "buttonPos":{
-        	"left": 620
-        },
         "printTop":1042,
         "instructions": "The purpose of this assignment is to present an example of work that demonstrates numeracy. This assignment relates to being able to use knowledge and skills related to analyzing data.",
         "due_date": "11-5-04.png",
@@ -196,9 +178,6 @@
         "sub_title": "Assignment Information",
         "tooltip": {
             "left": 700
-        },
-        "buttonPos":{
-        	"left": 745
         },
         "printTop": 1280,
         "instructions": "The purpose of this assignment is to present an example of work that demonstrates awareness of multiple audiences. This assignment relates to being able to communicate typically complex information about an environmental issue to multiple audiences. It is based upon learning outcomes for the major and course.",
@@ -229,9 +208,6 @@
         "tooltip": {
             "left": 820
         },
-        "buttonPos":{
-        	"left": 870
-        },
         "printTop": 1540,
         "instructions": "The purpose of this assignment is to create an electronic portfolio of your work in college that exemplifies each learning outcome in your degree.",
         "taskA": {
@@ -261,9 +237,6 @@
         "sub_title": "Assignment Information",
         "tooltip": {
             "left": 948
-        },
-        "buttonPos":{
-        	"left": 993
         },
         "printTop": 1800
     }]

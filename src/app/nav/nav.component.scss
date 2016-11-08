@@ -1,24 +1,16 @@
-
-
-
 p,
 b {
     font-family: sans-serif;
 }
 
-.navArea {
-    position: relative;
-    height: 40px;
-    padding: 20px;
+.buttonList{
+  margin-left: 35px;
 }
 
 .numButtons {
     float: left;
     margin-right: 5%;
     z-index: 1000;
-    position: relative;
-    top: 15px;
-    left: 20px;
 }
 
 .resize {
@@ -28,7 +20,7 @@ b {
 
 #line {
     width: 97%;
-    margin: 18px 0px 0px 5px;
+    margin: 30px 0px 0px 5px;
     height: 1px;
 }
 

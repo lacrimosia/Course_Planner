@@ -32,7 +32,7 @@
 	<!-- the tasks  and instructions Area -->
 	<div class="workArea">
 		<!-- title of the interactive -->
-		<h3 class="animated fadeIn"> {{ data.activity }} </h3>
+		<h3 class="animated fadeIn" > {{ data.activity }} </h3>
 
 			<div class="animated fadeIn box">
 				<!--instructions -->
@@ -47,8 +47,11 @@
 </div>
 
 	<!-- bottom nav bar and tooltips -->
-	<app-nav [d]="d" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" (valueChanged)="value = $event"></app-nav>
-
+<div class="container navArea">
+	<div class="row">
+		<app-nav class="col-md-12 col-lg-12" [d]="d" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" (valueChanged)="value = $event"></app-nav>
+  </div>
+</div>
 	<!-- print area -->
 	<div class="print animated fadeIn" *ngIf="data.print==true">
 		<h2 class="titles">Review Information</h2>
