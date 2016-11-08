@@ -3,11 +3,13 @@
   Course Name, help(), reload()
 -->
 <!-- course name -->
-<div>
-<app-course-name [data]="data" [courseName]="data.course_title"></app-course-name>
+<div class="col-lg-12 col-md-12">
+  <div class="pull-left padding-left">
+    <h1 class="courseTitle">{{ courseName }}</h1>
+  </div>
   <!-- menu -->
-<div class="buttonMenu">
-  <button class="circle" (click)="reload()"><i class="fa fa-refresh"></i></button>
-  <button class="circle" (click)="help();"><i class="fa fa-question"></i></button>
-</div>
+  <div class="buttonMenu" class="pull-right padding-right">
+    <button class="circle" (click)="reload()"><i class="fa fa-refresh"></i></button>
+    <button class="circle" (click)="help();"><i class="fa fa-question"></i></button>
+  </div>
 <div>

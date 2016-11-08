@@ -83,6 +83,14 @@ p, span, ul li{
 	border: 1px solid $red;
 }
 
+.specialCircle{
+	@include buttonStyles(50px, 50px, $red, 100px, $red, subHeadings);
+	cursor: default;
+	text-align: center;
+	color: $white;
+	font-size: 2.5em;
+}
+
 // circle navigation buttons
 .smallcircle{
 	@include buttonStyles(40px, 40px, $green, 100px, $green, subHeadings);
@@ -121,8 +129,16 @@ p, span, ul li{
 
 .heading{
 	background: $blue !important;
+	padding: 10px 5px 10px 5px;
 }
 
+.padding-left{
+	padding-left: 10px;
+}
+
+.padding-right{
+	padding-right: 10px;
+}
 // clear both
 .clear{
 	clear: both;
@@ -393,4 +409,12 @@ ul li{
 
 .taskA, .taskB{
 	width: 47%;
+}
+
+.courseTitle{
+	color: $white;
+}
+
+.topHeadingArea{
+	background: $white;
 }

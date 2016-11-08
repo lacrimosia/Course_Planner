@@ -1,16 +1,18 @@
 <!-- main app component -->
-<div id="container">
+<div class="container">
+	<div class="row">
 	<!-- top menu -->
-	<div class="heading">
-		<app-menu [data]="data" [courseName]="data.course_title"></app-menu>
-		<div class="clear"></div>
+	<div class="heading container">
+		<div class="row">
+			<app-menu [data]="data" [courseName]="data.course_title"></app-menu>
+		</div>
 	</div>
 
 	<!-- heading with symbol and title -->
-	<div id="titleArea">
-		<app-heading [data]="data" [assignments]="assignments" [value]="value"></app-heading>
-		<div class="clear"></div>
-		<!--clear floats-->
+	<div class="titleArea container">
+		<div class="row">
+				<app-heading [data]="data" [assignments]="assignments" [value]="value"></app-heading>
+		</div>
 	</div>
 
 	<!-- previous button -->
@@ -21,7 +23,7 @@
 
 	<!--error message-->
 	<app-error [data]="data" [assignments]="assignments" [amount]="amount"></app-error>
-	<app-title [data]="data" [assignments]="assignments" [amount]="amount"><!--app title area --></app-title>
+<!--	<app-title [data]="data" [assignments]="assignments" [amount]="amount"></app-title>-->
 	<!-- save button -->
 	<app-download [data]="data" [assignments]="assignments" [amount]="amount" [alert]="alert"></app-download>
 	<!-- when print is saved -->
@@ -36,7 +38,7 @@
 				<!--instructions -->
 				<app-instructions *ngIf="data.value==0" [data]="data" [instructions]="instructions"></app-instructions>
 					<!-- assignment information -->
-						<app-information *ngIf="data.value>0&& data.value < amount-1" [data]="data" [assignments]="assignments"></app-information> 
+						<app-information *ngIf="data.value>0&& data.value < amount-1" [data]="data" [assignments]="assignments"></app-information>
 					<!-- one task
 						<app-one-task></app-one-task>-->
 					<!-- two tasks
@@ -56,5 +58,5 @@
 			<app-print [data]="data" [assignments]="assignments" [amount]="amount"></app-print>
 		</ul>
 	</div>
-
+	</div>
 </div><!-- end main component -->
