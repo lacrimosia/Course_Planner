@@ -15,23 +15,24 @@ export class ButtonBComponent implements OnInit {
   @Input() data;
   @Input() amount;
   @Input() value:number = 0;
+  @Input() d;
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) { }
 
   ngOnInit() {
     // select B for the option B task
       this._hotkeysService.add(new Hotkey('b', (event: KeyboardEvent): boolean => {
           if(this.assignments[this.value].type=="two"){
-              this.buttonTwoClick(this.value);
+              this.buttonTwoClick();
               return;
           }
           return false; // Prevent bubbling
       }));
   }
 
-  buttonTwoClick(value){
-    console.log("value B", value);
-    this.data.assignments[value].taskB.selectB = true;
-    this.data.assignments[value].taskA.selectA = false;
+  buttonTwoClick(){
+  console.log("value B", this.d);
+    this.d.value.taskB.selectB = true;
+    this.d.value.taskA.selectA = false;
     return;
   }
 

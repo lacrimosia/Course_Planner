@@ -62,11 +62,6 @@ export class NavComponent implements OnInit {
         return false; // Prevent bubbling
     }));
 
-    // help keyboard shortcut
-    this._hotkeysService.add(new Hotkey('h', (event: KeyboardEvent): boolean => {
-          this.help();
-            return false; // Prevent bubbling
-    }));
 
    // The print keyboard shorcut
    this._hotkeysService.add(new Hotkey('p', (event: KeyboardEvent): boolean => {
@@ -79,7 +74,7 @@ export class NavComponent implements OnInit {
   // go to link onclick
   goTo(i){
   	this.data.value = i;
-    if(this.value == this.assignments.length-1){
+    if(this.data.value == this.assignments.length-1){
       this.printContent();
     }else{
       this.hidePrintContent();
@@ -126,7 +121,7 @@ printContent(){
       // this ensures they actually select something
       if(this.data.assignments[x].taskA.selectA == false && this.data.assignments[x].taskB.selectB==false){
         this.data.error.open = true;
-        this.value = 2;
+        this.data.value = 2;
         this.hidePrintContent();
       }else{
         this.data.error.open = false;

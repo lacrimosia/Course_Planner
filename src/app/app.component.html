@@ -45,10 +45,10 @@
 						<app-instructions *ngIf="data.value==0" [data]="data" [instructions]="instructions"></app-instructions>
 					<!-- assignment information -->
 						<app-information *ngIf="data.value>0 && data.value < amount-1" [data]="data" [assignments]="assignments"></app-information>
-					<!-- one task
-						<app-one-task></app-one-task>-->
-					<!-- two tasks
-						<app-two-tasks></app-two-tasks> -->
+					<!-- one task -->
+						<app-one-task [data]="data" *ngIf="data.value>0" [assignments]="assignments"></app-one-task>
+					<!-- two tasks -->
+						<app-two-tasks [data]="data" *ngIf="data.value>0" [assignments]="assignments"></app-two-tasks>
 					</div>
 		</div>
 </div>

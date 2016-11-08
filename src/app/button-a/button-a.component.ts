@@ -11,13 +11,11 @@ import {HotkeysService, Hotkey} from 'angular2-hotkeys';
   providers: [DataService, HotkeysService]
 })
 export class ButtonAComponent implements OnInit {
-  @Input() d:number;
   @Input() assignments;
   @Input() data;
-	selected:boolean;
   @Input() amount;
   @Input() value;
-  textSelected: string;
+  @Input() d;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) {
   }
@@ -26,7 +24,7 @@ export class ButtonAComponent implements OnInit {
     // select A for the option A task
     this._hotkeysService.add(new Hotkey('a', (event: KeyboardEvent): boolean => {
         if(this.assignments[this.value].type=="two"){
-            this.buttonOneClick(this.value);
+            this.buttonOneClick();
             return;
         }
         return false; // Prevent bubbling
@@ -34,10 +32,10 @@ export class ButtonAComponent implements OnInit {
   }
 
   // toggle buttons for selection
-  buttonOneClick(value){
-    console.log("value A", value);
-    this.data.assignments[value].taskA.selectA = true;
-    this.data.assignments[value].taskB.selectB= false;
+  buttonOneClick(){
+    console.log("value A", this.d);
+    this.d.value.taskA.selectA = true;
+    this.d.value.taskB.selectB= false;
     return;
   }
 

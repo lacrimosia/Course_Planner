@@ -19,6 +19,11 @@ export class MenuComponent implements OnInit {
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) { }
 
   ngOnInit() {
+    // help keyboard shortcut
+    this._hotkeysService.add(new Hotkey('h', (event: KeyboardEvent): boolean => {
+          this.help();
+            return false; // Prevent bubbling
+    }));
   }
 
   // reload function

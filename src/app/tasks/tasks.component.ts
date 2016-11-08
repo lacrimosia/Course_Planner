@@ -17,6 +17,7 @@ export class TasksComponent implements OnInit {
   @Input() value:number = 0;
   @Input() title;
   @Input() information;
+  @Input() d;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) { }
 
