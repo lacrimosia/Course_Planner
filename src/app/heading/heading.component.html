@@ -1,8 +1,8 @@
 <!--
     title and subtitle with symbol
  -->
-    <div class="topHeadingArea col-md-12 col-lg-12" *ngFor="let d of assignments | keys; let i = index">
-      <div class="symbol" *ngIf="i==data.value">{{ d.value.symbol }}</div>
+    <div class="header" *ngFor="let d of assignments | keys; let i = index">
+      <div class="symbol pull-left" *ngIf="i==data.value">{{ d.value.symbol }}</div>
       <h1 class="sub pull-left padding-left" *ngIf="i!=1 && i==data.value">{{  d.value.title }}</h1>
       <!--show if short text -->
       <h1 class="subForLarge pull-left padding-left" *ngIf="i==1 && i==data.value">{{ d.value.title }}</h1>

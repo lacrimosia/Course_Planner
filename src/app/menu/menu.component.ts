@@ -21,4 +21,15 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
   }
 
+  // reload function
+  reload(){
+    location.reload();
+  }
+
+  // help button
+    help(){
+      this.data.value = 0;
+      this.data.print = false;
+    }
+
 }

@@ -91,11 +91,6 @@ export class NavComponent implements OnInit {
   	return "assets/images/" + picture;
   }
 
-// reload function
-reload(){
-  location.reload();
-}
-
   // next button
   next(value){
   	this.value = value;
@@ -116,11 +111,7 @@ reload(){
     }
   }
 
-// help button
-  help(){
-    this.value = 0;
-    this.data.print = false;
-  }
+
 
 printContent(){
   this.data.print = true;

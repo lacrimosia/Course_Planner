@@ -73,9 +73,11 @@ p, span, ul li{
 
 // circle navigation buttons
 .circle{
-	@include buttonStyles(50px, 50px, $green, 100px, $green, subHeadings);
+	@include buttonStyles(60px, 60px, $green, 100px, $green, subHeadings);
 	cursor: pointer;
 	text-align: center;
+	font-size: 2.3em;
+	font-weight: lighter;
 }
 
 .circle:hover{
@@ -149,24 +151,32 @@ p, span, ul li{
 
 // title of assignment
 .sub{
-	font-size: 2.2;
+	font-size: 2.5em !important;
 }
 
 // info box
 .box{
 	background: $white;
-	width: 80%;
+//	width: 80%;
 	min-height: 100px;
 	height: auto;
-	margin: 15px auto;
-	position: relative;
+	margin-top: 40px;
+//	margin: 15px auto;
+//	position: relative;
 	padding: 15px;
 	z-index: 100000;
 	// box-shadow: 3px 3px 5px #333333;
 }
 
+.activityTitle{
+	font-weight: bold;
+	font-size: 3.1em !important;
+	margin-top: 40px !important;
+}
+
 .navArea{
 	background: $blue;
+	padding: 10px;
 }
 
 .tooltip{
@@ -410,8 +420,10 @@ ul li{
 
 .courseTitle{
 	color: $white;
+	font-size: 1.9em !important;
 }
 
 .topHeadingArea{
 	background: $white;
+	padding: 10px;
 }
