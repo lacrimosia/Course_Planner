@@ -22,6 +22,13 @@ export class ErrorComponent implements OnInit {
         this.data.error.open=false;
         return false; // Prevent bubbling
     }));
+    
+  }
+
+  automaticHiding(value){
+    setTimeout(function(){
+      value=false;
+    }, 100);
   }
 
 }
