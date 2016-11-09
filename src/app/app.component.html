@@ -17,12 +17,6 @@
 		</div>
 	</div>
 
-	<!-- previous button -->
-	<app-previous></app-previous>
-
-	<!-- next button -->
-	<app-next></app-next>
-
 	<!--error message-->
 	<app-error [data]="data" [assignments]="assignments" [amount]="amount"></app-error>
 <!--	<app-title [data]="data" [assignments]="assignments" [amount]="amount"></app-title>-->
@@ -38,8 +32,12 @@
 			<div class="col-md-12 col-lg-12">
 				<h3 class="animated fadeIn activityTitle" *ngIf="data.value==0"> {{ data.activity }} </h3>
 			</div>
+
 			<!-- added to center div-->
-			<div class="col-md-1 col-lg-1"></div>
+			<div class="col-md-1 col-lg-1">
+				<!-- previous button -->
+				<app-previous [data]="data" [assignments]="assignments"></app-previous>
+			</div>
 			<div class="animated fadeIn box col-md-10 col-lg-10">
 				<!--instructions -->
 						<app-instructions *ngIf="data.value==0" [data]="data" [instructions]="instructions"></app-instructions>
@@ -61,6 +59,12 @@
 							</ul>
 						</div>
 			</div>
+
+			<div class="col-md-1 col-lg-1">
+				<!-- next button -->
+				<app-next [data]="data" [assignments]="assignments" [amount]="amount"></app-next>
+			</div>
+
 		</div>
 </div>
 

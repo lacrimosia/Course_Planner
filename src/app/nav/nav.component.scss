@@ -43,36 +43,11 @@ b {
     padding: 10px;
 }
 
-#next {
-    position: absolute;
-    top: 450px;
-    left: 983px;
-    width: 50px;
-    height: 50px;
-    z-index: 43000;
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid transparent;
-    background: none;
-}
-
-#prev {
-    position: absolute;
-    top: 450px;
-    left: -50px;
-    width: 50px;
-    height: 50px;
-    z-index: 43000;
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid transparent;
-    background: none;
-}
 
 button{
 	float: right;
 	margin: 7px 15px 0px 0px;
 }
-
-
 
 .contentAreaPrint{
   width: 100%;

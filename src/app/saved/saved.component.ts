@@ -20,6 +20,7 @@ export class SavedComponent implements OnInit {
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) { }
 
   ngOnInit() {
+  
   }
 
   close(){

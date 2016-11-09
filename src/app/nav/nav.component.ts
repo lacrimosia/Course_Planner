@@ -85,29 +85,7 @@ export class NavComponent implements OnInit {
   imageSrc(picture){
   	return "assets/images/" + picture;
   }
-
-  // next button
-  next(value){
-  	this.value = value;
-  	this.value++;
-    if(this.value == this.assignments.length-1){
-      this.data.print = true;
-    }else{
-      this.data.print = false;
-    }
-  }
-
-  // Prev button
-  prev(value){
-  	this.value = value;
-  	this.value--;
-    if(this.value < this.assignments.length-1){
-      this.data.print = false;
-    }
-  }
-
-
-
+  
 printContent(){
   this.data.print = true;
   // If any of the buttons have not been selected, trigger error message
