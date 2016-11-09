@@ -32,7 +32,7 @@ body{
 
 // get the titles specs (font name, size, font color, letter spacing)
 @mixin titles($font, $size, $color, $letterSpacing){
-	font-family: $font;
+	font-family: $font, sans-serif;
 	font-size: $size;
 	color: $color;
 	letter-spacing: $letterSpacing;
@@ -156,7 +156,7 @@ p, span, ul li{
 
 // info box
 .box{
-	background: rgba(255,255,255,0.9);
+	background: rgba(255,255,255,1);
 //	width: 80%;
 	min-height: 100px;
 	height: auto;
@@ -172,6 +172,9 @@ p, span, ul li{
 	font-weight: bold;
 	font-size: 3.1em !important;
 	margin-top: 40px !important;
+	color: $blue !important;
+	text-align: left !important;
+	margin-bottom: 40px;
 }
 
 .navArea{

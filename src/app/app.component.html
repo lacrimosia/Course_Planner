@@ -29,9 +29,6 @@
 	<div class="workArea container">
 		<!-- title of the interactive -->
 		<div class="row">
-			<div class="col-md-12 col-lg-12">
-				<h3 class="animated fadeIn activityTitle" *ngIf="data.value==0"> {{ data.activity }} </h3>
-			</div>
 
 			<!-- added to center div-->
 			<div class="col-md-1 col-lg-1">
@@ -40,6 +37,7 @@
 			</div>
 			<div class="animated fadeIn box col-md-10 col-lg-10">
 				<!--instructions -->
+						<h3 class="animated fadeIn activityTitle" *ngIf="data.value==0"><i class="fa fa-calendar-o"></i> {{ data.activity }} </h3>
 						<app-instructions *ngIf="data.value==0" [data]="data" [instructions]="instructions"></app-instructions>
 					<!-- assignment information -->
 						<app-information *ngIf="data.value>0 && data.value < amount-1" [data]="data" [assignments]="assignments"></app-information>

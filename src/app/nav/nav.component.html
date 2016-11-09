@@ -4,7 +4,7 @@
 <!-- These are the cicle buttons at the bottom nav-->
 <ul class="nav nav-justified buttonList">
     <li *ngFor="let d of assignments | keys; let i = index">
-      <button type="button" ngbPopover="You see, I show up on hover!" triggers="mouseenter:mouseleave" popoverTitle="Pop title" class="numButtons circle" id={{i}} (click)="goTo(i)"  [ngClass]="{'highlight': i==data.value}">
+      <button type="button" class="numButtons circle" id={{i}} (click)="goTo(i)"  [ngClass]="{'highlight': i==data.value}">
           {{ d.value.symbol }}
       </button><div id="line" class="hidden-xs hidden-sm" *ngIf="i<assignments.length-1"></div>
   </li>

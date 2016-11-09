@@ -59,6 +59,11 @@ $black: #000000; //black
   	font-size: 1.6em !important;
   }
 
+  .highlight{
+  	background: $red !important;
+  	border: 1px solid $red !important;
+  }
+
   // circle navigation buttons
   .circle{
   	@include buttonStyles(50px, 50px, $green, 100px, $green, subHeadings);
@@ -109,6 +114,11 @@ $black: #000000; //black
   	font-size: 1.3em !important;
   }
 
+  .highlight{
+  	background: $red !important;
+  	border: 1px solid $red !important;
+  }
+
   // circle navigation buttons
   .circle{
   	@include buttonStyles(45px, 45px, $green, 100px, $green, subHeadings);
@@ -157,6 +167,11 @@ $black: #000000; //black
   .courseTitle{
   	color: $white;
   	font-size: 1.2em !important;
+  }
+
+  .highlight{
+  	background: $red !important;
+  	border: 1px solid $red !important;
   }
 
   // circle navigation buttons
