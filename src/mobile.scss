@@ -41,10 +41,13 @@ $black: #000000; //black
 	font-size: 1.7em;
 	color: $white;
 }
+
 // Media queries
 // large screen sizes - DESKTOPS, TV's
 @media (min-width: 1200px) {
-
+  .buttonSpace{
+    margin-right: 10px;
+  }
 }
 
 
@@ -90,6 +93,10 @@ $black: #000000; //black
   .symbol, hl{
       float: left;
       margin-right: 15px !important;
+  }
+
+  .buttonSpace{
+    margin-right: 10px;
   }
 
 }
@@ -138,6 +145,10 @@ $black: #000000; //black
       margin-right: 7px !important;
   }
 
+  .buttonSpace{
+    margin-right: 10px;
+  }
+
 }
 
 // extra small screen sizes -- IPHONES and MOBILE DEVICES
@@ -183,5 +194,10 @@ $black: #000000; //black
       float: left;
       margin-right: 7px !important;
   }
+
+  .buttonSpace{
+    margin-right: 10px;
+  }
+
 
 }
