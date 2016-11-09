@@ -70,6 +70,28 @@ $black: #000000; //black
   	border: 1px solid $red;
   }
 
+  // circle symbol
+  .symbol{
+  	@include buttonStyles(60px, 60px, $red, 100px, $red, subHeadings);
+  	text-align: center;
+  	font-size: 3.2em;
+  }
+
+  .subForLarge {
+      font-size: 170% !important;
+      margin-top: 17px !important;
+  }
+
+  .sub {
+      font-size: 188% !important;
+      margin-top: 16px !important;
+  }
+
+  .symbol, hl{
+      float: left;
+      margin-right: 15px !important;
+  }
+
 }
 
 // small screen sizes -- TABLETS
@@ -94,6 +116,28 @@ $black: #000000; //black
   	border: 1px solid $red;
   }
 
+  // circle symbol
+  .symbol{
+  	@include buttonStyles(50px, 50px, $red, 100px, $red, subHeadings);
+  	text-align: center;
+  	font-size: 2.8em;
+  }
+
+  .subForLarge {
+      font-size: 145% !important;
+      margin-top: 13px !important;
+  }
+
+  .sub {
+      font-size: 175% !important;
+      margin-top: 11px !important;
+  }
+
+  .symbol, hl{
+      float: left;
+      margin-right: 7px !important;
+  }
+
 }
 
 // extra small screen sizes -- IPHONES and MOBILE DEVICES
@@ -116,6 +160,28 @@ $black: #000000; //black
   .circle:hover{
   	background: $red;
   	border: 1px solid $red;
+  }
+
+  // circle symbol
+  .symbol{
+  	@include buttonStyles(50px, 50px, $red, 100px, $red, subHeadings);
+  	text-align: center;
+  	font-size: 2.8em;
+  }
+
+  .subForLarge {
+      font-size: 130% !important;
+      margin-top: 13px !important;
+  }
+
+  .sub {
+      font-size: 165% !important;
+      margin-top: 11px !important;
+  }
+
+  .symbol, hl{
+      float: left;
+      margin-right: 7px !important;
   }
 
 }
