@@ -1,0 +1,64 @@
+// Mobile styles are located here
+/* Global color styles*/
+$background: #F2F2F2; // background gray
+// Colors for app
+$red: #F04C4B; // mostly for buttons
+$blue: #607D8B; // mostly for divs
+$green: #9FBA91; // mostly for navigation and text
+$darkBlue: #4A626B; // mostly if blue is already used
+$text: #4D4D4D; // used for copy text
+$subHeading: #595959; // used for subheadings
+$white: #ffffff; //white
+$black: #000000; //black
+
+//fonts defaults
+@font-face{
+	src: url(./assets/fonts/AlfaSlabOne-Regular.ttf);
+	font-family: Headings;
+}
+
+@font-face{
+	src: url(./assets/fonts/JosefinSlab-Regular.ttf);
+	font-family: subHeadings;
+}
+
+// get the titles specs (font name, size, font color, letter spacing)
+@mixin titles($font, $size, $color, $letterSpacing){
+	font-family: $font;
+	font-size: $size;
+	color: $color;
+	letter-spacing: $letterSpacing;
+}
+
+// buttons styles
+@mixin buttonStyles($w, $h, $color, $radius, $border, $font){
+	width: $w;
+	height: $h;
+	background: $color;
+	border-radius: $radius;
+	border: 1px solid $border;
+	font-family: $font;
+	font-size: 1.7em;
+	color: $white;
+}
+// Media queries
+// large screen sizes - DESKTOPS, TV's
+@media (min-width: 1200px) {
+
+}
+
+
+// medium screen sizes --- DESKTOPS
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+// small screen sizes -- TABLETS
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+// extra small screen sizes -- IPHONES and MOBILE DEVICES
+@media (min-width: 0px) and (max-width: 767px){
+
+}

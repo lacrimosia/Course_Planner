@@ -16,7 +16,8 @@
       "mobile": false,
       "styles": [
         "../node_modules/bootstrap/dist/css/bootstrap.css",
-        "styles.scss"
+        "styles.scss",
+        "mobile.scss"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.js",
