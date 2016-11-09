@@ -167,6 +167,10 @@ $black: #000000; //black
 // extra small screen sizes -- IPHONES and MOBILE DEVICES
 @media (min-width: 0px) and (max-width: 767px){
 
+  .container{
+    min-width: 480px !important;
+  }
+
   .courseTitle{
   	color: $white;
   	font-size: 1.2em !important;
@@ -175,6 +179,16 @@ $black: #000000; //black
   .highlight{
   	background: $red !important;
   	border: 1px solid $red !important;
+  }
+
+  .box{
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+
+  .workArea{
+    height: auto !important;
+    min-height: 0px !important;
   }
 
   // circle navigation buttons

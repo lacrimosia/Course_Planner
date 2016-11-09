@@ -27,15 +27,16 @@
 
 	<!-- the tasks  and instructions Area -->
 	<div class="workArea container">
+
 		<!-- title of the interactive -->
 		<div class="row">
 
 			<!-- added to center div-->
-			<div class="col-md-1 col-lg-1">
+			<div class="col-md-1 col-lg-1 hidden-sm hidden-xs">
 				<!-- previous button -->
 				<app-previous [data]="data" [assignments]="assignments"></app-previous>
 			</div>
-			<div class="animated fadeIn box col-md-10 col-lg-10">
+			<div class="animated fadeIn box col-md-10 col-lg-10 col-sm-12 col-xs-12">
 				<!--instructions -->
 						<h3 class="animated fadeIn activityTitle" *ngIf="data.value==0"><i class="fa fa-calendar-o"></i> {{ data.activity }} </h3>
 						<app-instructions *ngIf="data.value==0" [data]="data" [instructions]="instructions"></app-instructions>
@@ -58,7 +59,7 @@
 						</div>
 			</div>
 
-			<div class="col-md-1 col-lg-1">
+			<div class="col-md-1 col-lg-1 hidden-sm hidden-xs">
 				<!-- next button -->
 				<app-next [data]="data" [assignments]="assignments" [amount]="amount"></app-next>
 			</div>
