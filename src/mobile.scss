@@ -56,6 +56,20 @@ $black: #000000; //black
   	font-size: 1.6em !important;
   }
 
+  // circle navigation buttons
+  .circle{
+  	@include buttonStyles(50px, 50px, $green, 100px, $green, subHeadings);
+  	cursor: pointer;
+  	text-align: center;
+  	font-size: 1.6em;
+  	font-weight: lighter;
+  }
+
+  .circle:hover{
+  	background: $red;
+  	border: 1px solid $red;
+  }
+
 }
 
 // small screen sizes -- TABLETS
@@ -66,6 +80,20 @@ $black: #000000; //black
   	font-size: 1.3em !important;
   }
 
+  // circle navigation buttons
+  .circle{
+  	@include buttonStyles(45px, 45px, $green, 100px, $green, subHeadings);
+  	cursor: pointer;
+  	text-align: center;
+  	font-size: 1.4em;
+  	font-weight: lighter;
+  }
+
+  .circle:hover{
+  	background: $red;
+  	border: 1px solid $red;
+  }
+
 }
 
 // extra small screen sizes -- IPHONES and MOBILE DEVICES
@@ -74,6 +102,20 @@ $black: #000000; //black
   .courseTitle{
   	color: $white;
   	font-size: 1.2em !important;
+  }
+
+  // circle navigation buttons
+  .circle{
+  	@include buttonStyles(45px, 45px, $green, 100px, $green, subHeadings);
+  	cursor: pointer;
+  	text-align: center;
+  	font-size: 1.4em;
+  	font-weight: lighter;
+  }
+
+  .circle:hover{
+  	background: $red;
+  	border: 1px solid $red;
   }
 
 }
