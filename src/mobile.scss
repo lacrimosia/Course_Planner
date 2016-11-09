@@ -64,6 +64,9 @@ $black: #000000; //black
   	border: 1px solid $red !important;
   }
 
+  .buttonList{
+    margin-left: 25px !important;
+  }
   // circle navigation buttons
   .circle{
   	@include buttonStyles(50px, 50px, $green, 100px, $green, subHeadings);
