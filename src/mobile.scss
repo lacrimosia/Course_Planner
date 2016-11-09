@@ -168,17 +168,27 @@ $black: #000000; //black
 @media (min-width: 0px) and (max-width: 767px){
 
   .container{
-    min-width: 480px !important;
+    min-width: 320px !important;
+  }
+
+  h3.activityTitle{
+    font-size: 200% !important;
+    margin-left: 0px !important;
   }
 
   .courseTitle{
   	color: $white;
   	font-size: 1.2em !important;
+    text-align: left !important;
   }
 
   .highlight{
   	background: $red !important;
   	border: 1px solid $red !important;
+  }
+
+  .buttonList{
+    margin-left: 15px !important;
   }
 
   .box{
