@@ -1,11 +1,11 @@
 <div *ngFor="let d of assignments | keys; let i = index">
 <div class="twoTasks" *ngIf="d.value.type=='two' && i==data.value">
-  <div class="taskA col-md-6 col-lg-6 col-sm-12 col-xs-12">
+  <div class="taskA col-md-12 col-lg-6 col-sm-12 col-xs-12">
     <app-tasks class="tasks" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [title]="d.value.taskA.name" [information]="d.value.taskA.information" [d]="d"></app-tasks>
     <app-button-a [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [d]="d"></app-button-a>
   </div>
   <!-- task B -->
-  <div class="taskB col-md-6 col-lg-6 col-sm-12 col-xs-12">
+  <div class="taskB col-md-12 col-lg-6 col-sm-12 col-xs-12">
     <app-tasks class="tasks" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [title]="d.value.taskB.name" [information]="d.value.taskB.information" [d]="d"></app-tasks>
     <app-button-b [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [d]="d"></app-button-b>
   </div>
