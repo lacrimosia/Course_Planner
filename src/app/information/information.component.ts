@@ -31,8 +31,11 @@ export class InformationComponent implements OnInit {
 // shows the colors for the progress bar
   colors(){
     // red zone
-    if(this.progress() >= 0 && this.progress() < 30){
+    if(this.progress() >= 0 && this.progress() < 15){
       return "progress-bar-danger animated fadeInLeft";
+    }
+    else if(this.progress() > 15 && this.progress() < 30){
+      return "progress-bar-danger";
       // yellow zone
     }else if(this.progress() > 30 && this.progress() < 70){
       return "progress-bar-warning";

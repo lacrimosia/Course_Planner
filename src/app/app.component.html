@@ -42,8 +42,11 @@
 						<h3 class="animated fadeIn activityTitle" *ngIf="data.value==0"><i class="fa fa-calendar-o"></i> {{ data.activity }} </h3>
 						<app-instructions *ngIf="data.value==0" [data]="data" [instructions]="instructions"></app-instructions>
 					<!-- assignment information -->
-						<div class="col-md-12 col-sm-10 col-xs-10 col-lg-12" *ngIf="data.value>0">
+						<div class="col-md-9 col-sm-10 col-xs-10 col-lg-9" *ngIf="data.value>0">
 							<h2 class="titles"><i class="fa fa-file-text-o"></i> Assignment Information</h2>
+						</div>
+						<div class="col-md-3 visible-md visible-lg col-lg-3" *ngIf="data.value>0">
+							<button class="btn btn-primary btn-lg"> <i class="fa fa-calendar"></i> View in Calendar</button>
 						</div>
 						<div class="col-sm-2 col-xs-2 visible-sm visible-xs" *ngIf="data.value>0">
 							<!-- previous button -->
