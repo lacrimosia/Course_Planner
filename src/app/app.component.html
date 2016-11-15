@@ -36,14 +36,29 @@
 				<!-- previous button -->
 				<app-previous [data]="data" [assignments]="assignments"></app-previous>
 			</div>
+
 			<div class="animated fadeIn box col-md-10 col-lg-10 col-sm-12 col-xs-12">
 				<!--instructions -->
 						<h3 class="animated fadeIn activityTitle" *ngIf="data.value==0"><i class="fa fa-calendar-o"></i> {{ data.activity }} </h3>
 						<app-instructions *ngIf="data.value==0" [data]="data" [instructions]="instructions"></app-instructions>
 					<!-- assignment information -->
-						<app-information *ngIf="data.value>0 && data.value < amount-1" [data]="data" [assignments]="assignments"></app-information>
+						<div class="col-md-12 col-sm-10 col-xs-10 col-lg-12" *ngIf="data.value>0">
+							<h2 class="titles"><i class="fa fa-file-text-o"></i> Assignment Information</h2>
+						</div>
+						<div class="col-sm-2 col-xs-2 visible-sm" *ngIf="data.value>0">
+							<!-- previous button -->
+							<app-previous [data]="data" [assignments]="assignments"></app-previous>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+								<app-information *ngIf="data.value>0 && data.value < amount-1" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value"></app-information>
+						</div>
+
+
+
 					<!-- one task -->
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 						<app-one-task [data]="data" *ngIf="data.value>0" [assignments]="assignments"></app-one-task>
+					</div>
 					<!-- two tasks -->
 						<app-two-tasks [data]="data" *ngIf="data.value>0" [assignments]="assignments"></app-two-tasks>
 

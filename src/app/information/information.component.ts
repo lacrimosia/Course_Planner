@@ -14,10 +14,17 @@ export class InformationComponent implements OnInit {
 
 	@Input() data;
 	@Input() assignments;
+  @Input() amount;
+  @Input() value;
+  count:number = 0;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) { }
 
   ngOnInit() {
+  }
+
+  progress(){
+    return Math.round(this.data.value * 14.28);
   }
 
 }

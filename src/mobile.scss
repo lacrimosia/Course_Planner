@@ -122,6 +122,14 @@ $black: #000000; //black
   	border: 1px solid $red !important;
   }
 
+	#prev{
+		top: 0px !important;
+		border-top: 20px solid transparent !important;
+		border-bottom: 20px solid transparent !important;
+		border-right: 30px solid #F04C4B !important;
+		border-left: 30px solid transparent !important;
+	}
+
   // circle navigation buttons
   .circle{
   	@include buttonStyles(45px, 45px, $green, 100px, $green, subHeadings);

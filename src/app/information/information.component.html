@@ -1,6 +1,11 @@
-<h2 class="titles"><i class="fa fa-file-text-o"></i> Assignment Information</h2>
 <div class="infos" *ngFor="let d of assignments | keys; let i = index">
 	<!-- <img [src]="imageSrc(d.value.due_date)" class="taskImage1" /> -->
 	<p *ngIf="i==data.value"> {{ d.value.instructions }} </p>
+</div>
+<!-- progress bar on each question -->
+<div class="progress col-md-12 col-lg-12 col-sm-12 col-xs-12">
+		<div class="progress-bar" role="progressbar" aria-valuenow="progress()" aria-valuemin="0" aria-valuemax="amount-2" [ngStyle]="{'width': progress()+'%'}">
+			Progress:	{{ progress() }} %
+		</div>
 </div>
 <hr />
