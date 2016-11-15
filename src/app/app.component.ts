@@ -19,6 +19,7 @@ export class AppComponent implements OnInit{
  alert:boolean;
  value:number = 0;
  instructions:string;
+ showCalendar:boolean = false;
 
 
  constructor(private dataService: DataService, private _hotkeysService: HotkeysService){
@@ -34,6 +35,7 @@ export class AppComponent implements OnInit{
          this.assignments = this.data.assignments;
          this.alert = this.data.alert;
          this.instructions = this.assignments[0].instructions;
+         this.showCalendar = this.data.showCalendar;
         // console.log("the data alert", this.value);
         },
         err => console.error(err),

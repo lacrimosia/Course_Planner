@@ -45,9 +45,13 @@
 						<div class="col-md-9 col-sm-10 col-xs-10 col-lg-9" *ngIf="data.value>0">
 							<h2 class="titles"><i class="fa fa-file-text-o"></i> Assignment Information</h2>
 						</div>
+
+						<!-- calendar button -->
 						<div class="col-md-3 visible-md visible-lg col-lg-3" *ngIf="data.value>0">
-							<button class="btn btn-primary btn-lg"> <i class="fa fa-calendar"></i> View in Calendar</button>
+							<button class="btn btn-primary btn-lg" (click)="data.showCalendar = !data.showCalendar"> <i class="fa fa-calendar"></i> View in Calendar {{ showCalendar}}</button>
 						</div>
+
+
 						<div class="col-sm-2 col-xs-2 visible-sm visible-xs" *ngIf="data.value>0">
 							<!-- previous button -->
 							<app-previous [data]="data" [assignments]="assignments"></app-previous>
@@ -95,6 +99,10 @@
 		</div>
 	</div>
 </div>
-
-	</div>
+</div>
 </div><!-- end main component -->
+
+<!--calendar area-->
+<div class="col-md-12 col-lg-12">
+	<app-calendar-app [data]="data" [assignments]="assignments" [amount]="amount" *ngIf="data.showCalendar==true"></app-calendar-app>
+</div>
