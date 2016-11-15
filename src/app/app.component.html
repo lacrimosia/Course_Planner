@@ -48,7 +48,7 @@
 
 						<!-- calendar button -->
 						<div class="col-md-3 visible-md visible-lg col-lg-3" *ngIf="data.value>0">
-							<button class="btn btn-primary btn-lg" (click)="data.showCalendar = !data.showCalendar"> <i class="fa fa-calendar"></i> View in Calendar {{ showCalendar}}</button>
+							<button class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#myModal"> <i class="fa fa-calendar"></i> Add to Calendar</button>
 						</div>
 
 
@@ -104,5 +104,5 @@
 
 <!--calendar area-->
 <div class="col-md-12 col-lg-12">
-	<app-calendar-app [data]="data" [assignments]="assignments" [amount]="amount" *ngIf="data.showCalendar==true"></app-calendar-app>
+	<app-calendar-app [data]="data" [assignments]="assignments" [amount]="amount"></app-calendar-app>
 </div>

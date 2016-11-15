@@ -164,7 +164,7 @@ p, span, ul li{
 //	margin: 15px auto;
 //	position: relative;
 	padding: 15px;
-	z-index: 100000;
+	z-index: 100;
 	margin-bottom: 40px;
 	// box-shadow: 3px 3px 5px #333333;
 }
@@ -220,6 +220,11 @@ p, span, ul li{
 .btn-primary{
 	background: $blue !important;
 	border: 1px solid $blue !important;
+}
+
+.btn-primary:hover{
+	background: $red !important;
+	border: 1px solid $red !important;
 }
 
 .highlight{
