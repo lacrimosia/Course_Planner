@@ -126,14 +126,6 @@ $black: #000000; //black
   	border: 1px solid $red !important;
   }
 
-	#prev{
-		top: 0px !important;
-		border-top: 20px solid transparent !important;
-		border-bottom: 20px solid transparent !important;
-		border-right: 30px solid #F04C4B !important;
-		border-left: 30px solid transparent !important;
-	}
-
   // circle navigation buttons
   .circle{
   	@include buttonStyles(45px, 45px, $green, 100px, $green, subHeadings);
@@ -176,6 +168,14 @@ $black: #000000; //black
 
 	.buttonList{
 		margin-left: 18px !important;
+	}
+
+	// next and previous
+	#prev, #next{
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		font-size: 3em;
 	}
 
 }
@@ -257,5 +257,13 @@ $black: #000000; //black
     margin-right: 10px;
   }
 
+	// next and previous
+	#prev, #next{
+		top: 0px !important;
+		left: 0px !important;
+		right: 0px !important;
+		font-size: 1.5em !important;
+		float: left;
+	}
 
 }

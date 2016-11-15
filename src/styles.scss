@@ -217,6 +217,11 @@ p, span, ul li{
 	color: $darkBlue;
 }
 
+.btn-primary{
+	background: $blue !important;
+	border: 1px solid $blue !important;
+}
+
 .highlight{
 	background: $red;
 	border: 1px solid $red;
@@ -290,7 +295,28 @@ hr{
 	opacity: 0.4;
 }
 
+#prev, #next{
+	color: $red;
+	font-size: 5em;
+	background: none;
+	border: none;
+	position: relative;
+	top: 300px;
+}
+
 #prev{
+	left: 0px;
+}
+
+#next{
+	right: 0px;
+}
+
+#prev:hover, #next:hover{
+	color: $blue;
+}
+
+/*#prev{
 	border-right: 60px solid $red;
 	border-left: 60px solid transparent;
 	cursor: pointer;
@@ -314,7 +340,7 @@ hr{
 	border-right: 60px solid transparent;
 	border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
-}
+}*/
 
 .yes{
 	background: $darkBlue;

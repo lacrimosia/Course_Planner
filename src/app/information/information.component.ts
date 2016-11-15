@@ -23,8 +23,22 @@ export class InformationComponent implements OnInit {
   ngOnInit() {
   }
 
+// keeps track of progress
   progress(){
     return Math.round(this.data.value * 14.28);
+  }
+
+// shows the colors for the progress bar
+  colors(){
+    // red zone
+    if(this.progress() >= 0 && this.progress() < 30){
+      return "progress-bar-danger animated fadeInLeft";
+      // yellow zone
+    }else if(this.progress() > 30 && this.progress() < 70){
+      return "progress-bar-warning";
+    }else if(this.progress() > 70){
+      return "progress-bar-success";
+    }
   }
 
 }

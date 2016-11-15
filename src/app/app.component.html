@@ -45,9 +45,11 @@
 						<div class="col-md-12 col-sm-10 col-xs-10 col-lg-12" *ngIf="data.value>0">
 							<h2 class="titles"><i class="fa fa-file-text-o"></i> Assignment Information</h2>
 						</div>
-						<div class="col-sm-2 col-xs-2 visible-sm" *ngIf="data.value>0">
+						<div class="col-sm-2 col-xs-2 visible-sm visible-xs" *ngIf="data.value>0">
 							<!-- previous button -->
 							<app-previous [data]="data" [assignments]="assignments"></app-previous>
+							<!-- next button -->
+							<app-next [data]="data" [assignments]="assignments" [amount]="amount"></app-next>
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 								<app-information *ngIf="data.value>0 && data.value < amount-1" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value"></app-information>
