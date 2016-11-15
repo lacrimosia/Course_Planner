@@ -16,6 +16,7 @@ export class ButtonBComponent implements OnInit {
   @Input() amount;
   @Input() value:number = 0;
   @Input() d;
+
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) { }
 
   ngOnInit() {
@@ -30,14 +31,16 @@ export class ButtonBComponent implements OnInit {
   }
 
   buttonTwoClick(){
-  console.log("value B", this.d);
+//  console.log("value B", this.d);
+  this.data.count++;
     this.d.value.taskB.selectB = true;
     this.d.value.taskA.selectA = false;
-    if(this.d.value.taskB.selectB==true){
-      this.data.progressB++;
+    if(this.data.count==1){
+      this.data.progress++;
     }else{
-      this.data.progressA--;
+      this.data.count--;
     }
+
     return;
   }
 
