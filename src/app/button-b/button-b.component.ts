@@ -33,6 +33,11 @@ export class ButtonBComponent implements OnInit {
   console.log("value B", this.d);
     this.d.value.taskB.selectB = true;
     this.d.value.taskA.selectA = false;
+    if(this.d.value.taskB.selectB==true){
+      this.data.progressB++;
+    }else{
+      this.data.progressA--;
+    }
     return;
   }
 

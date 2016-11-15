@@ -17,6 +17,7 @@ export class InformationComponent implements OnInit {
   @Input() amount;
   @Input() value;
   count:number = 0;
+  counter:number = 0;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) { }
 
@@ -25,7 +26,10 @@ export class InformationComponent implements OnInit {
 
 // keeps track of progress
   progress(){
-    return Math.round(this.data.value * 14.28);
+    this.counter = this.data.progressA + this.data.progressB;
+    console.log("process A", this.data.progressA);
+    console.log("process B", this.data.progressB);
+    return Math.round(this.counter * 14.28);
   }
 
 // shows the colors for the progress bar
