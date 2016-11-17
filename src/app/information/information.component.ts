@@ -27,7 +27,7 @@ export class InformationComponent implements OnInit {
 // keeps track of progress
   progress(){
     this.counter = this.data.progress;
-    console.log("process A", this.data.progress);
+    console.log("process amount", this.data.progress);
     return Math.round(this.counter * 14.28);
   }
 

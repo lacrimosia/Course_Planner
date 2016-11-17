@@ -7,14 +7,12 @@ import * as jsPDF from 'jspdf';
 import { ButtonAComponent } from '../button-a/button-a.component';
 import { ButtonBComponent } from '../button-b/button-b.component';
 import { TasksComponent } from '../tasks/tasks.component';
-import { ValueService } from '../value.service';
-
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
-  providers: [DataService, HotkeysService, ValueService]
+  providers: [DataService, HotkeysService]
 })
 export class NavComponent implements OnInit {
 	@Input() d:number = 0;
@@ -25,7 +23,7 @@ export class NavComponent implements OnInit {
   @Input() value;
   textSelected: string;
 
-  constructor(private dataService: DataService, private _hotkeysService: HotkeysService, public valueService: ValueService) {
+  constructor(private dataService: DataService, private _hotkeysService: HotkeysService) {
   	// this.dataService = dataService;
   //	this.value = 0;
   	this.selected = false;
@@ -74,6 +72,11 @@ export class NavComponent implements OnInit {
   // go to link onclick
   goTo(i){
   	this.data.value = i;
+    if(this.assignments[this.data.value].type=="one"){
+      if(this.assignments[this.data.value].selected == 1){
+        this.data.progress += 1;
+      }
+    }
     if(this.data.value == this.assignments.length-1){
       this.printContent();
     }else{
@@ -85,7 +88,7 @@ export class NavComponent implements OnInit {
   imageSrc(picture){
   	return "assets/images/" + picture;
   }
-  
+
 printContent(){
   this.data.print = true;
   // If any of the buttons have not been selected, trigger error message

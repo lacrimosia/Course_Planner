@@ -32,15 +32,12 @@ export class ButtonBComponent implements OnInit {
 
   buttonTwoClick(){
 //  console.log("value B", this.d);
-  this.data.count++;
+    this.d.value.selected++;
     this.d.value.taskB.selectB = true;
     this.d.value.taskA.selectA = false;
-    if(this.data.count==1){
+    if(this.d.value.selected == 1){
       this.data.progress++;
-    }else{
-      this.data.count--;
     }
-
     return;
   }
 

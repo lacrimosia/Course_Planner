@@ -34,13 +34,11 @@ export class ButtonAComponent implements OnInit {
   // toggle buttons for selection
   buttonOneClick(){
   //  console.log("value A", this.d);
-    this.data.count++;
+    this.d.value.selected++;
     this.d.value.taskA.selectA = true;
     this.d.value.taskB.selectB= false;
-    if(this.data.count == 1){
+    if(this.d.value.selected == 1){
       this.data.progress++;
-    }else{
-      this.data.count--;
     }
     return;
   }
