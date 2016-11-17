@@ -126,6 +126,11 @@ $black: #000000; //black
   	border: 1px solid $red !important;
   }
 
+	.navArea{
+		overflow-x: auto !important;
+		height: 80px !important;
+	}
+
   // circle navigation buttons
   .circle{
   	@include buttonStyles(45px, 45px, $green, 100px, $green, subHeadings);
@@ -209,9 +214,18 @@ $black: #000000; //black
   	border: 1px solid $red !important;
   }
 
-  .buttonList{
-    margin-left: 15px !important;
-  }
+	.numButtons{
+	//	margin-right: 10% !important;
+//	 float: none !important;
+	//	display: inline !important;
+	//	white-space: nowrap;
+	//	overflow: auto !important;
+	}
+
+	.list{
+		display: inline !important;
+		white-space: nowrap !important
+	}
 
   .box{
   //  margin-top: 0px !important;
@@ -222,6 +236,11 @@ $black: #000000; //black
     height: auto !important;
     min-height: 0px !important;
   }
+
+	.navArea{
+		overflow-x: auto !important;
+	//	white-space: nowrap !important;
+	}
 
   // circle navigation buttons
   .circle{
@@ -263,6 +282,11 @@ $black: #000000; //black
     margin-right: 10px;
   }
 
+	.buttonList{
+	//	min-width: 500px !important;
+		height: 80px !important;
+	}
+
 	// next and previous
 	#prev, #next{
 		top: 0px !important;
@@ -281,5 +305,6 @@ $black: #000000; //black
 	h2.titles{
 		font-size: 190% !important;
 	}
+
 
 }

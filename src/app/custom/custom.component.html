@@ -2,12 +2,12 @@
 <div class="twoTasks" *ngIf="d.value.type=='custom' && i==data.value">
   <div class="taskA col-md-12 col-lg-6 col-sm-12 col-xs-12">
     <app-tasks class="tasks" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [title]="d.value.taskA.name" [information]="d.value.taskA.information" [d]="d"></app-tasks>
-    <img [src]="imageSrc(d.value.taskA.due_date)" class="img-responsive imageSize"/>
+      <img [src]="imageSrc(d.value.taskA.due_date)" *ngIf="d.value.type=='custom'" class="img-responsive imageSize"/>
   </div>
   <!-- task B -->
   <div class="taskB col-md-12 col-lg-6 col-sm-12 col-xs-12">
     <app-tasks class="tasks" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [title]="d.value.taskB.name" [information]="d.value.taskB.information" [d]="d"></app-tasks>
-    <img [src]="imageSrc(d.value.taskB.due_date)" class="img-responsive imageSize"/>
+    <img [src]="imageSrc(d.value.taskB.due_date)" *ngIf="d.value.type=='custom'" class="img-responsive imageSize"/>
   </div>
 </div>
 </div>

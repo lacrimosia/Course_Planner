@@ -460,9 +460,14 @@ ul li{
 }
 
 .circleArea{
-	background: $white;
-	color: $blue;
+	background: $red;
+	color: $white;
 	font-family: subHeadings;
 	box-shadow: 2px 2px 3px $text;
 	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.glow{
+	background: $blue;
 }

@@ -3,9 +3,10 @@
 <!--<app-tooltip></app-tooltip>-->
 <!-- These are the cicle buttons at the bottom nav-->
 <ul class="nav nav-justified buttonList">
-    <li *ngFor="let d of assignments | keys; let i = index">
-      <button type="button" class="numButtons circle" id={{i}} (click)="goTo(i)" [ngClass]="{'highlight': i==data.value}">
+    <li *ngFor="let d of assignments | keys; let i = index" class="list">
+    <button type="button" class="numButtons circle" id={{i}} (click)="goTo(i)" [ngClass]="{'highlight': i==data.value}">
           {{ d.value.symbol }}
-      </button><div id="line" class="hidden-xs hidden-sm" *ngIf="i<assignments.length-1"></div>
+      </button>
+      <div id="line" class="hidden-xs hidden-sm" *ngIf="i<assignments.length-1"></div>
   </li>
 </ul>
