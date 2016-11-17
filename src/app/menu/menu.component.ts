@@ -24,6 +24,12 @@ export class MenuComponent implements OnInit {
           this.help();
             return false; // Prevent bubbling
     }));
+
+    // reload keyboard shortcut
+    this._hotkeysService.add(new Hotkey('r', (event: KeyboardEvent): boolean => {
+          this.reload();
+            return false; // Prevent bubbling
+    }));
   }
 
   // reload function
