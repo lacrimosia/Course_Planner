@@ -42,12 +42,12 @@
 						<h3 class="animated fadeIn activityTitle" *ngIf="data.value==0"><i class="fa fa-calendar-o"></i> {{ data.activity }} </h3>
 						<app-instructions *ngIf="data.value==0" [data]="data" [instructions]="instructions"></app-instructions>
 					<!-- assignment information -->
-						<div class="col-md-9 col-sm-10 col-xs-10 col-lg-9" *ngIf="data.value>0">
+						<div class="col-md-9 col-sm-10 col-xs-10 col-lg-9" *ngIf="data.value>0 && data.value < amount-1">
 							<h2 class="titles"><i class="fa fa-file-text-o"></i> Assignment Information</h2>
 						</div>
 
 						<!-- calendar button -->
-						<div class="col-md-3 visible-md visible-lg col-lg-3" *ngIf="data.value>0">
+						<div class="col-md-3 visible-md visible-lg col-lg-3" *ngIf="data.value>0 && data.value < amount-1">
 							<button class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#myModal"> <i class="fa fa-calendar"></i> Add to Calendar</button>
 						</div>
 
@@ -70,6 +70,9 @@
 					</div>
 					<!-- two tasks -->
 						<app-two-tasks [data]="data" *ngIf="data.value>0" [assignments]="assignments"></app-two-tasks>
+
+					<!-- custom tasks -->
+					<app-custom *ngIf="data.value>0" [data]="data" [assignments]="assignments" [amount]="amount"></app-custom>
 
 						<!-- print area -->
 						<div class="printArea" *ngIf="data.print==true">

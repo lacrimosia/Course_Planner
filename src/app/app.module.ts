@@ -28,6 +28,7 @@ import { HeadingComponent } from './heading/heading.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { CourseNameComponent } from './course-name/course-name.component';
 import { CalendarAppComponent } from './calendar-app/calendar-app.component';
+import { CustomComponent } from './custom/custom.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { CalendarAppComponent } from './calendar-app/calendar-app.component';
     HeadingComponent,
     TooltipComponent,
     CourseNameComponent,
-    CalendarAppComponent
+    CalendarAppComponent,
+    CustomComponent
   ],
   imports: [
     BrowserModule,
