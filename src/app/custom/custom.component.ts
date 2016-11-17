@@ -21,4 +21,8 @@ export class CustomComponent implements OnInit {
   ngOnInit() {
   }
 
+  imageSrc(picture){
+    return "assets/images/" + picture;
+  }
+
 }
