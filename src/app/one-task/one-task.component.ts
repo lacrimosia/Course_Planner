@@ -20,5 +20,4 @@ export class OneTaskComponent implements OnInit {
   ngOnInit() {
   }
 
-
 }
