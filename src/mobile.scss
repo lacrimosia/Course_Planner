@@ -178,13 +178,19 @@ $black: #000000; //black
 		font-size: 3em;
 	}
 
+.imageSize{
+	position: relative !important;
+	top: 0px !important;
+	width: 35% !important;
+}
+
 }
 
 // extra small screen sizes -- IPHONES and MOBILE DEVICES
 @media (min-width: 0px) and (max-width: 767px){
 
   .container{
-    min-width: 320px !important;
+    min-width: 543px !important;
   }
 
   h3.activityTitle{
@@ -264,6 +270,12 @@ $black: #000000; //black
 		right: 0px !important;
 		font-size: 1.5em !important;
 		float: left;
+	}
+
+	.imageSize{
+		position: relative !important;
+		top: 0px !important;
+		width: 35% !important;
 	}
 
 }
