@@ -42,9 +42,9 @@
 						<h3 class="animated fadeIn activityTitle" *ngIf="data.value==0"><i class="fa fa-calendar-o"></i> {{ data.activity }} </h3>
 						<app-instructions *ngIf="data.value==0" [data]="data" [instructions]="instructions"></app-instructions>
 					<!-- assignment information -->
-						<div class="col-md-9 col-sm-9 col-xs-9 col-lg-9" *ngIf="data.value>0 && data.value < amount-1">
+						<div class="col-md-9 col-sm-8 col-xs-8 col-lg-9" *ngIf="data.value>0 && data.value < amount-1">
 							<h2 class="titles"><i class="fa fa-file-text-o"></i> Assignment Information</h2>
-							<img [src]="imageSrc(this.assignments[data.value].due_date)" class="img-responsive imageSize visible-sm visible-xs"/>
+							<img *ngIf="data.value>0 && data.value < amount-2" [src]="imageSrc(this.assignments[data.value].due_date)" class="img-responsive imageSize visible-sm visible-xs"/>
 						</div>
 
 						<!-- due date image -->
@@ -57,7 +57,7 @@
 							<button class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#myModal"> <i class="fa fa-calendar"></i> Add to Calendar</button>
 						</div> -->
 
-						<div class="col-sm-2 col-xs-2 visible-sm visible-xs" *ngIf="data.value>0">
+						<div class="col-sm-3 col-xs-3 visible-sm visible-xs" *ngIf="data.value>0">
 							<!-- previous button -->
 							<app-previous [data]="data" [assignments]="assignments"></app-previous>
 							<!-- next button -->

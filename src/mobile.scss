@@ -214,8 +214,8 @@ $black: #000000; //black
   }
 
   .box{
-    margin-top: 0px !important;
-    margin-bottom: 0px !important;
+  //  margin-top: 0px !important;
+  //  margin-bottom: 0px !important;
   }
 
   .workArea{
@@ -268,7 +268,7 @@ $black: #000000; //black
 		top: 0px !important;
 		left: 0px !important;
 		right: 0px !important;
-		font-size: 1.5em !important;
+		font-size: 2.5em !important;
 		float: left;
 	}
 
@@ -276,6 +276,10 @@ $black: #000000; //black
 		position: relative !important;
 		top: 0px !important;
 		width: 35% !important;
+	}
+
+	h2.titles{
+		font-size: 190% !important;
 	}
 
 }
