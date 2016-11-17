@@ -27,6 +27,19 @@ export class InformationComponent implements OnInit {
 // keeps track of progress
   progress(){
     this.counter = this.data.progress;
+    // if type one task or custom task, automatically increment the progress
+    console.log("type", this.assignments[this.data.value].type);
+    if(this.assignments[this.data.value].type=="one"){
+      if(this.assignments[this.data.value].selected == 1){
+        this.counter++;
+      }
+    }else if(this.assignments[this.data.value].type=="custom"){
+      if(this.assignments[this.data.value].selected == 1){
+        this.counter++;
+      }
+    }else{
+      this.counter++;
+    }
     console.log("process amount", this.data.progress);
     return Math.round(this.counter * 14.28);
   }
