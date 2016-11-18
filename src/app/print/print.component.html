@@ -1,15 +1,23 @@
 <li *ngFor="let d of assignments | keys; let i = index">
-      <h2 class="printTitle" *ngIf="i>0 && i<8"><button class="smallcircle">{{ d.value.symbol }}</button>  {{ d.value.title }}</h2>
-      <div class="one" *ngIf="d.value.type=='one'">
-        <p class="text"> {{ d.value.taskA.information }}</p>
+      <h2 class="printTitle col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="i>0 && i<8"><button class="smallcircle" (click)="goTo(i)">{{ d.value.symbol }}</button>  {{ d.value.title }}</h2>
+      <div class="one col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="d.value.type=='one'">
+        <img [src]="imageSrc(d.value.due_date)" class="img-responsive imageSize col-md-3 col-lg-3 col-sm-12 col-xs-12" />
+        <p class="text col-md-9 col-lg-9 col-sm-12 col-xs-12">Task A: {{ d.value.taskA.information }}</p>
       </div>
-      <div class="two" *ngIf="d.value.type=='two'">
-        <p class="text" *ngIf="d.value.taskA.selectA==true">Task A: {{ d.value.taskA.information }}</p>
-        <p class="text" *ngIf="d.value.taskB.selectB==true">Task B: {{ d.value.taskB.information }}</p>
+      <div class="two col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="d.value.type=='two'">
+        <img [src]="imageSrc(d.value.due_date)" class="img-responsive imageSize col-md-3 col-lg-3 col-sm-12 col-xs-12" />
+        <p class="text col-md-9 col-lg-9 col-sm-12 col-xs-12" *ngIf="d.value.taskA.selectA==true">Task A: {{ d.value.taskA.information }}</p>
+        <p class="text col-md-9 col-lg-9 col-sm-12 col-xs-12" *ngIf="d.value.taskB.selectB==true">Task B: {{ d.value.taskB.information }}</p>
       <!--  <p class="text" *ngIf="d.value.taskA.selectA==false && d.value.taskB.selectB==false">Please select an assignment.</p>-->
       </div>
-      <div class="custom" *ngIf="d.value.type=='custom'">
-        <p class="text" *ngIf="d.value.taskA.selectA==true">Task A: {{ d.value.taskA.information }}</p>
-        <p class="text" *ngIf="d.value.taskB.selectB==true">Task B: {{ d.value.taskB.information }}</p>
+      <div class="custom col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="d.value.type=='custom'">
+        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+          <img [src]="imageSrc(d.value.taskA.due_date)" class="img-responsive imageSize col-md-3 col-lg-3 col-sm-12 col-xs-12" />
+          <p class="text col-md-9 col-lg-9 col-sm-12 col-xs-12" *ngIf="d.value.taskA.selectA==true">Task A: {{ d.value.taskA.information }}</p>
+      </div>
+      <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+        <img [src]="imageSrc(d.value.taskB.due_date)" class="img-responsive imageSize col-md-3 col-lg-3 col-sm-12 col-xs-12" />
+        <p class="text col-md-9 col-lg-9 col-sm-12 col-xs-12" *ngIf="d.value.taskB.selectB==true">Task B: {{ d.value.taskB.information }}</p>
+      </div>
       </div>
     </li>

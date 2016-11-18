@@ -67,7 +67,7 @@ p, span, ul li{
 
 //print text
 .text{
-	@include titles(sans-serif, 0.9em, $text, 0px);
+	@include titles(sans-serif, 1.1em, $text, 0px);
 	font-weight: lighter;
 }
 
@@ -96,6 +96,7 @@ p, span, ul li{
 .smallcircle{
 	@include buttonStyles(40px, 40px, $green, 200px, $green, subHeadings);
 	text-align: center;
+	font-size: 1.3em !important;
 }
 
 // circle symbol
